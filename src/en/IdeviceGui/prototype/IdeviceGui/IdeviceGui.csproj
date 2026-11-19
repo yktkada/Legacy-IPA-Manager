@@ -6,6 +6,9 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>IdeviceGui</AssemblyName>
+    <AssemblyTitle>Legacy IPA Manager</AssemblyTitle>
+    <Product>Legacy IPA Manager</Product>
+    <Description>Legacy IPA Manager for Windows</Description>
     <RootNamespace>IdeviceGui</RootNamespace>
     <ApplicationIcon>app.ico</ApplicationIcon>
     <!-- 工具链来源目录：构建时把 exe 与 DLL 一并复制到输出目录，

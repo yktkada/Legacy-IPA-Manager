@@ -35,7 +35,7 @@ jobs:
             $proj = "src/$lang/IdeviceGui/prototype/IdeviceGui/IdeviceGui.csproj"
             dotnet build $proj -c Release --nologo -p:ToolkitDir="$toolkit"
             $out = "src/$lang/IdeviceGui/prototype/IdeviceGui/bin/Release/net10.0-windows"
-            $stage = Join-Path $dist "IdeviceGui-$lang-Windows"
+            $stage = Join-Path $dist "Legacy-IPA-Manager-$lang-Windows"
             Remove-Item $stage -Recurse -Force -ErrorAction SilentlyContinue
             New-Item -ItemType Directory -Force -Path $stage | Out-Null
             Copy-Item "$out\*" $stage -Recurse -Force
@@ -47,7 +47,7 @@ jobs:
               $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
               "$hash  $rel"
             } | Sort-Object | Set-Content (Join-Path $stage 'SHA256SUMS.txt') -Encoding ASCII
-            Compress-Archive -Path "$stage\*" -DestinationPath (Join-Path $dist "IdeviceGui-$lang-Windows.zip") -Force
+            Compress-Archive -Path "$stage\*" -DestinationPath (Join-Path $dist "Legacy-IPA-Manager-$lang-Windows.zip") -Force
           }
 
       - name: Create draft GitHub release
@@ -57,4 +57,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           $tag = if ($env:GITHUB_REF -like 'refs/tags/*') { $env:GITHUB_REF -replace '^refs/tags/', '' } else { "${{ inputs.tag }}" }
-          gh release create $tag dist/*.zip --draft --title "iDeviceInstaller+Library $tag" --notes-file RELEASE_NOTES.md
+          gh release create $tag dist/*.zip --draft --title "Legacy IPA Manager $tag" --notes-file RELEASE_NOTES.md

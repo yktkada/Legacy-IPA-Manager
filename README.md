@@ -1,4 +1,4 @@
-# iDeviceInstaller+Library GUI For Windows
+# Legacy IPA Manager for Windows
 
 **IPA Library & Installer for Legacy iOS Devices**
 
@@ -26,7 +26,7 @@ records were intentionally removed. Old commit hashes are no longer valid.
 
 ## Overview
 
-iDeviceInstaller+Library is built for legacy iOS devices and large local IPA collections. It combines three things in one app:
+Legacy IPA Manager is built for legacy iOS devices and large local IPA collections. It combines three things in one app:
 
 - a fast local IPA library;
 - compatibility filtering for old devices;

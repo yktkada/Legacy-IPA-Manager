@@ -29,9 +29,9 @@ public partial class App : Application
         if (!HasElevatedMarker(e.Args) && IsAnotherInstanceRunning())
         {
             MessageBox.Show(
-                "iDeviceInstaller+Library is already running." + Environment.NewLine + Environment.NewLine +
-                "Only one instance of iDeviceInstaller+Library is allowed.",
-                "Only one instance of iDeviceInstaller+Library is allowed.", MessageBoxButton.OK, MessageBoxImage.Information);
+                "Legacy IPA Manager is already running." + Environment.NewLine + Environment.NewLine +
+                "Only one instance of Legacy IPA Manager is allowed.",
+                "Only one instance of Legacy IPA Manager is allowed.", MessageBoxButton.OK, MessageBoxImage.Information);
             Shutdown(1);
             return;
         }
@@ -53,9 +53,9 @@ public partial class App : Application
         if (!TryAcquireSingleInstance())
         {
             MessageBox.Show(
-                "iDeviceInstaller+Library is already running." + Environment.NewLine + Environment.NewLine +
-                "Only one instance of iDeviceInstaller+Library is allowed.",
-                "Only one instance of iDeviceInstaller+Library is allowed.", MessageBoxButton.OK, MessageBoxImage.Information);
+                "Legacy IPA Manager is already running." + Environment.NewLine + Environment.NewLine +
+                "Only one instance of Legacy IPA Manager is allowed.",
+                "Only one instance of Legacy IPA Manager is allowed.", MessageBoxButton.OK, MessageBoxImage.Information);
             Shutdown(1);
             return;
         }

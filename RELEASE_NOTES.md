@@ -1,4 +1,4 @@
-# iDeviceInstaller+Library Release
+# Legacy IPA Manager Release
 
 IPA library manager and installer for legacy iOS devices on Windows.
 
@@ -26,8 +26,8 @@ IPA library manager and installer for legacy iOS devices on Windows.
 
 ## Packages
 
-- `IdeviceGui-en-Windows.zip` - English UI
-- `IdeviceGui-zh-Windows.zip` - Chinese UI
+- `Legacy-IPA-Manager-en-Windows.zip` - English UI
+- `Legacy-IPA-Manager-zh-Windows.zip` - Chinese UI
 
 Each package includes the bundled idevice toolkit, license texts and
 `SHA256SUMS.txt`.

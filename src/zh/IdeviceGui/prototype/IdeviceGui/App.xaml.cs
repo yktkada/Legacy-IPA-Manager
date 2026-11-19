@@ -29,9 +29,9 @@ public partial class App : Application
         if (!HasElevatedMarker(e.Args) && IsAnotherInstanceRunning())
         {
             MessageBox.Show(
-                "iDeviceInstaller+Library 已运行。" + Environment.NewLine + Environment.NewLine +
-                "iDeviceInstaller+Library 仅允许一个实例。",
-                "iDeviceInstaller+Library 仅允许一个实例。", MessageBoxButton.OK, MessageBoxImage.Information);
+                "Legacy IPA Manager 已运行。" + Environment.NewLine + Environment.NewLine +
+                "Legacy IPA Manager 仅允许一个实例。",
+                "Legacy IPA Manager 仅允许一个实例。", MessageBoxButton.OK, MessageBoxImage.Information);
             Shutdown(1);
             return;
         }
@@ -53,9 +53,9 @@ public partial class App : Application
         if (!TryAcquireSingleInstance())
         {
             MessageBox.Show(
-                "iDeviceInstaller+Library 已运行。" + Environment.NewLine + Environment.NewLine +
-                "iDeviceInstaller+Library 仅允许一个实例。",
-                "iDeviceInstaller+Library 仅允许一个实例。", MessageBoxButton.OK, MessageBoxImage.Information);
+                "Legacy IPA Manager 已运行。" + Environment.NewLine + Environment.NewLine +
+                "Legacy IPA Manager 仅允许一个实例。",
+                "Legacy IPA Manager 仅允许一个实例。", MessageBoxButton.OK, MessageBoxImage.Information);
             Shutdown(1);
             return;
         }

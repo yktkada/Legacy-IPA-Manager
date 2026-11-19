@@ -280,7 +280,7 @@
             <TabItem Header="关于">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
                     <StackPanel>
-                        <TextBlock Text="iDeviceInstaller+Library GUI For Windows"
+                        <TextBlock Text="Legacy IPA Manager for Windows"
                                    FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
                         <TextBlock Text="IPA Library &amp; Installer for Legacy iOS Devices"
                                    Margin="0,4,0,12" Foreground="#FF555555" TextWrapping="Wrap" />

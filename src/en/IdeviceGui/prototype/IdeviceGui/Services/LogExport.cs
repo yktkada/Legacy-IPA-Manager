@@ -9,7 +9,7 @@ namespace IdeviceGui.Services;
 /// </summary>
 internal static class LogExport
 {
-    public const string FileHeader = "iDeviceInstaller+Library log export";
+    public const string FileHeader = "Legacy IPA Manager log export";
 
     /// <summary>默认文件名：`日志-yyyyMMdd-HHmmss.txt`（默认目录由调用方给程序目录）。</summary>
     public static string DefaultFileName(DateTime now) => $"log-{now:yyyyMMdd-HHmmss}.txt";

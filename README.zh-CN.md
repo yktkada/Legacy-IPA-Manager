@@ -1,4 +1,4 @@
-# iDeviceInstaller+Library GUI For Windows
+# Legacy IPA Manager for Windows
 
 **适用于旧版 iOS 设备的 IPA 资料库与安装器**
 
@@ -23,7 +23,7 @@
 
 ## 概述
 
-iDeviceInstaller+Library 面向旧版 iOS 设备和大规模本地 IPA 收藏，把三件事放在同一个程序里：
+Legacy IPA Manager 面向旧版 iOS 设备和大规模本地 IPA 收藏，把三件事放在同一个程序里：
 
 - 快速本地 IPA 资料库；
 - 旧设备兼容性筛选；

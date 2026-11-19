@@ -1,4 +1,4 @@
-# iDeviceInstaller+Library · User Guide
+# Legacy IPA Manager · User Guide
 
 > IPA library and installation queue for legacy iOS devices on Windows.
 > This document describes the interface, the working logic, and the decision rules. It contains no walkthrough.
@@ -11,7 +11,7 @@
 
 | Item | Value |
 |---|---|
-| Product name | `iDeviceInstaller+Library GUI For Windows` |
+| Product name | `Legacy IPA Manager for Windows` |
 | Function | IPA library management, compatibility evaluation, multi-device installation queue |
 | Implementation | C# / WPF / MVVM; calls `ideviceinstaller.exe` and `AfcHelper.exe` |
 | UI language | Chinese and English builds |

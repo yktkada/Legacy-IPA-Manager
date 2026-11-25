@@ -39,7 +39,7 @@ internal sealed class SettingsDraft
     public bool LogDetailMode { get; set; }
 
     // ── 布局（三栏比例由窗口上的按钮即时复位，不进草稿）──
-    public bool LogHidden { get; set; }
+    public bool LogHidden { get; set; } = true;
     public double LogOverlayWidth { get; set; } = 420;
     public string UiLanguage { get; set; } = Services.UiLanguage.SystemSetting;
 
@@ -127,7 +127,7 @@ internal sealed class SettingsDraft
                 LogDetailMode = false;
                 break;
             case SettingsGroup.Layout:
-                LogHidden = false;
+                LogHidden = true;
                 LogOverlayWidth = 420;
                 UiLanguage = Services.UiLanguage.SystemSetting;
                 break;

@@ -1,5 +1,7 @@
 # Legacy IPA Manager · User Guide
 
+<p><img src="assets/manager-icon.png" width="88" alt="Legacy IPA Manager icon" /></p>
+
 > IPA library manager, compatibility analyzer, and independent multi-device installation queue for legacy iOS devices on Windows.
 > Covers the current UI, keyboard shortcuts, decision rules, and the bundled `IdeviceIndex` component.
 
@@ -265,6 +267,8 @@ All state lives inside `<program dir>\data` and `<program dir>\logs` (`library.d
 
 ## 8. Companion Tool: IdeviceIndex
 
+<p><img src="assets/index-icon.png" width="72" alt="IdeviceIndex icon" /></p>
+
 Open via `IPA Index...` or `IdeviceIndex.exe`:
 - **Import & Remote Updates**: supports local `index.db` (copy or read-only external link), `manifest.json` / `entries.jsonl(.gz)` / `.json` full rebuilds or incremental `upsert`/`delete` deltas, and `Index.UpdateUrl` remote updates.
 - **200,000+ Row Virtual List & Shortcuts**: defaults to full virtualized scrolling (optional 500-row paging in Settings), shared **`0–9 / A–Z / #` Pinyin jump bar**, `Shift + Wheel` horizontal scroll, and `93`-version iOS quick filter (`2.0`–`10.3.4`). Shortcuts (`<Letter>` in menu / `Ctrl+Alt+<Letter>` global): `G` expand/collapse, `Q` enqueue focused, `S` enqueue checked, `C` copy submenu (`N/B/V/O`), `H` row height (`S/M/L`), `Z` clear selection, `Ctrl+L` toggle right pane.
@@ -272,7 +276,8 @@ Open via `IPA Index...` or `IdeviceIndex.exe`:
 
 ---
 
-## 9. License
+## 9. License & Assets
 
-- Application code: **GPL-2.0-or-later** ([COPYING](COPYING), [LICENSE](LICENSE)).
+- Application code (`1.1.0+`): **PolyForm Noncommercial License 1.0.0** ([LICENSE](LICENSE)).
 - Bundled `aria2c.exe` (1.37.0): **GPL-2.0** (`aria2-LICENSE.txt`, `aria2-SOURCE.txt`).
+- Custom application icons were created with Gemini and ChatGPT.

@@ -1,5 +1,10 @@
 # Legacy IPA Manager for Windows
 
+<p>
+  <img src="assets/manager-icon.png" width="96" alt="Legacy IPA Manager icon" />
+  <img src="assets/index-icon.png" width="96" alt="IdeviceIndex icon" />
+</p>
+
 **IPA Library, Compatibility Analyzer & Multi-Device Installer for Legacy iOS Devices**
 
 [English](README.md) | [简体中文](README.zh-CN.md)
@@ -64,8 +69,9 @@ dotnet test .\tests\IdeviceGui.Tests\IdeviceGui.Tests.csproj -c Release -- --fil
 
 ---
 
-## License
+## License & Assets
 
-- Main application: **GPL-3.0-only** ([LICENSE](LICENSE), [COPYRIGHT](COPYRIGHT)).
+- Main application (`1.1.0+`): **PolyForm Noncommercial License 1.0.0** ([LICENSE](LICENSE), [COPYRIGHT](COPYRIGHT)). Prior versions (`v1.0.0` / `v1.0.1`) remain `GPL-3.0-only`.
 - Bundled `aria2c.exe` (1.37.0): **GPL-2.0** (`toolkit/aria2-LICENSE.txt`, `toolkit/aria2-SOURCE.txt`).
 - Bundled `libimobiledevice` / `ideviceinstaller` components: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `toolkit/LICENSES/`.
+- Custom application icons (`assets/` & `app.ico`) were created by the project owner with Gemini and ChatGPT.

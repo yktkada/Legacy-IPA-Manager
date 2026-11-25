@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <Resource Include="app.ico" />
+    <Resource Include="icon_large.png" />
     <None Include="$(ToolkitDir)\*.dll" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(ToolkitDir)\ideviceinstaller.exe;$(ToolkitDir)\idevice_id.exe;$(ToolkitDir)\ideviceinfo.exe;$(ToolkitDir)\idevicediagnostics.exe;$(ToolkitDir)\aria2c.exe;$(ToolkitDir)\aria2.manifest.json;$(ToolkitDir)\aria2-LICENSE.txt;$(ToolkitDir)\aria2-LICENSE-OpenSSL.txt;$(ToolkitDir)\aria2-SOURCE.txt" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(MSBuildThisFileDirectory)..\..\..\LICENSE" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\LICENSE')" CopyToOutputDirectory="PreserveNewest" />

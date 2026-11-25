@@ -1,5 +1,6 @@
 * text=auto
 
+tests/IdeviceGui.Tests/fixtures/** binary
 toolkit/*.exe binary
 toolkit/*.dll binary
 third_party/** text=auto

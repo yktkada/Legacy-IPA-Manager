@@ -27,7 +27,7 @@ public sealed class SettingsDraftTests
         Assert.True(draft.IconDownscaleCache);
         Assert.False(draft.LogToFile);
         Assert.False(draft.LogDetailMode);
-        Assert.False(draft.LogHidden);
+        Assert.True(draft.LogHidden);
         Assert.Equal("system", draft.UiLanguage);
         Assert.Equal(2, draft.PollSeconds);
         Assert.True(draft.AutoResume);
@@ -93,7 +93,7 @@ public sealed class SettingsDraftTests
             IconDownscaleCache = false,
             LogToFile = true,
             LogDetailMode = true,
-            LogHidden = true,
+            LogHidden = false,
             LogOverlayWidth = 700,
             UiLanguage = "en",
             PollSeconds = 9,
@@ -116,7 +116,7 @@ public sealed class SettingsDraftTests
         Assert.False(draft.LogDetailMode);
 
         draft.ResetGroup(SettingsGroup.Layout);
-        Assert.False(draft.LogHidden);
+        Assert.True(draft.LogHidden);
         Assert.Equal(420, draft.LogOverlayWidth);
         Assert.Equal("system", draft.UiLanguage);
 

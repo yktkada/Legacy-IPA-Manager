@@ -219,9 +219,10 @@
   </data>
   <data name="License_Body" xml:space="preserve">
     <value>Legacy IPA Manager for Windows — IdeviceIndex
-许可协议：GNU GPL v2 或更高版本（LICENSE / COPYING）。
+许可协议：PolyForm Noncommercial License 1.0.0（LICENSE）。
 
 本工具用于浏览本地只读 IPA 索引，应用描述按上游来源逐字展示，不做 AI 生成。
+图标：由项目作者使用 Gemini 与 ChatGPT 绘制生成。
 
 随包第三方组件：
 · aria2 1.37.0 (win-64bit build1) — GNU GPL v2（详情见程序目录下 aria2-LICENSE.txt、aria2-LICENSE-OpenSSL.txt、aria2-SOURCE.txt）。

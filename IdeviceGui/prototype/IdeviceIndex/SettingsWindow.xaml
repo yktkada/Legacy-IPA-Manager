@@ -396,6 +396,14 @@
             <!-- License -->
             <TabItem Header="{x:Static res:Strings.Settings_Tab_License}">
                 <DockPanel Margin="8">
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+                        <Image Source="pack://application:,,,/IdeviceIndex;component/icon_large.png"
+                               Width="40" Height="40"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Margin="0,0,10,0" VerticalAlignment="Center" />
+                        <TextBlock Text="{x:Static res:Strings.Window_Title}"
+                                   FontSize="14" FontWeight="Bold" VerticalAlignment="Center" />
+                    </StackPanel>
                     <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,8,0,0">
                         <Button x:Name="OpenAppLicenseButton" Content="{x:Static res:Strings.Settings_License_OpenMain}"
                                 Padding="10,3" Click="OnOpenMainLicenseClick" />

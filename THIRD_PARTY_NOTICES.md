@@ -5,9 +5,11 @@ corresponding Windows x64 runtime binaries under `toolkit/`.
 
 ## Binaries included in this repository
 
-The `toolkit/` directory contains the runtime executables and DLLs used by the
-application. Each component keeps its upstream license text in
-`toolkit/LICENSES/` (or beside `aria2c.exe` in `toolkit/`).
+The `toolkit/` directory contains the runtime executables and DLLs used as
+separate processes or dynamically loaded libraries by the application. Each
+component keeps its upstream license text in `toolkit/LICENSES/` (or beside
+`aria2c.exe` in `toolkit/`), and is **not** subject to the PolyForm
+Noncommercial restriction.
 
 ## Source included in this repository
 
@@ -37,8 +39,17 @@ directories and any machine-specific notes were removed. See
 | zlib | zlib license | `toolkit/LICENSES/zlib-LICENSE` |
 
 The toolkit is a collection of separate executables and dynamically loaded
-libraries. It is not relicensed as GPL-3.0 as a whole; each component keeps
-its own license.
+libraries. Each component keeps its own upstream license.
+
+## LGPL-2.1 dynamic linking compatibility (`AfcHelper`)
+
+`IdeviceGui/AfcHelper/` is a thin helper executable that dynamically loads
+`libimobiledevice-1.0.dll` and `libplist-2.0.dll` (LGPL-2.1). In accordance
+with LGPL-2.1 Section 6, users are permitted to replace or relink compatible
+versions of those LGPL-2.1 libraries and to debug/reverse-engineer `AfcHelper`
+solely for that purpose. `IdeviceGui` and `IdeviceIndex` communicate with
+`ideviceinstaller.exe`, `aria2c.exe`, and `AfcHelper.exe` strictly as separate
+subprocesses.
 
 ## Build-time dependencies
 
@@ -50,7 +61,9 @@ its own license.
 
 See the package metadata for the exact license text of each NuGet package.
 
-## Our source
+## First-party source
 
-The GUI source in this repository is licensed under GPL-3.0-only. See
-[LICENSE](LICENSE) and [COPYRIGHT](COPYRIGHT).
+Starting with **v1.1.0**, the first-party GUI source and original assets in
+this repository are licensed under the **PolyForm Noncommercial License 1.0.0**
+(`PolyForm-Noncommercial-1.0.0`). See [LICENSE](LICENSE) and [COPYRIGHT](COPYRIGHT).
+Prior releases (`v1.0.0` and `v1.0.1`) remain under `GPL-3.0-only`.

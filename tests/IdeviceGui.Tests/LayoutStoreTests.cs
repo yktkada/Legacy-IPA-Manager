@@ -16,7 +16,7 @@ public sealed class LayoutStoreTests
         var state = LayoutStore.Load(null);
 
         Assert.Equal(new[] { 45d, 27d, 28d }, state.Columns);
-        Assert.False(state.LogHidden);
+        Assert.True(state.LogHidden);
         Assert.Equal(LayoutStore.DefaultOverlayWidth, state.LogOverlayWidth);
     }
 
@@ -79,17 +79,17 @@ public sealed class LayoutStoreTests
         => Assert.Equal(expected, LayoutStore.ParseWidth(raw, LayoutStore.DefaultOverlayWidth));
 
     [Fact]
-    public void 隐藏状态_缺省为false_非法值也用默认()
+    public void 隐藏状态_缺省为true_非法值也用默认()
     {
         using var workspace = new TestWorkspace("layout-hidden");
         using var db = AppDatabase.Open(workspace.Full("library.db"));
 
-        Assert.False(LayoutStore.Load(db).LogHidden);
+        Assert.True(LayoutStore.Load(db).LogHidden);
 
         SettingsStore.SetString(db, LayoutStore.LogHiddenKey, "随便写的");
-        Assert.False(LayoutStore.Load(db).LogHidden);
-
-        SettingsStore.SetString(db, LayoutStore.LogHiddenKey, "true");
         Assert.True(LayoutStore.Load(db).LogHidden);
+
+        SettingsStore.SetString(db, LayoutStore.LogHiddenKey, "false");
+        Assert.False(LayoutStore.Load(db).LogHidden);
     }
 }

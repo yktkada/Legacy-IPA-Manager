@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Resource Include="app.ico" />
+    <Resource Include="icon_large.png" />
   </ItemGroup>
 
   <ItemGroup>

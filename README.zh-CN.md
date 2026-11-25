@@ -1,5 +1,10 @@
 # Legacy IPA Manager for Windows
 
+<p>
+  <img src="assets/manager-icon.png" width="96" alt="Legacy IPA Manager 图标" />
+  <img src="assets/index-icon.png" width="96" alt="IdeviceIndex 图标" />
+</p>
+
 **适用于旧版 iOS 设备的 IPA 资料库、兼容性分析与多设备安装管理器**
 
 [English](README.md) | 简体中文
@@ -58,8 +63,9 @@ dotnet test .\tests\IdeviceGui.Tests\IdeviceGui.Tests.csproj -c Release -- --fil
 
 ---
 
-## 许可证
+## 许可证与图标
 
-- 主程序源码：**GNU General Public License v3.0**（GPL-3.0-only），见 [LICENSE](LICENSE) 与 [COPYRIGHT](COPYRIGHT)。
+- 主程序源码与自制图标（`1.1.0+`）：**PolyForm Noncommercial License 1.0.0**（非商用许可，见 [LICENSE](LICENSE) 与 [COPYRIGHT](COPYRIGHT)）。历史版本（`v1.0.0` / `v1.0.1`）仍保持 `GPL-3.0-only`。
 - 内置 `aria2c.exe` (1.37.0)：**GPL-2.0**（`toolkit/aria2-LICENSE.txt`、`toolkit/aria2-SOURCE.txt`）。
-- 第三方组件与许可证汇总见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 `toolkit/LICENSES/`。
+- 第三方组件与 `AfcHelper` LGPL-2.1 兼容声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 `toolkit/LICENSES/`。
+- 应用图标由项目作者使用 Gemini 与 ChatGPT 绘制生成。

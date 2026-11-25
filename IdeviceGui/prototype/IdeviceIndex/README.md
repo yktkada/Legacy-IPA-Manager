@@ -1,5 +1,7 @@
 # IdeviceIndex
 
+<p><img src="../../../assets/index-icon.png" width="88" alt="IdeviceIndex icon" /></p>
+
 `Legacy IPA Manager` 的配套离线索引浏览与高速下载组件（随主程序目录同级分发，不可缺失）。
 
 ## 运行

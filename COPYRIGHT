@@ -1,14 +1,14 @@
-iDeviceInstaller+Library GUI For Windows
+Legacy IPA Manager for Windows
 Copyright (C) 2026 yktkada
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, version 3 of the License.
+Starting with version 1.1.0, the first-party application source code and
+original assets in this repository (excluding third_party/, toolkit/, and the
+LGPL-2.1-compatible AfcHelper wrapper rights) are licensed under the
+PolyForm Noncommercial License 1.0.0. See LICENSE for the full license text.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+Prior versions (v1.0.0 and v1.0.1) remain available under GPL-3.0-only as
+originally distributed.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Bundled third-party components in toolkit/ and third_party/ retain their
+respective upstream GPL-2.0 / LGPL-2.1 / permissive licenses; see
+THIRD_PARTY_NOTICES.md.

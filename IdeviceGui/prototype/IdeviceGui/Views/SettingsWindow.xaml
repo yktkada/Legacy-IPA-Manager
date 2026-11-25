@@ -320,10 +320,18 @@
             <TabItem Header="{x:Static res:Strings.Settings_Tab_About}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
                     <StackPanel>
-                        <TextBlock Text="Legacy IPA Manager for Windows"
-                                   FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
-                        <TextBlock Text="IPA Library &amp; Installer for Legacy iOS Devices"
-                                   Margin="0,4,0,12" Foreground="#FF555555" TextWrapping="Wrap" />
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <Image Source="pack://application:,,,/IdeviceGui;component/icon_large.png"
+                                   Width="64" Height="64"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   Margin="0,0,14,0" VerticalAlignment="Center" />
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="Legacy IPA Manager for Windows"
+                                           FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
+                                <TextBlock Text="IPA Library &amp; Installer for Legacy iOS Devices"
+                                           Margin="0,4,0,0" Foreground="#FF555555" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </StackPanel>
                         <TextBlock TextWrapping="Wrap" LineHeight="20">
                             A powerful IPA library manager and installer for legacy iOS devices on Windows.
                         </TextBlock>
@@ -340,7 +348,8 @@
                         <TextBlock Margin="0,12,0,0" TextWrapping="Wrap" LineHeight="20">
                             Unofficial third-party tool. Not affiliated with Apple Inc.
                         </TextBlock>
-                        <TextBlock Margin="0,12,0,0" Text="License: GPL-2.0-or-later · aria2 1.37.0 (GPL-2.0)" TextWrapping="Wrap" />
+                        <TextBlock Margin="0,12,0,0" Text="License: PolyForm Noncommercial 1.0.0 · aria2 1.37.0 (GPL-2.0)" TextWrapping="Wrap" />
+                        <TextBlock Margin="0,4,0,0" Foreground="#FF555555" Text="Icons: Custom artwork created with Gemini and ChatGPT." TextWrapping="Wrap" />
                         <Button Content="{x:Static res:Strings.Settings_About_LicensesButton}" Margin="0,8,0,0"
                                 HorizontalAlignment="Left" Padding="10,4" Click="OnOpenLicensesClick" />
                     </StackPanel>

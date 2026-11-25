@@ -219,9 +219,10 @@
   </data>
   <data name="License_Body" xml:space="preserve">
     <value>Legacy IPA Manager for Windows — IdeviceIndex
-License: GNU General Public License v2.0 or later (LICENSE / COPYING).
+License: PolyForm Noncommercial License 1.0.0 (LICENSE).
 
 This tool browses a local read-only IPA index. Descriptions are reproduced verbatim from upstream sources with zero AI generation.
+Icons: Custom artwork created with Gemini and ChatGPT.
 
 Bundled Third-Party Components:
 · aria2 1.37.0 (win-64bit build1) — GNU GPL v2 (see aria2-LICENSE.txt, aria2-LICENSE-OpenSSL.txt, aria2-SOURCE.txt in the program directory).

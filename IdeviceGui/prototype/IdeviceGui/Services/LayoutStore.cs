@@ -12,8 +12,8 @@ namespace IdeviceGui.Services;
 /// </summary>
 internal sealed record LayoutState(double[] Columns, bool LogHidden, double LogOverlayWidth)
 {
-    /// <summary>默认 45 / 27 / 28，日志栏显示，浮层 420 DIP（docs/01 §2 / §2.1）。</summary>
-    public static LayoutState Default { get; } = new(new[] { 45d, 27d, 28d }, false, 420d);
+    /// <summary>默认 45 / 27 / 28，日志栏默认隐藏，浮层 420 DIP（docs/01 §2 / §2.1）。</summary>
+    public static LayoutState Default { get; } = new(new[] { 45d, 27d, 28d }, true, 420d);
 }
 
 /// <summary>
@@ -45,7 +45,7 @@ internal static class LayoutStore
         try
         {
             var columns = ParseColumns(SettingsStore.GetString(db, ColumnsKey));
-            var hidden = SettingsStore.GetBool(db, LogHiddenKey, fallback: false);
+            var hidden = SettingsStore.GetBool(db, LogHiddenKey, fallback: true);
             var overlay = ParseWidth(SettingsStore.GetString(db, LogOverlayWidthKey), DefaultOverlayWidth);
             return new LayoutState(columns, hidden, overlay);
         }

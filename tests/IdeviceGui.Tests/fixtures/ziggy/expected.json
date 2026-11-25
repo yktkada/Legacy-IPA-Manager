@@ -1,0 +1,22 @@
+{
+  "bundleId": "com.tinyplay.ZiggyLightsOn",
+  "version": "1.1",
+  "name": "Ziggy Lights",
+  "minOs": "4.1",
+  "appDirectory": "ZiggyLightsOn.app",
+  "plistFormat": "bplist",
+  "executableName": "ZiggyLightsOn",
+  "arch": "armv6,armv7",
+  "archSource": "脚本内独立的 PowerShell 实现（Read-U32/Get-ArchFromMachO）；M3 用生产解析器复核，本轮不断言",
+  "machoMagic": "CAFEBABE",
+  "hasCgbi": true,
+  "fileSize": 1166238,
+  "sourceIpa": "Ziggy Lights 1.1.ipa",
+  "sourceIpaSha256": "bb7d540c2f890f6e24943c9f6d24b28390b1181cceb14821bf8d8399a5308591",
+  "generatedBy": "FixtureGeneration/extract_fixtures.ps1（R3：+sha256/来源指纹/machoMagic）",
+  "filesSha256": {
+    "Info.plist": "351ae33b9b6297282e04de0e31a853d9d128d62dabec2d0e148fac204ea89ee9",
+    "executable-head.bin": "5a1d334de14a9e13da728cb56ff4f1a064b52b99f3f5a46d70ddaa537af1fc59",
+    "icon-slice.bin": "60b9ca721ad2da2f52a6d1b56a6a8dc9e6f76334841a89b6c86915b7319c626c"
+  }
+}

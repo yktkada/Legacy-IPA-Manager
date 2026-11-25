@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>IdeviceIndex</AssemblyName>
+    <RootNamespace>IdeviceIndex</RootNamespace>
+    <AssemblyTitle>IPA 索引</AssemblyTitle>
+    <Product>Legacy IPA Manager</Product>
+    <Description>Legacy IPA Manager - IPA 索引浏览</Description>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <DefineConstants>$(DefineConstants);IDEVICEINDEX</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Shared\AlphabetBuckets.cs" Link="AlphabetBuckets.cs" />
+    <Compile Include="..\Shared\AlphabetJumpBar.cs" Link="AlphabetJumpBar.cs" />
+    <Compile Include="..\Shared\MenuShortcutIcons.cs" Link="MenuShortcutIcons.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="IdeviceGui.Tests" />
+  </ItemGroup>
+
+  <!-- SQLite 原生库随 helper 一起分发；单独双击 helper 时也能找到 e_sqlite3.dll。 -->
+  <Target Name="CopySqliteNativeToOutput" AfterTargets="Build">
+    <ItemGroup>
+      <SqliteNativeFiles Include="$(OutDir)runtimes\win-x64\native\e_sqlite3.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SqliteNativeFiles)" DestinationFolder="$(OutDir)"
+          SkipUnchangedFiles="true" Condition="Exists('%(SqliteNativeFiles.FullPath)')" />
+    <Warning Condition="!Exists('%(SqliteNativeFiles.FullPath)')"
+             Text="找不到 e_sqlite3.dll（%(SqliteNativeFiles.FullPath)）：索引库将无法打开。" />
+  </Target>
+</Project>

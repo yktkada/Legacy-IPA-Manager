@@ -1,0 +1,76 @@
+<Window x:Class="IdeviceIndex.IndexImportWindow" x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:IdeviceIndex.Resources"
+        Title="{x:Static res:Strings.Import_Title}"
+        Width="600" SizeToContent="Height" MinWidth="540"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <DockPanel Margin="14">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+            <Button x:Name="ImportButton" Content="{x:Static res:Strings.Import_StartButton}"
+                    Width="92" Padding="0,4" IsDefault="True" Click="OnImportClick" />
+            <Button x:Name="CancelCloseButton" Content="{x:Static res:Strings.Import_CancelButton}"
+                    Width="92" Padding="0,4" Margin="8,0,0,0" IsCancel="True" Click="OnCancelOrCloseClick" />
+        </StackPanel>
+
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="96" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{x:Static res:Strings.Import_FileLabel}" VerticalAlignment="Center" Margin="0,0,8,0" />
+                <TextBox x:Name="FilePathBox" Grid.Column="1" VerticalContentAlignment="Center" Height="24"
+                         TextChanged="OnFilePathChanged" />
+                <Button x:Name="BrowseButton" Grid.Column="2" Content="{x:Static res:Strings.DownloadDir_Browse}"
+                        Height="24" Padding="10,0" Margin="6,0,0,0" Click="OnBrowseClick" />
+            </Grid>
+
+            <GroupBox x:Name="RemoteUpdatePanel" Header="{x:Static res:Strings.Import_RemoteGroup}"
+                      Margin="0,10,0,0" Padding="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="88" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{x:Static res:Strings.Import_UpdateUrlLabel}" VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <TextBox x:Name="UpdateUrlBox" Grid.Column="1" VerticalContentAlignment="Center" Height="24"
+                             TextChanged="OnUpdateUrlChanged" />
+                    <Button x:Name="DownloadUpdateButton" Grid.Column="2"
+                            Content="{x:Static res:Strings.Import_DownloadApplyButton}"
+                            Height="24" Padding="10,0" Margin="6,0,0,0" Click="OnDownloadUpdateClick" />
+                </Grid>
+            </GroupBox>
+
+            <GroupBox x:Name="DbModePanel" Header="{x:Static res:Strings.Import_DbModeGroup}"
+                      Margin="0,10,0,0" Padding="8" Visibility="Collapsed">
+                <StackPanel>
+                    <RadioButton x:Name="DbCopyRadio" GroupName="DbMode"
+                                 Content="{x:Static res:Strings.Import_DbCopyRadio}" IsChecked="True" />
+                    <RadioButton x:Name="DbLinkRadio" GroupName="DbMode" Margin="0,6,0,0"
+                                 Content="{x:Static res:Strings.Import_DbLinkRadio}" />
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox x:Name="JsonModePanel" Header="{x:Static res:Strings.Import_JsonModeGroup}"
+                      Margin="0,10,0,0" Padding="8" Visibility="Visible">
+                <StackPanel>
+                    <RadioButton x:Name="JsonIncrementalRadio" GroupName="JsonMode"
+                                 Content="{x:Static res:Strings.Import_JsonIncrementalRadio}" />
+                    <RadioButton x:Name="JsonFullReplaceRadio" GroupName="JsonMode" Margin="0,6,0,0"
+                                 Content="{x:Static res:Strings.Import_JsonFullReplaceRadio}" IsChecked="True" />
+                    <CheckBox x:Name="MergeSourcesCheck" Margin="0,10,0,0" IsChecked="True"
+                              Content="{x:Static res:Strings.Import_MergeSourcesCheck}" />
+                    <CheckBox x:Name="VerifyBaseRevisionCheck" Margin="0,6,0,0" IsChecked="True"
+                              Content="{x:Static res:Strings.Import_VerifyBaseRevisionCheck}" />
+                </StackPanel>
+            </GroupBox>
+
+            <ProgressBar x:Name="ImportProgressBar" Height="14" Margin="0,12,0,4" Minimum="0" Maximum="100" />
+            <TextBlock x:Name="ImportStatusText" Text="{x:Static res:Strings.Import_ReadyHint}"
+                       Foreground="#FF555555" TextWrapping="Wrap" />
+        </StackPanel>
+    </DockPanel>
+</Window>

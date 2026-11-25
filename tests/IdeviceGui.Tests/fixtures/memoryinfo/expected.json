@@ -1,0 +1,22 @@
+{
+  "bundleId": "com.RecessionApps.MemoryInfo",
+  "version": "1.1",
+  "name": "MemoryInfo",
+  "minOs": "2.0",
+  "appDirectory": "MemoryInfo.app",
+  "plistFormat": "xml",
+  "executableName": "MemoryInfo",
+  "arch": "armv6",
+  "archSource": "脚本内独立的 PowerShell 实现（Read-U32/Get-ArchFromMachO）；M3 用生产解析器复核，本轮不断言",
+  "machoMagic": "CEFAEDFE",
+  "hasCgbi": true,
+  "fileSize": 112005,
+  "sourceIpa": "MemoryInfo 1.1.ipa",
+  "sourceIpaSha256": "d5c56c78abe347300367952b1d3ee49e3f88d36beaac1d44ecd7bc09c12f55bd",
+  "generatedBy": "FixtureGeneration/extract_fixtures.ps1（R3：+sha256/来源指纹/machoMagic）",
+  "filesSha256": {
+    "Info.plist": "cf29e95e015d1f0876f1a19d95bf5d6f7f29e4f719bb3eebcf9a40ed7e3a425b",
+    "executable-head.bin": "b4fc203e022021ccbc4fe1183e7b569350f471e520120c4e60ea5202b80bfe09",
+    "icon-slice.bin": "4a2c8ce6c682716c21c8abfe88c7e062501b0b505e5742f4131ef7a8c1d89ec2"
+  }
+}

@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="App_Title" xml:space="preserve">
+    <value>IPA Index</value>
+  </data>
+  <data name="App_SingleInstance_Title" xml:space="preserve">
+    <value>IPA Index is already running</value>
+  </data>
+  <data name="App_SingleInstance_AlreadyRunning" xml:space="preserve">
+    <value>An instance of IPA Index is already running in this session. Please switch to the existing window.</value>
+  </data>
+  <data name="App_DbOpenFailedFormat" xml:space="preserve">
+    <value>Failed to open index database:
+{0}</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>IPA Index - Legacy IPA Manager</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Toolbar_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Toolbar_SearchToolTip" xml:space="preserve">
+    <value>Search fields &amp; match mode configurable via ▾</value>
+  </data>
+  <data name="Toolbar_Device" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="Filter_Device_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Toolbar_MinIos" xml:space="preserve">
+    <value>Min iOS</value>
+  </data>
+  <data name="Toolbar_CountMergedFormat" xml:space="preserve">
+    <value>{0:N0} total ({1:N0} groups)</value>
+  </data>
+  <data name="Toolbar_CountUnmergedFormat" xml:space="preserve">
+    <value>{0:N0} total</value>
+  </data>
+  <data name="Toolbar_MergeSameBundle" xml:space="preserve">
+    <value>Merge Same Bundle</value>
+  </data>
+  <data name="Toolbar_MergeSameBundleToolTip" xml:space="preserve">
+    <value>Group entries with the same BundleId (click group row to expand)</value>
+  </data>
+  <data name="Search_OptionsToolTip" xml:space="preserve">
+    <value>Select search fields &amp; match mode</value>
+  </data>
+  <data name="Search_MatchModeHeader" xml:space="preserve">
+    <value>Match Mode</value>
+  </data>
+  <data name="Search_ModeContains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="Search_ModePrefix" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="Search_ModeExact" xml:space="preserve">
+    <value>Exact</value>
+  </data>
+  <data name="Filter_ToggleName" xml:space="preserve">
+    <value>Enable Advanced Filter</value>
+  </data>
+  <data name="Filter_ToggleToolTip" xml:space="preserve">
+    <value>Enable or disable advanced filter conditions</value>
+  </data>
+  <data name="Filter_Button" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Filter_ButtonCountFormat" xml:space="preserve">
+    <value>Filter ({0})</value>
+  </data>
+  <data name="Filter_ButtonToolTip" xml:space="preserve">
+    <value>Configure multi-group SQLite filter rules</value>
+  </data>
+  <data name="Filter_Title" xml:space="preserve">
+    <value>Advanced Filter</value>
+  </data>
+  <data name="Filter_Hint" xml:space="preserve">
+    <value>Conditions within a group combine with AND/OR; groups combine with AND.</value>
+  </data>
+  <data name="Filter_ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Filter_AddGroup" xml:space="preserve">
+    <value>Add Group</value>
+  </data>
+  <data name="Filter_Apply" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Filter_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Filter_Group_HeaderFormat" xml:space="preserve">
+    <value>Group {0}</value>
+  </data>
+  <data name="Filter_Group_JoinLabel" xml:space="preserve">
+    <value>Join:</value>
+  </data>
+  <data name="Filter_Join_And" xml:space="preserve">
+    <value>AND</value>
+  </data>
+  <data name="Filter_Join_Or" xml:space="preserve">
+    <value>OR</value>
+  </data>
+  <data name="Filter_AddCondition" xml:space="preserve">
+    <value>+ Condition</value>
+  </data>
+  <data name="Filter_RemoveGroup" xml:space="preserve">
+    <value>Remove Group</value>
+  </data>
+  <data name="Filter_Mode_Range" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="Filter_Col_SizeMb" xml:space="preserve">
+    <value>Size (MB)</value>
+  </data>
+  <data name="Filter_Col_Developer" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="Filter_Col_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Filter_Col_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="MinOs_OperatorToolTip" xml:space="preserve">
+    <value>Minimum iOS comparison operator</value>
+  </data>
+  <data name="MinOs_InputToolTip" xml:space="preserve">
+    <value>Enter minimum iOS version (e.g. 6.1.3) or pick from menu</value>
+  </data>
+  <data name="MinOs_InvalidTooltip" xml:space="preserve">
+    <value>Invalid iOS version format (use major.minor[.patch], 0-99 per part)</value>
+  </data>
+  <data name="MinOs_DropdownToolTip" xml:space="preserve">
+    <value>Choose built-in iOS version (2.0-10.3.4)</value>
+  </data>
+  <data name="MinOs_Any" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="Column_Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Column_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Column_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Column_MinOs" xml:space="preserve">
+    <value>Min iOS</value>
+  </data>
+  <data name="Column_DeviceFamily" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="Column_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Column_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Detail_DescriptionHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Detail_SourcesHeader" xml:space="preserve">
+    <value>Download Sources</value>
+  </data>
+  <data name="Detail_ReadOnlyHint" xml:space="preserve">
+    <value>Double-click an index row to enqueue download; double-click a queue row to cancel.</value>
+  </data>
+  <data name="Detail_MetaFormat" xml:space="preserve">
+    <value>{0} · Version {1} · Min iOS {2} · {3} · {4} · {5} source(s)</value>
+  </data>
+  <data name="Detail_LoadFailedFormat" xml:space="preserve">
+    <value>Failed to load details: {0}</value>
+  </data>
+  <data name="Detail_NoDescription" xml:space="preserve">
+    <value>No description (not provided by source; not generated).</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Status_MetaFormat" xml:space="preserve">
+    <value>schema {0} · Search LIKE</value>
+  </data>
+  <data name="Status_MetaFailed" xml:space="preserve">
+    <value>Failed to read metadata</value>
+  </data>
+  <data name="Status_MetaFailedFormat" xml:space="preserve">
+    <value>Failed to read metadata: {0}</value>
+  </data>
+  <data name="Status_Querying" xml:space="preserve">
+    <value>Querying...</value>
+  </data>
+  <data name="Status_NoMatches" xml:space="preserve">
+    <value>No matching results</value>
+  </data>
+  <data name="Status_QueryFailedFormat" xml:space="preserve">
+    <value>Query failed: {0}</value>
+  </data>
+  <data name="Status_IconLoadFailedFormat" xml:space="preserve">
+    <value>Failed to load icon: {0}</value>
+  </data>
+  <data name="License_Body" xml:space="preserve">
+    <value>Legacy IPA Manager for Windows — IdeviceIndex
+License: GNU General Public License v2.0 or later (LICENSE / COPYING).
+
+This tool browses a local read-only IPA index. Descriptions are reproduced verbatim from upstream sources with zero AI generation.
+
+Bundled Third-Party Components:
+· aria2 1.37.0 (win-64bit build1) — GNU GPL v2 (see aria2-LICENSE.txt, aria2-LICENSE-OpenSSL.txt, aria2-SOURCE.txt in the program directory).
+· Microsoft.Data.Sqlite / SQLite (e_sqlite3.dll) — MIT / Public Domain.
+
+Unofficial third-party tool. Not affiliated with Apple Inc.</value>
+  </data>
+  <data name="Toolbar_MultiSelect_Off" xml:space="preserve">
+    <value>Multi-Select</value>
+  </data>
+  <data name="Toolbar_MultiSelect_OnFormat" xml:space="preserve">
+    <value>Multi-Select ({0})</value>
+  </data>
+  <data name="Toolbar_MultiSelect_ToolTip" xml:space="preserve">
+    <value>Toggle multi-select mode (drag to select range, right-click to download)</value>
+  </data>
+  <data name="Toolbar_DownloadSelectedFormat" xml:space="preserve">
+    <value>Download Selected ({0})</value>
+  </data>
+  <data name="Toolbar_DownloadSelectedToolTip" xml:space="preserve">
+    <value>Add selected entries to the download queue</value>
+  </data>
+  <data name="Toolbar_ClearSelection" xml:space="preserve">
+    <value>Clear Selection</value>
+  </data>
+  <data name="Toolbar_ClearSelectionToolTip" xml:space="preserve">
+    <value>Clear multi-selected entries</value>
+  </data>
+  <data name="Toolbar_HideRight" xml:space="preserve">
+    <value>Hide Side Panel</value>
+  </data>
+  <data name="Toolbar_ShowRight" xml:space="preserve">
+    <value>Show Side Panel</value>
+  </data>
+  <data name="Toolbar_RightToggleToolTip" xml:space="preserve">
+    <value>Show / hide right queue &amp; details panel (Ctrl+L)</value>
+  </data>
+  <data name="ContextMenu_Enqueue" xml:space="preserve">
+    <value>Enqueue Download</value>
+  </data>
+  <data name="ContextMenu_EnqueueSelectedFormat" xml:space="preserve">
+    <value>Enqueue Selected ({0})</value>
+  </data>
+  <data name="ContextMenu_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ContextMenu_CopyName" xml:space="preserve">
+    <value>Copy Name</value>
+  </data>
+  <data name="ContextMenu_CopyBundleId" xml:space="preserve">
+    <value>Copy BundleId</value>
+  </data>
+  <data name="ContextMenu_CopyVersion" xml:space="preserve">
+    <value>Copy Version</value>
+  </data>
+  <data name="ContextMenu_CopyMinOs" xml:space="preserve">
+    <value>Copy Min iOS</value>
+  </data>
+  <data name="ContextMenu_RowHeight" xml:space="preserve">
+    <value>Row Height</value>
+  </data>
+  <data name="RowHeight_Small" xml:space="preserve">
+    <value>Small (24)</value>
+  </data>
+  <data name="RowHeight_Medium" xml:space="preserve">
+    <value>Medium (32)</value>
+  </data>
+  <data name="RowHeight_Large" xml:space="preserve">
+    <value>Large (42)</value>
+  </data>
+  <data name="ContextMenu_ClearSelection" xml:space="preserve">
+    <value>Clear Selection</value>
+  </data>
+  <data name="ContextMenu_ExpandGroup" xml:space="preserve">
+    <value>Expand Group</value>
+  </data>
+  <data name="ContextMenu_CollapseGroup" xml:space="preserve">
+    <value>Collapse Group</value>
+  </data>
+  <data name="RightSection_Queue" xml:space="preserve">
+    <value>Download Queue</value>
+  </data>
+  <data name="RightSection_Details" xml:space="preserve">
+    <value>App Details</value>
+  </data>
+  <data name="Queue_Suspend" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+  <data name="Queue_Resume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="Queue_SuspendResumeToolTip" xml:space="preserve">
+    <value>Suspend or resume pending download queue</value>
+  </data>
+  <data name="Queue_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Queue_CancelToolTip" xml:space="preserve">
+    <value>Cancel selected item (or double-click queue item)</value>
+  </data>
+  <data name="Queue_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Queue_ClearToolTip" xml:space="preserve">
+    <value>Clear completed, failed, and cancelled items</value>
+  </data>
+  <data name="Queue_SummaryFormat" xml:space="preserve">
+    <value>{0} queued · {1} active · {2} done · {3} failed</value>
+  </data>
+  <data name="Queue_Status_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="Queue_Status_Downloading" xml:space="preserve">
+    <value>Downloading</value>
+  </data>
+  <data name="Queue_Status_Verifying" xml:space="preserve">
+    <value>Verifying</value>
+  </data>
+  <data name="Queue_Status_Importing" xml:space="preserve">
+    <value>Importing</value>
+  </data>
+  <data name="Queue_Status_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="Queue_Status_Succeeded" xml:space="preserve">
+    <value>Succeeded</value>
+  </data>
+  <data name="Queue_Status_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Queue_Status_Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Queue_Note_Waiting" xml:space="preserve">
+    <value>Queued (ready for download engine)</value>
+  </data>
+  <data name="Queue_Note_Suspended" xml:space="preserve">
+    <value>Queue suspended</value>
+  </data>
+  <data name="Queue_Col_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Queue_Col_Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Queue_Col_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Queue_Col_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Queue_Col_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Queue_Col_MinOs" xml:space="preserve">
+    <value>Min iOS</value>
+  </data>
+  <data name="Queue_Col_DeviceFamily" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="Queue_Col_Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Queue_Col_TargetPath" xml:space="preserve">
+    <value>Target Path</value>
+  </data>
+  <data name="Status_EnqueuedFormat" xml:space="preserve">
+    <value>Enqueued: {0}</value>
+  </data>
+  <data name="Status_AlreadyQueuedFormat" xml:space="preserve">
+    <value>Already in queue: {0}</value>
+  </data>
+  <data name="Status_BatchEnqueuedFormat" xml:space="preserve">
+    <value>Enqueued {0} item(s) ({1} already in queue)</value>
+  </data>
+  <data name="Status_QueueCancelledFormat" xml:space="preserve">
+    <value>Cancelled: {0}</value>
+  </data>
+  <data name="Status_QueueSuspended" xml:space="preserve">
+    <value>Download queue suspended</value>
+  </data>
+  <data name="Status_QueueResumed" xml:space="preserve">
+    <value>Download queue resumed</value>
+  </data>
+  <data name="Status_QueueClearedFormat" xml:space="preserve">
+    <value>Cleared {0} finished item(s)</value>
+  </data>
+  <data name="Status_CopiedFormat" xml:space="preserve">
+    <value>Copied: {0}</value>
+  </data>
+  <data name="Aria2_Error_FilesMissingFormat" xml:space="preserve">
+    <value>aria2 integrity check failed: missing required file ({0}). Downloads are disabled.</value>
+  </data>
+  <data name="Aria2_Error_ManifestInvalidFormat" xml:space="preserve">
+    <value>aria2 integrity check failed: invalid manifest ({0}). Downloads are disabled.</value>
+  </data>
+  <data name="Aria2_Error_ProcessFailedFormat" xml:space="preserve">
+    <value>aria2 integrity check failed: unable to run aria2c.exe ({0}). Downloads are disabled.</value>
+  </data>
+  <data name="Aria2_Error_VersionMismatchFormat" xml:space="preserve">
+    <value>aria2 version mismatch (expected {0}, got {1}). Downloads are disabled.</value>
+  </data>
+  <data name="Aria2_Error_HashMismatchFormat" xml:space="preserve">
+    <value>aria2 SHA-256 checksum mismatch (expected {0}, got {1}). Downloads are disabled.</value>
+  </data>
+  <data name="Aria2_Disabled_BannerFormat" xml:space="preserve">
+    <value>Downloads disabled: {0}</value>
+  </data>
+  <data name="Policy_Error_OutsideProgramDirFormat" xml:space="preserve">
+    <value>Write outside program directory is blocked by security policy: {0}</value>
+  </data>
+  <data name="Policy_Error_ForbiddenSystemDirFormat" xml:space="preserve">
+    <value>Writing to system temporary or protected profile directory is forbidden: {0}</value>
+  </data>
+  <data name="Policy_Error_ReparsePointFormat" xml:space="preserve">
+    <value>Reparse point / symbolic link path is rejected: {0}</value>
+  </data>
+  <data name="Policy_Error_DirNotWritableFormat" xml:space="preserve">
+    <value>Target directory is not writable ({0}): {1}</value>
+  </data>
+  <data name="Policy_Error_MaxFileSizeFormat" xml:space="preserve">
+    <value>File size ({0} MB) exceeds configured limit ({1} MB).</value>
+  </data>
+  <data name="Policy_Error_InsufficientSpaceFormat" xml:space="preserve">
+    <value>Insufficient disk space: {0} short.</value>
+  </data>
+  <data name="Policy_Error_EmptyFile" xml:space="preserve">
+    <value>Downloaded file is empty.</value>
+  </data>
+  <data name="Policy_Error_SizeMismatchFormat" xml:space="preserve">
+    <value>File size mismatch (expected {0} bytes, got {1} bytes).</value>
+  </data>
+  <data name="Policy_Error_InvalidZipHeader" xml:space="preserve">
+    <value>Corrupted file: invalid ZIP/IPA header.</value>
+  </data>
+  <data name="Policy_Error_Sha256Mismatch" xml:space="preserve">
+    <value>Corrupted file: SHA-256 verification failed.</value>
+  </data>
+  <data name="Policy_Error_NotSingleFileFormat" xml:space="preserve">
+    <value>Refused to delete directory or non-regular file: {0}</value>
+  </data>
+  <data name="Download_Note_NoSources" xml:space="preserve">
+    <value>No download source available</value>
+  </data>
+  <data name="Download_Note_MirrorAttemptFormat" xml:space="preserve">
+    <value>Mirror {0}/{1}</value>
+  </data>
+  <data name="Download_Note_RetryingFormat" xml:space="preserve">
+    <value>Retrying ({0}/{1})...</value>
+  </data>
+  <data name="Download_Note_StallRetrying" xml:space="preserve">
+    <value>No data progress; retrying...</value>
+  </data>
+  <data name="Download_Note_Verifying" xml:space="preserve">
+    <value>Verifying downloaded file...</value>
+  </data>
+  <data name="Download_Error_DeadLink" xml:space="preserve">
+    <value>Link dead (HTTP 404/410)</value>
+  </data>
+  <data name="Download_Error_Unavailable" xml:space="preserve">
+    <value>Link unavailable (HTTP 403)</value>
+  </data>
+  <data name="Download_Error_DiskFullFormat" xml:space="preserve">
+    <value>Disk full: {0}</value>
+  </data>
+  <data name="Download_Error_FailedFormat" xml:space="preserve">
+    <value>Download failed: {0}</value>
+  </data>
+  <data name="Download_Error_DaemonFailedFormat" xml:space="preserve">
+    <value>aria2 RPC startup failed: {0}</value>
+  </data>
+  <data name="Download_Note_SavedToFormat" xml:space="preserve">
+    <value>Saved: {0}</value>
+  </data>
+  <data name="Window_ConfirmExitActiveDownloadsFormat" xml:space="preserve">
+    <value>{0} download(s) are still in progress. Exit anyway and stop active downloads?</value>
+  </data>
+  <data name="Window_ConfirmExitCaption" xml:space="preserve">
+    <value>Confirm Exit</value>
+  </data>
+  <data name="Status_Aria2ReadyFormat" xml:space="preserve">
+    <value>aria2 {0} ready</value>
+  </data>
+  <data name="Status_CleanedStalePartsFormat" xml:space="preserve">
+    <value>Cleaned {0} expired .part file(s)</value>
+  </data>
+  <data name="Ipc_Note_ProtocolMismatch" xml:space="preserve">
+    <value>Saved; main app protocol version mismatch (please update).</value>
+  </data>
+  <data name="Ipc_Note_StandaloneLibraryFallback" xml:space="preserve">
+    <value>Saved to library; will be imported on next main app scan.</value>
+  </data>
+  <data name="Ipc_Note_NotInScanRoot" xml:space="preserve">
+    <value>Saved; directory is not an enabled scan root (will not auto-import).</value>
+  </data>
+  <data name="Ipc_Note_AutoImportedFormat" xml:space="preserve">
+    <value>Auto-imported into library: {0}</value>
+  </data>
+  <data name="Ipc_Note_RefreshedFallback" xml:space="preserve">
+    <value>Saved; triggered main app library refresh.</value>
+  </data>
+  <data name="Ipc_Note_NextScanFallback" xml:space="preserve">
+    <value>Saved; main app will import on next scan.</value>
+  </data>
+  <data name="Toolbar_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Toolbar_SettingsToolTip" xml:space="preserve">
+    <value>Configure download, network, layout, and security settings</value>
+  </data>
+  <data name="DownloadDir_Label" xml:space="preserve">
+    <value>Download To</value>
+  </data>
+  <data name="DownloadDir_Browse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="DownloadDir_Warning_NotInScanRoot" xml:space="preserve">
+    <value>Selected directory is outside enabled scan roots; downloaded IPAs will not be auto-imported into the library.</value>
+  </data>
+  <data name="DownloadDir_Warning_OutsideBlocked" xml:space="preserve">
+    <value>Selected directory is outside the program directory and writing is currently blocked. Enable "Allow writing outside program directory" in Settings -&gt; Security first.</value>
+  </data>
+  <data name="Sources_CopyLink" xml:space="preserve">
+    <value>Copy Link</value>
+  </data>
+  <data name="Sources_OpenLink" xml:space="preserve">
+    <value>Open Link</value>
+  </data>
+  <data name="Sources_OpenPage" xml:space="preserve">
+    <value>Open Details Page</value>
+  </data>
+  <data name="Status_SourceLinkOpenedFormat" xml:space="preserve">
+    <value>Opened link: {0}</value>
+  </data>
+  <data name="Status_SourceLinkInvalid" xml:space="preserve">
+    <value>Only http/https links can be opened.</value>
+  </data>
+  <data name="Status_LanguageChangedHint" xml:space="preserve">
+    <value>Language saved; restart IPA Index to refresh all static labels.</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>IPA Index Settings</value>
+  </data>
+  <data name="Settings_Tab_General" xml:space="preserve">
+    <value>General &amp; UI</value>
+  </data>
+  <data name="Settings_Tab_Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Settings_Tab_NetworkSession" xml:space="preserve">
+    <value>Network &amp; Import</value>
+  </data>
+  <data name="Settings_Tab_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="Settings_Button_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Settings_Button_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Settings_Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Settings_Button_ResetGroup" xml:space="preserve">
+    <value>Reset to Defaults</value>
+  </data>
+  <data name="Settings_General_Language" xml:space="preserve">
+    <value>Interface Language</value>
+  </data>
+  <data name="Settings_General_LangSystem" xml:space="preserve">
+    <value>Follow System (default)</value>
+  </data>
+  <data name="Settings_General_LangZhCn" xml:space="preserve">
+    <value>Simplified Chinese (zh-CN)</value>
+  </data>
+  <data name="Settings_General_LangEn" xml:space="preserve">
+    <value>English (en)</value>
+  </data>
+  <data name="Settings_General_LanguageHint" xml:space="preserve">
+    <value>Language change takes full effect after restarting IPA Index.</value>
+  </data>
+  <data name="Settings_General_RightSections" xml:space="preserve">
+    <value>Right Panel Sections (visibility &amp; order)</value>
+  </data>
+  <data name="Settings_General_QueueColumns" xml:space="preserve">
+    <value>Download Queue Fields (visibility &amp; order)</value>
+  </data>
+  <data name="Settings_Button_MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Settings_Button_MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="Settings_Download_Dir" xml:space="preserve">
+    <value>Default Download Folder</value>
+  </data>
+  <data name="Settings_Download_RememberLastDir" xml:space="preserve">
+    <value>Remember last selected download folder</value>
+  </data>
+  <data name="Settings_Download_Connections" xml:space="preserve">
+    <value>Connections per Server (1-16)</value>
+  </data>
+  <data name="Settings_Download_Splits" xml:space="preserve">
+    <value>File Splits (1-16)</value>
+  </data>
+  <data name="Settings_Download_MinSplitSize" xml:space="preserve">
+    <value>Min Split Size (1M-64M)</value>
+  </data>
+  <data name="Settings_Download_Concurrency" xml:space="preserve">
+    <value>Max Concurrent Tasks (1-8)</value>
+  </data>
+  <data name="Settings_Download_SpeedLimit" xml:space="preserve">
+    <value>Overall Speed Limit (0 or 64K-100M)</value>
+  </data>
+  <data name="Settings_Download_PerTaskSpeedLimit" xml:space="preserve">
+    <value>Per-Task Speed Limit (0 or 64K-100M)</value>
+  </data>
+  <data name="Settings_Download_RetryTimes" xml:space="preserve">
+    <value>Retry Times (0-10)</value>
+  </data>
+  <data name="Settings_Download_RetryWait" xml:space="preserve">
+    <value>Retry Wait Seconds (1-120)</value>
+  </data>
+  <data name="Settings_Download_Timeout" xml:space="preserve">
+    <value>Timeout Seconds (10-600)</value>
+  </data>
+  <data name="Settings_Download_Continue" xml:space="preserve">
+    <value>Resume partial downloads (--continue)</value>
+  </data>
+  <data name="Settings_Network_ProxyMode" xml:space="preserve">
+    <value>Proxy Mode</value>
+  </data>
+  <data name="Settings_Network_ProxySystem" xml:space="preserve">
+    <value>System Proxy</value>
+  </data>
+  <data name="Settings_Network_ProxyManual" xml:space="preserve">
+    <value>Manual Proxy</value>
+  </data>
+  <data name="Settings_Network_ProxyNone" xml:space="preserve">
+    <value>Direct (No Proxy)</value>
+  </data>
+  <data name="Settings_Network_ProxyUrl" xml:space="preserve">
+    <value>Proxy URL</value>
+  </data>
+  <data name="Settings_Network_ProxyBypass" xml:space="preserve">
+    <value>Proxy Bypass List</value>
+  </data>
+  <data name="Settings_Network_UserAgent" xml:space="preserve">
+    <value>User-Agent</value>
+  </data>
+  <data name="Settings_Session_DirMode" xml:space="preserve">
+    <value>Session File Location</value>
+  </data>
+  <data name="Settings_Session_ModeProgram" xml:space="preserve">
+    <value>Program data folder (program)</value>
+  </data>
+  <data name="Settings_Session_ModeTarget" xml:space="preserve">
+    <value>Target folder .aria2 (target)</value>
+  </data>
+  <data name="Settings_Session_ModeCustom" xml:space="preserve">
+    <value>Custom folder (custom)</value>
+  </data>
+  <data name="Settings_Session_DirCustom" xml:space="preserve">
+    <value>Custom Session Folder</value>
+  </data>
+  <data name="Settings_Session_ControlFileMode" xml:space="preserve">
+    <value>Control File (.aria2) Mode</value>
+  </data>
+  <data name="Settings_Session_ControlSameAsPart" xml:space="preserve">
+    <value>Same folder as .part (same-as-part)</value>
+  </data>
+  <data name="Settings_Session_ControlSession" xml:space="preserve">
+    <value>Session directory (session)</value>
+  </data>
+  <data name="Settings_Storage_KeepPartFiles" xml:space="preserve">
+    <value>Keep .part files when cancelled or failed</value>
+  </data>
+  <data name="Settings_Storage_PartTtlHours" xml:space="preserve">
+    <value>.part Cleanup TTL Hours (1-720)</value>
+  </data>
+  <data name="Settings_Storage_SpaceMarginMb" xml:space="preserve">
+    <value>Free Space Margin MB (0-1024)</value>
+  </data>
+  <data name="Settings_Storage_MaxFileSizeMb" xml:space="preserve">
+    <value>Max File Size MB (0 = unlimited)</value>
+  </data>
+  <data name="Settings_Import_AutoImport" xml:space="preserve">
+    <value>Auto-import into main app when saved inside a scan root</value>
+  </data>
+  <data name="Settings_Import_AutoRefreshFallback" xml:space="preserve">
+    <value>Fallback to library refresh when single-file import fails</value>
+  </data>
+  <data name="Settings_Import_OpenFolderWhenDone" xml:space="preserve">
+    <value>Open target folder when download finishes</value>
+  </data>
+  <data name="Settings_Security_AllowOutsideWrite" xml:space="preserve">
+    <value>Allow writing outside program directory</value>
+  </data>
+  <data name="Settings_Security_Hint" xml:space="preserve">
+    <value>When off, writes are only allowed inside the program directory; reading and opening paths are never restricted.</value>
+  </data>
+  <data name="Settings_Security_RiskNotice" xml:space="preserve">
+    <value>When enabled, software bugs could modify or delete data outside the program directory at your own risk.</value>
+  </data>
+  <data name="Settings_Security_ConfirmTitle" xml:space="preserve">
+    <value>Allow writing outside program directory</value>
+  </data>
+  <data name="Settings_Security_ConfirmBody" xml:space="preserve">
+    <value>When enabled, this program may save downloads and session files outside the program directory.</value>
+  </data>
+  <data name="Settings_Security_ConfirmRisk" xml:space="preserve">
+    <value>Risk notice: If the program contains a bug, files outside the program directory could be modified or deleted unexpectedly. Enabling this option means you understand and accept this risk.</value>
+  </data>
+  <data name="Settings_Security_ConfirmCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Settings_Security_ConfirmEnable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="Sources_ChooseProgram" xml:space="preserve">
+    <value>Choose Program...</value>
+  </data>
+  <data name="Sources_ChooseProgramMenu" xml:space="preserve">
+    <value>Open with Program...</value>
+  </data>
+  <data name="Links_ChooseProgramDialogTitle" xml:space="preserve">
+    <value>Choose Program to Open Link</value>
+  </data>
+  <data name="Links_ExecutableFilter" xml:space="preserve">
+    <value>Executable Files (*.exe)|*.exe</value>
+  </data>
+  <data name="Links_Error_ProgramMissingFormat" xml:space="preserve">
+    <value>Custom link opener executable not found or invalid: {0}</value>
+  </data>
+  <data name="Links_SaveDefaultTitle" xml:space="preserve">
+    <value>Save Default Link Opener</value>
+  </data>
+  <data name="Links_SaveDefaultPromptFormat" xml:space="preserve">
+    <value>Save this program as the default link opener?
+
+{0}</value>
+  </data>
+  <data name="Download_Hint_ProxyAria2Direct" xml:space="preserve">
+    <value>Check proxy/TUN rules for PROCESS-NAME,aria2c.exe,DIRECT and add PROCESS-NAME,aria2c.exe,PROXY</value>
+  </data>
+  <data name="Settings_General_DisplayLimit" xml:space="preserve">
+    <value>Display Limit (0 = unlimited)</value>
+  </data>
+  <data name="Settings_General_DisplayLimitHint" xml:space="preserve">
+    <value>Default 0 for unlimited (full virtualized list); enter a positive integer to cap results (negative or invalid falls back to 0).</value>
+  </data>
+  <data name="Settings_General_OpenLinkProgram" xml:space="preserve">
+    <value>Custom Link Program</value>
+  </data>
+  <data name="Settings_General_ClearProgram" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Settings_Tab_License" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="Settings_License_OpenMain" xml:space="preserve">
+    <value>Open LICENSE</value>
+  </data>
+  <data name="Settings_License_OpenAria2" xml:space="preserve">
+    <value>Open aria2-LICENSE.txt</value>
+  </data>
+  <data name="Settings_License_FileMissingFormat" xml:space="preserve">
+    <value>License file not found in program directory: {0}</value>
+  </data>
+  <data name="Settings_License_OpenedFormat" xml:space="preserve">
+    <value>Opened license file: {0}</value>
+  </data>
+  <data name="Detail_GroupMetaFormat" xml:space="preserve">
+    <value>{0} · {1} version(s) ({2}) · iOS {3}+ · {4} · {5} · {6} rep. source(s)</value>
+  </data>
+  <data name="Toolbar_ImportIndex" xml:space="preserve">
+    <value>Import Index...</value>
+  </data>
+  <data name="Toolbar_ImportIndexToolTip" xml:space="preserve">
+    <value>Import local index.db, manifest.json, JSONL, or incremental patch</value>
+  </data>
+  <data name="Banner_MissingDbText" xml:space="preserve">
+    <value>No index database is currently loaded. Import a local index.db, manifest.json, entries.jsonl.gz, or JSON patch to browse and download.</value>
+  </data>
+  <data name="Status_NoIndexLoaded" xml:space="preserve">
+    <value>(No index loaded)</value>
+  </data>
+  <data name="Status_NoIndexHint" xml:space="preserve">
+    <value>No index database loaded — click "Import Index..." to load one</value>
+  </data>
+  <data name="Status_IndexImportedFormat" xml:space="preserve">
+    <value>Index loaded: {0}</value>
+  </data>
+  <data name="Settings_General_IndexDb" xml:space="preserve">
+    <value>Index database</value>
+  </data>
+  <data name="Import_Title" xml:space="preserve">
+    <value>Import Index</value>
+  </data>
+  <data name="Import_FileLabel" xml:space="preserve">
+    <value>Index file</value>
+  </data>
+  <data name="Import_FileFilter" xml:space="preserve">
+    <value>Index files (*.db;manifest.json;*.jsonl.gz;*.jsonl;*.json)|*.db;manifest.json;*.jsonl.gz;*.jsonl;*.json|All files (*.*)|*.*</value>
+  </data>
+  <data name="Import_DialogTitle" xml:space="preserve">
+    <value>Choose index file or patch</value>
+  </data>
+  <data name="Import_DbModeGroup" xml:space="preserve">
+    <value>SQLite database import mode</value>
+  </data>
+  <data name="Import_DbCopyRadio" xml:space="preserve">
+    <value>Copy into program directory (index\index.db)</value>
+  </data>
+  <data name="Import_DbLinkRadio" xml:space="preserve">
+    <value>Link external path read-only (never modifies source file)</value>
+  </data>
+  <data name="Import_JsonModeGroup" xml:space="preserve">
+    <value>JSON / JSONL import mode</value>
+  </data>
+  <data name="Import_JsonIncrementalRadio" xml:space="preserve">
+    <value>Incremental update (upsert / delete in a single transaction)</value>
+  </data>
+  <data name="Import_JsonFullReplaceRadio" xml:space="preserve">
+    <value>Full rebuild (build new index.db with all 9 indexes and swap)</value>
+  </data>
+  <data name="Import_MergeSourcesCheck" xml:space="preserve">
+    <value>Keep and merge existing download sources (deduplicated by URL)</value>
+  </data>
+  <data name="Import_VerifyBaseRevisionCheck" xml:space="preserve">
+    <value>Verify base_revision chain when present</value>
+  </data>
+  <data name="Import_StartButton" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Import_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Import_CloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Import_ReadyHint" xml:space="preserve">
+    <value>Choose a local index.db, manifest.json, .jsonl.gz, .jsonl, or .json file.</value>
+  </data>
+  <data name="Import_ProgressFormat" xml:space="preserve">
+    <value>Importing entries: {0:N0} / {1:N0}...</value>
+  </data>
+  <data name="Import_ProgressCountFormat" xml:space="preserve">
+    <value>Importing entries: {0:N0}...</value>
+  </data>
+  <data name="Import_SuccessDbFormat" xml:space="preserve">
+    <value>Database ready ({0:N0} entries).</value>
+  </data>
+  <data name="Import_SuccessJsonFormat" xml:space="preserve">
+    <value>Import complete: {0:N0} total ({1:N0} upserted, {2:N0} deleted).</value>
+  </data>
+  <data name="Import_Cancelled" xml:space="preserve">
+    <value>Import cancelled; previous index remains unchanged.</value>
+  </data>
+  <data name="Import_Error_DbMissing" xml:space="preserve">
+    <value>Selected index database file does not exist.</value>
+  </data>
+  <data name="Import_Error_DbMissingTableFormat" xml:space="preserve">
+    <value>Database is missing required table: {0}</value>
+  </data>
+  <data name="Import_Error_SchemaMismatchFormat" xml:space="preserve">
+    <value>Unsupported index schema version: {0}</value>
+  </data>
+  <data name="Import_Error_DbInvalid" xml:space="preserve">
+    <value>Invalid index database.</value>
+  </data>
+  <data name="Import_Error_FileNotFound" xml:space="preserve">
+    <value>Selected index file was not found.</value>
+  </data>
+  <data name="Import_Error_RevisionMismatchFormat" xml:space="preserve">
+    <value>Incremental base_revision mismatch (expected {0}, current {1}); full rebuild required.</value>
+  </data>
+  <data name="Import_Error_UnsupportedFormat" xml:space="preserve">
+    <value>Unsupported index file format.</value>
+  </data>
+  <data name="Import_Error_ManifestInvalid" xml:space="preserve">
+    <value>Invalid manifest.json structure.</value>
+  </data>
+  <data name="Import_Error_UnsafePath" xml:space="preserve">
+    <value>Manifest contains an unsafe or escaping file path.</value>
+  </data>
+  <data name="Import_Error_BytesMismatchFormat" xml:space="preserve">
+    <value>Manifest file size mismatch (expected {0} bytes, got {1} bytes).</value>
+  </data>
+  <data name="Import_Error_Sha256MismatchFormat" xml:space="preserve">
+    <value>Manifest SHA-256 mismatch (expected {0}, got {1}).</value>
+  </data>
+  <data name="Import_Error_InvalidRow" xml:space="preserve">
+    <value>Invalid JSON entry object in index file.</value>
+  </data>
+  <data name="Import_Error_UnknownOpFormat" xml:space="preserve">
+    <value>Unsupported incremental operation: {0}</value>
+  </data>
+  <data name="Import_Error_MissingBundleId" xml:space="preserve">
+    <value>Entry is missing required bundle_id.</value>
+  </data>
+  <data name="Import_Stage_Finalizing" xml:space="preserve">
+    <value>Building indexes and finalizing database...</value>
+  </data>
+  <data name="App_TempDirWarningFormat" xml:space="preserve">
+    <value>Unable to write temporary directory in program folder ({0}); falling back to system temp: {1}</value>
+  </data>
+  <data name="Toolbar_Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Import_RemoteGroup" xml:space="preserve">
+    <value>Remote update patch URL (http/https)</value>
+  </data>
+  <data name="Import_UpdateUrlLabel" xml:space="preserve">
+    <value>Update URL</value>
+  </data>
+  <data name="Import_DownloadApplyButton" xml:space="preserve">
+    <value>Download &amp; Apply</value>
+  </data>
+  <data name="Import_Error_UpdateUrlInvalid" xml:space="preserve">
+    <value>Update URL must be a valid http:// or https:// address.</value>
+  </data>
+  <data name="Import_Stage_Downloading" xml:space="preserve">
+    <value>Downloading remote index package...</value>
+  </data>
+  <data name="Window_Closing_TitleFormat" xml:space="preserve">
+    <value>{0} - Closing - {1}</value>
+  </data>
+  <data name="Window_Closing_Step_SavingLayout" xml:space="preserve">
+    <value>Saving layout &amp; settings</value>
+  </data>
+  <data name="Window_Closing_Step_StoppingDownloads" xml:space="preserve">
+    <value>Stopping download engine</value>
+  </data>
+  <data name="Window_Closing_Step_DisposingEngine" xml:space="preserve">
+    <value>Releasing download engine</value>
+  </data>
+  <data name="Queue_EmptyHint" xml:space="preserve">
+    <value>Double-click a file row to add it to this queue, or double-click it or the queued item again to cancel</value>
+  </data>
+</root>

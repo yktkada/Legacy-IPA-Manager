@@ -1,0 +1,22 @@
+{
+  "bundleId": "com.gamedokan.gyroblox4",
+  "version": "1.1",
+  "name": "Gyroblox 4",
+  "minOs": "4.0",
+  "appDirectory": "Gyroblox_4.app",
+  "plistFormat": "bplist",
+  "executableName": "Gyroblox_4",
+  "arch": "armv6,armv7",
+  "archSource": "脚本内独立的 PowerShell 实现（Read-U32/Get-ArchFromMachO）；M3 用生产解析器复核，本轮不断言",
+  "machoMagic": "CAFEBABE",
+  "hasCgbi": true,
+  "fileSize": 370990,
+  "sourceIpa": "Gyroblox 4_1.1_AppDoc.ipa",
+  "sourceIpaSha256": "c261f2ebe702cf64c72c1b73e21667b3dbc1fdf740ffb24dee4a9989e1d21872",
+  "generatedBy": "FixtureGeneration/extract_fixtures.ps1（R3：+sha256/来源指纹/machoMagic）",
+  "filesSha256": {
+    "Info.plist": "2784c013bc00612d6e610520b3c165cbbb593c4f37442fc5334a4d4f01b14cea",
+    "executable-head.bin": "af2318f1340397ddf2a024e076033e8957f5b63d305757f6272a9350a98fa2f2",
+    "icon-slice.bin": "12ae3f9c0a8cf11581a2e577a259f6e75c041abe9eb3d3e8544b6ff1503a5407"
+  }
+}

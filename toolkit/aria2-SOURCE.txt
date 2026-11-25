@@ -1,0 +1,8 @@
+aria2 1.37.0 (win-64bit build1)
+Source: https://github.com/aria2/aria2/releases/tag/release-1.37.0
+Archive: aria2-1.37.0-win-64bit-build1.zip
+Archive sha256: 67d015301eef0b612191212d564c5bb0a14b5b9c4796b76454276a4d28d9b288
+aria2c.exe sha256: be2099c214f63a3cb4954b09a0becd6e2e34660b886d4c898d260febfe9d70c2
+aria2c.exe bytes: 5649408
+License: GPL-2.0; see aria2-LICENSE.txt and aria2-LICENSE-OpenSSL.txt.
+Fetched: 2026-11-22

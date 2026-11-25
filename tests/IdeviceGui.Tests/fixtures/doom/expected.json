@@ -1,0 +1,22 @@
+{
+  "bundleId": "com.escalationstudios.ResurrectionDoom",
+  "version": "1.0.1",
+  "name": "Resurrection",
+  "minOs": "2.2.1",
+  "appDirectory": "DoomResurrection.app",
+  "plistFormat": "xml",
+  "executableName": "DoomResurrection",
+  "arch": "armv6",
+  "archSource": "脚本内独立的 PowerShell 实现（Read-U32/Get-ArchFromMachO）；M3 用生产解析器复核，本轮不断言",
+  "machoMagic": "CEFAEDFE",
+  "hasCgbi": true,
+  "fileSize": 91718847,
+  "sourceIpa": "DOOM Resurrection(v1.0.1).ipa",
+  "sourceIpaSha256": "0027f31c450f5d28450aa52ebcfbb8a0e801ca6b7599d7692dbbc5187968aa7f",
+  "generatedBy": "FixtureGeneration/extract_fixtures.ps1（R3：+sha256/来源指纹/machoMagic）",
+  "filesSha256": {
+    "Info.plist": "d8d5143ec7fadae547972cc3dd0d35232627e2ab1e994cb7b7eb9e0389285632",
+    "executable-head.bin": "6b3aff4a5d9ce0ad30b90215632f399c994cdeb7d95aa99d87e8ac58fea695af",
+    "icon-slice.bin": "c00a148968eea20000174720d615fc5cf8653dd50b2ba06d6d19e68e8232b13e"
+  }
+}

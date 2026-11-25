@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Settings_Layout_Language" xml:space="preserve">
+    <value>Interface language</value>
+  </data>
+  <data name="Settings_Layout_Language_System" xml:space="preserve">
+    <value>Follow system</value>
+  </data>
+  <data name="Settings_Layout_Language_ZhCn" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="Settings_Layout_Language_En" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_Layout_Language_Tooltip" xml:space="preserve">
+    <value>Takes effect after restart. Unknown or non-Chinese system languages default to English.</value>
+  </data>
+  <data name="Settings_Layout_Language_RestartHint" xml:space="preserve">
+    <value>Restart required for language change to take effect.</value>
+  </data>
+  <data name="Main_Toolbar_AddRoot" xml:space="preserve">
+    <value>Add Folder…</value>
+  </data>
+  <data name="Main_Toolbar_AddRootToolTip" xml:space="preserve">
+    <value>Add a folder as a scan root</value>
+  </data>
+  <data name="Main_Toolbar_OpenIndex" xml:space="preserve">
+    <value>IPA Index…</value>
+  </data>
+  <data name="Main_Toolbar_OpenIndexToolTip" xml:space="preserve">
+    <value>Open the IPA index browser/downloader (IdeviceIndex)</value>
+  </data>
+  <data name="Main_Toolbar_InstallTo" xml:space="preserve">
+    <value>Install To…</value>
+  </data>
+  <data name="Main_Toolbar_HideLog" xml:space="preserve">
+    <value>Hide Log</value>
+  </data>
+  <data name="Main_Toolbar_ShowLog" xml:space="preserve">
+    <value>Show Log</value>
+  </data>
+  <data name="Main_Toolbar_LogToggleToolTip" xml:space="preserve">
+    <value>Show / hide log panel (Ctrl+L)</value>
+  </data>
+  <data name="Main_Toolbar_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Main_Toolbar_SettingsToolTip" xml:space="preserve">
+    <value>Settings: Library / Scan / Icons / Log / Layout / Devices</value>
+  </data>
+  <data name="Main_Device_MoreInfoToolTip" xml:space="preserve">
+    <value>More device info</value>
+  </data>
+  <data name="Main_Device_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Main_Device_RefreshToolTip" xml:space="preserve">
+    <value>Re-enumerate devices and refresh info</value>
+  </data>
+  <data name="Main_Device_OfflineToolTip" xml:space="preserve">
+    <value>Device offline (auto-recovers when reconnected)</value>
+  </data>
+  <data name="Main_Device_CurrentJobStatusToolTip" xml:space="preserve">
+    <value>Current task status</value>
+  </data>
+  <data name="Main_Device_NoOnlineDevices" xml:space="preserve">
+    <value>No online devices</value>
+  </data>
+  <data name="Main_Library_ModeTitle" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Main_Library_RowHeightSmall" xml:space="preserve">
+    <value>Row Height: Small (24)</value>
+  </data>
+  <data name="Main_Library_RowHeightMedium" xml:space="preserve">
+    <value>Row Height: Medium (32)</value>
+  </data>
+  <data name="Main_Library_RowHeightLarge" xml:space="preserve">
+    <value>Row Height: Large (40)</value>
+  </data>
+  <data name="Main_DeviceApps_ModeTitle" xml:space="preserve">
+    <value>Device Apps</value>
+  </data>
+  <data name="Main_DeviceApps_ModeToolTip" xml:space="preserve">
+    <value>Apps installed on the selected device</value>
+  </data>
+  <data name="Main_Library_MultiSelectToolTip" xml:space="preserve">
+    <value>Multi-select: click rows to toggle, right-click to install</value>
+  </data>
+  <data name="Main_Library_SwitchGroupToolTip" xml:space="preserve">
+    <value>Switch group</value>
+  </data>
+  <data name="Main_Library_ManageGroups" xml:space="preserve">
+    <value>Manage Groups</value>
+  </data>
+  <data name="Main_Library_ManageGroupsToolTip" xml:space="preserve">
+    <value>Manage user groups: rename / delete</value>
+  </data>
+  <data name="Main_Library_IncrementalScan" xml:space="preserve">
+    <value>Incremental Scan</value>
+  </data>
+  <data name="Main_Library_IncrementalScanToolTip" xml:space="preserve">
+    <value>Check only new or changed files (by size and modified time)</value>
+  </data>
+  <data name="Main_Library_FullRescan" xml:space="preserve">
+    <value>Full Rescan</value>
+  </data>
+  <data name="Main_Library_FullRescanToolTip" xml:space="preserve">
+    <value>Re-parse size, icons, architectures, etc.; may take longer</value>
+  </data>
+  <data name="Main_Library_CompatFilterToolTip" xml:space="preserve">
+    <value>Compatibility filter: Off / Installable / Adapted (Adapted = supports device screen resolution + meets minimum iOS)</value>
+  </data>
+  <data name="Main_Library_SearchToolTip" xml:space="preserve">
+    <value>Filter by selected fields; use ▾ to choose scope and match mode</value>
+  </data>
+  <data name="Main_Library_SearchOptionsToolTip" xml:space="preserve">
+    <value>Search scope and match mode</value>
+  </data>
+  <data name="Main_Library_SearchFieldFileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="Main_Search_MatchMode" xml:space="preserve">
+    <value>Match Mode</value>
+  </data>
+  <data name="Main_Search_ModeContains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="Main_Search_ModePrefix" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="Main_Search_ModeExact" xml:space="preserve">
+    <value>Exact</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterToggleName" xml:space="preserve">
+    <value>Advanced filter master toggle</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterToggleToolTip" xml:space="preserve">
+    <value>Master toggle: turning off keeps your filter criteria</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterToolTip" xml:space="preserve">
+    <value>Edit advanced filter criteria</value>
+  </data>
+  <data name="Main_Library_MergeSameBundle" xml:space="preserve">
+    <value>Group by BundleID</value>
+  </data>
+  <data name="Main_Library_MergeSameBundleToolTip" xml:space="preserve">
+    <value>Group multiple versions of the same BundleID together</value>
+  </data>
+  <data name="Main_DeviceApps_MultiSelectToolTip" xml:space="preserve">
+    <value>Multi-select: click rows to toggle, then batch uninstall</value>
+  </data>
+  <data name="Main_DeviceApps_BatchUninstallToolTip" xml:space="preserve">
+    <value>Uninstall all selected apps on the device</value>
+  </data>
+  <data name="Main_Common_SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="Main_Common_ClearSelection" xml:space="preserve">
+    <value>Clear Selection</value>
+  </data>
+  <data name="Main_Column_Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Main_Column_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Main_Column_Origin" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Main_Column_AppSize" xml:space="preserve">
+    <value>Unpacked Size</value>
+  </data>
+  <data name="Main_Column_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Main_Column_MinOs" xml:space="preserve">
+    <value>Min iOS</value>
+  </data>
+  <data name="Main_Column_DeviceFamily" xml:space="preserve">
+    <value>Device Family</value>
+  </data>
+  <data name="Main_Column_Arch" xml:space="preserve">
+    <value>Arch</value>
+  </data>
+  <data name="Main_Column_FileSize" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="Main_Column_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Main_Column_FilePath" xml:space="preserve">
+    <value>File Path</value>
+  </data>
+  <data name="Main_Menu_ForceInstall" xml:space="preserve">
+    <value>Force Install to Device</value>
+  </data>
+  <data name="Main_Menu_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Main_Menu_CopyBundleId" xml:space="preserve">
+    <value>Copy BundleID</value>
+  </data>
+  <data name="Main_Menu_CopyName" xml:space="preserve">
+    <value>Copy Name</value>
+  </data>
+  <data name="Main_Menu_CopyVersion" xml:space="preserve">
+    <value>Copy Version</value>
+  </data>
+  <data name="Main_Menu_CopyMinOs" xml:space="preserve">
+    <value>Copy Min iOS</value>
+  </data>
+  <data name="Main_Menu_CopyFileName" xml:space="preserve">
+    <value>Copy File Name</value>
+  </data>
+  <data name="Main_Menu_CopyFilePath" xml:space="preserve">
+    <value>Copy File Path</value>
+  </data>
+  <data name="Main_Menu_OpenFilePath" xml:space="preserve">
+    <value>Show in Folder</value>
+  </data>
+  <data name="Main_Menu_OpenFilePathToolTip" xml:space="preserve">
+    <value>Select this file in File Explorer</value>
+  </data>
+  <data name="Main_Menu_CopyRow" xml:space="preserve">
+    <value>Copy Row (Tab-separated)</value>
+  </data>
+  <data name="Main_Menu_AddToGroup" xml:space="preserve">
+    <value>Add to Group</value>
+  </data>
+  <data name="Main_Menu_NewGroup" xml:space="preserve">
+    <value>New Group…</value>
+  </data>
+  <data name="Main_Menu_ManageGroups" xml:space="preserve">
+    <value>Manage Groups…</value>
+  </data>
+  <data name="Main_Menu_RemoveFromGroup" xml:space="preserve">
+    <value>Remove from Current Group</value>
+  </data>
+  <data name="Main_Menu_DeleteMissingRecords" xml:space="preserve">
+    <value>Delete Missing File Records</value>
+  </data>
+  <data name="Main_Menu_NoGroups" xml:space="preserve">
+    <value>(No groups)</value>
+  </data>
+  <data name="Main_Menu_AllDevices" xml:space="preserve">
+    <value>All Devices</value>
+  </data>
+  <data name="Main_Menu_Install" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="Main_Menu_More" xml:space="preserve">
+    <value>More…</value>
+  </data>
+  <data name="Main_Menu_SelectAllItems" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="Main_Menu_ClearAllItems" xml:space="preserve">
+    <value>Deselect All</value>
+  </data>
+  <data name="Main_Queue_SuspendResumeToolTip" xml:space="preserve">
+    <value>Suspend: finish current task and pause pending ones; Resume: continue paused / suspended / offline queue</value>
+  </data>
+  <data name="Main_Queue_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Main_Queue_CancelToolTip" xml:space="preserve">
+    <value>Running: terminate or auto-uninstall later; queued / suspended: cancel immediately</value>
+  </data>
+  <data name="Main_Queue_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Main_Queue_ClearToolTip" xml:space="preserve">
+    <value>Clear finished tasks and status marks for this device</value>
+  </data>
+  <data name="Main_Queue_SpaceAfterToolTip" xml:space="preserve">
+    <value>Projected used/total storage after pending installs; turns red if free space &lt; 500 MB</value>
+  </data>
+  <data name="Main_Log_Title" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Main_Log_ModeToolTip" xml:space="preserve">
+    <value>Show only start, finish, errors, and warnings</value>
+  </data>
+  <data name="Main_Log_Export" xml:space="preserve">
+    <value>Export…</value>
+  </data>
+  <data name="Main_Log_ExportToolTip" xml:space="preserve">
+    <value>Export in-memory log (up to 2,000 lines) to .txt</value>
+  </data>
+  <data name="Main_Log_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Main_Log_ClearToolTip" xml:space="preserve">
+    <value>Clear log panel (up to 2,000 lines in memory); does not affect logs\app.log</value>
+  </data>
+  <data name="Main_Copy_Field_Row" xml:space="preserve">
+    <value>row</value>
+  </data>
+  <data name="Main_Status_CopyFailedFormat" xml:space="preserve">
+    <value>Failed to copy {0}: {1}: {2}</value>
+  </data>
+  <data name="Main_Status_NoFilePath" xml:space="preserve">
+    <value>No file path to open</value>
+  </data>
+  <data name="Main_Status_FileNotFoundFormat" xml:space="preserve">
+    <value>File not found: {0}</value>
+  </data>
+  <data name="Main_Status_OpenFilePathFailedFormat" xml:space="preserve">
+    <value>Failed to open file path: {0}</value>
+  </data>
+  <data name="Main_Status_OpenFilePathExceptionFormat" xml:space="preserve">
+    <value>Failed to open file path: {0}: {1}</value>
+  </data>
+  <data name="Main_Dialog_ExportLogTitle" xml:space="preserve">
+    <value>Export Log</value>
+  </data>
+  <data name="Main_Dialog_ExportLogFilter" xml:space="preserve">
+    <value>Text files (*.txt)|*.txt|All files (*.*)|*.*</value>
+  </data>
+  <data name="Main_Index_DialogTitle" xml:space="preserve">
+    <value>IPA Index</value>
+  </data>
+  <data name="Main_Index_MissingExe" xml:space="preserve">
+    <value>IdeviceIndex.exe is missing and the installation is incomplete. Reinstall or place IdeviceIndex.exe back in the application folder.</value>
+  </data>
+  <data name="Main_Index_LaunchFailedFormat" xml:space="preserve">
+    <value>Failed to launch IPA Index: {0}</value>
+  </data>
+  <data name="Main_Dialog_AddScanRootTitle" xml:space="preserve">
+    <value>Select Folder to Add as Scan Root</value>
+  </data>
+  <data name="Main_Status_AddScanRootFailedFormat" xml:space="preserve">
+    <value>Failed to add scan root: {0}: {1}</value>
+  </data>
+  <data name="Main_Dialog_NewGroupTitle" xml:space="preserve">
+    <value>New Group</value>
+  </data>
+  <data name="Main_DeviceApps_MenuUninstallThis" xml:space="preserve">
+    <value>Uninstall App</value>
+  </data>
+  <data name="Main_DeviceApps_MenuUninstallSelectedFormat" xml:space="preserve">
+    <value>Uninstall Selected ({0})</value>
+  </data>
+  <data name="Main_DeviceApps_MenuEnterMultiSelect" xml:space="preserve">
+    <value>Enter Multi-Select Mode</value>
+  </data>
+  <data name="Main_Settings_OpenFailedFormat" xml:space="preserve">
+    <value>Failed to open Settings window: {0}</value>
+  </data>
+  <data name="App_SingleInstance_AlreadyRunning" xml:space="preserve">
+    <value>Legacy IPA Manager is already running.</value>
+  </data>
+  <data name="App_SingleInstance_Title" xml:space="preserve">
+    <value>Only one instance of Legacy IPA Manager is allowed.</value>
+  </data>
+  <data name="App_Error_CannotWriteProgramDirTitle" xml:space="preserve">
+    <value>Cannot Write to Program Directory</value>
+  </data>
+  <data name="App_Error_CannotWriteTempDirTitle" xml:space="preserve">
+    <value>Cannot Write to Temp Directory</value>
+  </data>
+  <data name="App_Error_CannotStartTitle" xml:space="preserve">
+    <value>Failed to Start</value>
+  </data>
+  <data name="App_Error_Exiting" xml:space="preserve">
+    <value>The application will now exit.</value>
+  </data>
+  <data name="App_Error_CreateMainWindowFormat" xml:space="preserve">
+    <value>Failed to create main window: {0}</value>
+  </data>
+  <data name="Group_Common_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Group_Common_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Group_Name_WindowTitle" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="Group_Name_Label" xml:space="preserve">
+    <value>Group name:</value>
+  </data>
+  <data name="Group_Name_EmptyWarning" xml:space="preserve">
+    <value>Group name cannot be empty.</value>
+  </data>
+  <data name="Group_Name_EmptyWarningTitle" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Group_Manager_Title" xml:space="preserve">
+    <value>Manage Groups</value>
+  </data>
+  <data name="Group_Manager_Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Group_Manager_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Group_Manager_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Group_Manager_SelectFirst" xml:space="preserve">
+    <value>Please select a group first.</value>
+  </data>
+  <data name="Group_Manager_RenameTitle" xml:space="preserve">
+    <value>Rename Group</value>
+  </data>
+  <data name="Group_Manager_DeleteConfirmFormat" xml:space="preserve">
+    <value>Delete group "{0}"?</value>
+  </data>
+  <data name="Group_Manager_DeleteConfirmNote" xml:space="preserve">
+    <value>Only removes the group association; library files are not deleted.</value>
+  </data>
+  <data name="InstallTo_Title" xml:space="preserve">
+    <value>Install To…</value>
+  </data>
+  <data name="InstallTo_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="InstallTo_SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="InstallTo_Install" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="InstallTo_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Filter_Title" xml:space="preserve">
+    <value>Advanced Filter</value>
+  </data>
+  <data name="Filter_Hint" xml:space="preserve">
+    <value>Use AND / OR within a group, and AND between groups; each column can only be selected once.</value>
+  </data>
+  <data name="Filter_ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Filter_AddGroup" xml:space="preserve">
+    <value>Add Group</value>
+  </data>
+  <data name="Filter_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Filter_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Filter_Col_Compatibility" xml:space="preserve">
+    <value>Compatibility</value>
+  </data>
+  <data name="Filter_Arch_Multiple" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="Filter_Origin_AppStore" xml:space="preserve">
+    <value>Original App Store</value>
+  </data>
+  <data name="Filter_Origin_Resigned" xml:space="preserve">
+    <value>Re-signed</value>
+  </data>
+  <data name="Filter_Origin_Decrypted" xml:space="preserve">
+    <value>Decrypted</value>
+  </data>
+  <data name="Filter_State_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Filter_State_Missing" xml:space="preserve">
+    <value>Missing File</value>
+  </data>
+  <data name="Filter_State_ParseFailed" xml:space="preserve">
+    <value>Parse Incomplete</value>
+  </data>
+  <data name="Filter_State_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="Filter_Group_HeaderFormat" xml:space="preserve">
+    <value>Group {0}</value>
+  </data>
+  <data name="Filter_Group_JoinLabel" xml:space="preserve">
+    <value>  In group: </value>
+  </data>
+  <data name="Filter_Join_And" xml:space="preserve">
+    <value>AND</value>
+  </data>
+  <data name="Filter_Join_Or" xml:space="preserve">
+    <value>OR</value>
+  </data>
+  <data name="Filter_AddCondition" xml:space="preserve">
+    <value>+ Condition</value>
+  </data>
+  <data name="Filter_RemoveGroup" xml:space="preserve">
+    <value>Remove Group</value>
+  </data>
+  <data name="Filter_DuplicateColumnFormat" xml:space="preserve">
+    <value>Duplicate column selected: {0}</value>
+  </data>
+  <data name="Filter_Mode_Range" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="Filter_Family_PhoneSide" xml:space="preserve">
+    <value>iPhone: </value>
+  </data>
+  <data name="Filter_Family_PadSide" xml:space="preserve">
+    <value> iPad: </value>
+  </data>
+  <data name="Filter_Family_Unselected" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+  <data name="Filter_Compat_Off" xml:space="preserve">
+    <value>No Filter</value>
+  </data>
+  <data name="Filter_Compat_Installable" xml:space="preserve">
+    <value>Installable on device</value>
+  </data>
+  <data name="Filter_Compat_Adapted" xml:space="preserve">
+    <value>Adapted for device</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Settings_Button_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Settings_Button_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Settings_Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Settings_Button_ResetGroup" xml:space="preserve">
+    <value>Reset to Defaults</value>
+  </data>
+  <data name="Settings_Button_MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Settings_Button_MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="Settings_Tab_Library" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Settings_Tab_Scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="Settings_Tab_Icons" xml:space="preserve">
+    <value>Icons</value>
+  </data>
+  <data name="Settings_Tab_Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Settings_Tab_Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Settings_Tab_Queue" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="Settings_Tab_Device" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="Settings_Tab_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Settings_Library_RowHeight" xml:space="preserve">
+    <value>Row height (DIP)</value>
+  </data>
+  <data name="Settings_Library_RowHeightToolTip" xml:space="preserve">
+    <value>16–48 DIP; default 32 (invalid values revert on blur)</value>
+  </data>
+  <data name="Settings_Library_SearchRows" xml:space="preserve">
+    <value>Search delay threshold</value>
+  </data>
+  <data name="Settings_Library_SearchRowsToolTip" xml:space="preserve">
+    <value>Enable search debounce when visible rows exceed this count; 0–200000, default 1000</value>
+  </data>
+  <data name="Settings_Library_SearchRowsUnit" xml:space="preserve">
+    <value>rows</value>
+  </data>
+  <data name="Settings_Library_SearchDelay" xml:space="preserve">
+    <value>Search delay (ms)</value>
+  </data>
+  <data name="Settings_Library_SearchDelayToolTip" xml:space="preserve">
+    <value>0–5000, default 200; 0 = immediate</value>
+  </data>
+  <data name="Settings_Library_DefaultSort" xml:space="preserve">
+    <value>Default sort</value>
+  </data>
+  <data name="Settings_Library_SortDescending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="Settings_Library_MatchMode" xml:space="preserve">
+    <value>Search match mode</value>
+  </data>
+  <data name="Settings_Library_SearchScope" xml:space="preserve">
+    <value>Search scope (columns)</value>
+  </data>
+  <data name="Settings_Library_Behavior" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="Settings_Library_MergeSameBundle" xml:space="preserve">
+    <value>Merge same BundleId</value>
+  </data>
+  <data name="Settings_Library_ShowMissingFiles" xml:space="preserve">
+    <value>Show missing files</value>
+  </data>
+  <data name="Settings_Library_DeviceFamilyRetina" xml:space="preserve">
+    <value>Use Retina label for device family (off = R)</value>
+  </data>
+  <data name="Settings_Library_ColumnsSection" xml:space="preserve">
+    <value>Visible columns</value>
+  </data>
+  <data name="Settings_Library_ColumnInstalled" xml:space="preserve">
+    <value>Installed mark</value>
+  </data>
+  <data name="Settings_Library_ManageGroups" xml:space="preserve">
+    <value>Manage Groups…</value>
+  </data>
+  <data name="Settings_Scan_RootsSection" xml:space="preserve">
+    <value>Scan roots (RootN)</value>
+  </data>
+  <data name="Settings_Scan_AddFolder" xml:space="preserve">
+    <value>Add Folder…</value>
+  </data>
+  <data name="Settings_Scan_AddFolderToolTip" xml:space="preserve">
+    <value>Takes effect immediately: saves and scans right away (unaffected by Cancel)</value>
+  </data>
+  <data name="Settings_Scan_DeleteSelected" xml:space="preserve">
+    <value>Remove Selected</value>
+  </data>
+  <data name="Settings_Scan_DeleteSelectedToolTip" xml:space="preserve">
+    <value>Takes effect immediately: removes package rows under this root and scans right away (unaffected by Cancel)</value>
+  </data>
+  <data name="Settings_Scan_BatchSize" xml:space="preserve">
+    <value>Batch commit size</value>
+  </data>
+  <data name="Settings_Scan_BatchSizeToolTip" xml:space="preserve">
+    <value>1–1000; default 30 (invalid values revert on blur)</value>
+  </data>
+  <data name="Settings_Scan_SkipStartup" xml:space="preserve">
+    <value>Skip incremental scan on startup</value>
+  </data>
+  <data name="Settings_Scan_SkipStartupNote" xml:space="preserve">
+    <value>Loads existing packages directly from the local database on startup (recommended for low-power machines or network drives; use manual scan buttons when needed).</value>
+  </data>
+  <data name="Settings_Scan_Note" xml:space="preserve">
+    <value>Note: Adding or removing a scan root triggers an immediate rescan; removing deletes that root's packages from the library. Both take effect immediately and are unaffected by Cancel.</value>
+  </data>
+  <data name="Settings_Scan_NoRoots" xml:space="preserve">
+    <value>No scan roots (click "Add Folder…")</value>
+  </data>
+  <data name="Settings_Scan_RootsCountFormat" xml:space="preserve">
+    <value>{0} root(s)</value>
+  </data>
+  <data name="Settings_Scan_AddRootDialogTitle" xml:space="preserve">
+    <value>Add Scan Root</value>
+  </data>
+  <data name="Settings_Scan_UnknownError" xml:space="preserve">
+    <value>Unknown error</value>
+  </data>
+  <data name="Settings_Scan_AddRootFailedFormat" xml:space="preserve">
+    <value>Failed to add: {0}</value>
+  </data>
+  <data name="Settings_Scan_DeleteRootConfirmFormat" xml:space="preserve">
+    <value>Remove scan root {0}?
+This will remove {1} package(s) under this root from the library and run an incremental scan immediately.</value>
+  </data>
+  <data name="Settings_Scan_DeleteRootFailedFormat" xml:space="preserve">
+    <value>Failed to remove: {0}</value>
+  </data>
+  <data name="Settings_Scan_RootItemFormat" xml:space="preserve">
+    <value>{0}   {1}   ({2} packages)</value>
+  </data>
+  <data name="Settings_Icons_CacheLimit" xml:space="preserve">
+    <value>Icon cache limit (MB)</value>
+  </data>
+  <data name="Settings_Icons_CacheLimitToolTip" xml:space="preserve">
+    <value>Default 2048; 64–20480 (invalid values revert on blur)</value>
+  </data>
+  <data name="Settings_Icons_MatchScale" xml:space="preserve">
+    <value>Pick smallest sufficient icon size for display scale</value>
+  </data>
+  <data name="Settings_Icons_DownscaleCache" xml:space="preserve">
+    <value>Downscale icons to cache bucket on save (off = keep original size, uses more disk)</value>
+  </data>
+  <data name="Settings_Icons_BucketHint" xml:space="preserve">
+    <value>Icon size follows grid row height; cache buckets use multiples of 16 (fixed).</value>
+  </data>
+  <data name="Settings_Log_ToFile" xml:space="preserve">
+    <value>Write log file logs\app.log (off by default; crash.log is always written)</value>
+  </data>
+  <data name="Settings_Log_DetailMode" xml:space="preserve">
+    <value>Log panel: detailed mode (default: concise)</value>
+  </data>
+  <data name="Settings_Layout_HideLog" xml:space="preserve">
+    <value>Hide log panel</value>
+  </data>
+  <data name="Settings_Layout_OverlayWidth" xml:space="preserve">
+    <value>Log overlay max width</value>
+  </data>
+  <data name="Settings_Layout_OverlayWidthToolTip" xml:space="preserve">
+    <value>260–900; default 420 (invalid values revert on blur)</value>
+  </data>
+  <data name="Settings_Layout_ResetColumns" xml:space="preserve">
+    <value>Reset Default 3-Column Ratio</value>
+  </data>
+  <data name="Settings_Layout_ResetColumnsToolTip" xml:space="preserve">
+    <value>Takes effect immediately (unaffected by Cancel)</value>
+  </data>
+  <data name="Settings_Queue_FieldsSection" xml:space="preserve">
+    <value>Queue row fields (order / visibility)</value>
+  </data>
+  <data name="Settings_Queue_FieldsNote" xml:space="preserve">
+    <value>Status, Note, Name, Version, and Installed Size are shown by default; Note is shown only when Failed / Paused / Suspended; hiding all falls back to Status.</value>
+  </data>
+  <data name="Settings_Queue_ColStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Settings_Queue_ColNote" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Settings_Queue_ColInstalledSize" xml:space="preserve">
+    <value>Installed Size</value>
+  </data>
+  <data name="Settings_Device_PollSeconds" xml:space="preserve">
+    <value>Online poll interval (s)</value>
+  </data>
+  <data name="Settings_Device_PollSecondsToolTip" xml:space="preserve">
+    <value>1–10; default 2 (invalid values revert on blur)</value>
+  </data>
+  <data name="Settings_Device_StableSeconds" xml:space="preserve">
+    <value>Reconnect stability (s)</value>
+  </data>
+  <data name="Settings_Device_StableSecondsToolTip" xml:space="preserve">
+    <value>1–10; default 3; resets if disconnected again</value>
+  </data>
+  <data name="Settings_Device_AutoResume" xml:space="preserve">
+    <value>Auto-resume after stable reconnect (on by default)</value>
+  </data>
+  <data name="Settings_Device_AutoRetryAttempts" xml:space="preserve">
+    <value>Auto-retry attempts</value>
+  </data>
+  <data name="Settings_Device_AutoRetryAttemptsToolTip" xml:space="preserve">
+    <value>2–5; default 2 (includes first try); re-queues after failure until limit</value>
+  </data>
+  <data name="Settings_Device_FieldsSection" xml:space="preserve">
+    <value>Device info fields (order / visibility)</value>
+  </data>
+  <data name="Settings_Device_FieldName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Settings_Device_FieldProduct" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Settings_Device_FieldVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Settings_Device_FieldCapacity" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="Settings_Device_FieldColor" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Settings_Device_FieldBatteryHealth" xml:space="preserve">
+    <value>Max Battery Capacity: —</value>
+  </data>
+  <data name="Settings_About_LicensesButton" xml:space="preserve">
+    <value>Third-party licenses…</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Library_Common_Multiple" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="Library_Group_CountFormat" xml:space="preserve">
+    <value>×{0}</value>
+  </data>
+  <data name="Library_Row_TransientSuffix" xml:space="preserve">
+    <value>  ·Unsaved</value>
+  </data>
+  <data name="Library_State_Unparsed" xml:space="preserve">
+    <value>Not Parsed</value>
+  </data>
+  <data name="Library_State_NotInstallable" xml:space="preserve">
+    <value>Cannot Install</value>
+  </data>
+  <data name="Library_State_FailedWithReasonFormat" xml:space="preserve">
+    <value>Parse Incomplete: {0}</value>
+  </data>
+  <data name="Library_State_NotInstallableWithReasonFormat" xml:space="preserve">
+    <value>Cannot Install: {0}</value>
+  </data>
+  <data name="Library_State_PendingTooltip" xml:space="preserve">
+    <value>Not yet parsed. Try "Full Rescan".</value>
+  </data>
+  <data name="Library_State_CompatHardConflict" xml:space="preserve">
+    <value>Hard conflict</value>
+  </data>
+  <data name="Library_State_CompatConflictTooltipFormat" xml:space="preserve">
+    <value>Incompatible with current device: {0}</value>
+  </data>
+  <data name="Library_State_CompatOkTooltip" xml:space="preserve">
+    <value>Compatible with current device.</value>
+  </data>
+  <data name="Library_State_CompatUnknownTooltip" xml:space="preserve">
+    <value>Compatibility unknown</value>
+  </data>
+  <data name="Queue_Status_Pending" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="Queue_Status_VerifyDevice" xml:space="preserve">
+    <value>Verifying Device</value>
+  </data>
+  <data name="Queue_Status_Precheck" xml:space="preserve">
+    <value>Pre-checking</value>
+  </data>
+  <data name="Queue_Status_Cleaning" xml:space="preserve">
+    <value>Cleaning</value>
+  </data>
+  <data name="Queue_Status_SpaceCheck" xml:space="preserve">
+    <value>Checking Space</value>
+  </data>
+  <data name="Queue_Status_Installing" xml:space="preserve">
+    <value>Installing</value>
+  </data>
+  <data name="Queue_Status_Uninstalling" xml:space="preserve">
+    <value>Uninstalling</value>
+  </data>
+  <data name="Queue_Status_Readback" xml:space="preserve">
+    <value>Verifying</value>
+  </data>
+  <data name="Queue_Status_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="Queue_Status_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Queue_Status_NeedsConfirm" xml:space="preserve">
+    <value>Needs Confirm</value>
+  </data>
+  <data name="Queue_Status_Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="Queue_Status_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Queue_Status_Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Queue_RunState_Idle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="Queue_RunState_Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="Queue_RunState_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="Queue_RunState_Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="Queue_RunState_Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="Queue_Action_Resume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="Queue_Action_Suspend" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+  <data name="Queue_InstalledApps_NotRead" xml:space="preserve">
+    <value>Installed: Not read</value>
+  </data>
+  <data name="Queue_InstalledApps_CountFormat" xml:space="preserve">
+    <value>Installed: {0} app(s)</value>
+  </data>
+  <data name="Queue_Header_CurrentJobPercentFormat" xml:space="preserve">
+    <value> · Current {0}%</value>
+  </data>
+  <data name="Queue_StateNote_DeviceOffline" xml:space="preserve">
+    <value>Device Offline</value>
+  </data>
+  <data name="Queue_Progress_CountFormat" xml:space="preserve">
+    <value>Done {0} / {1}</value>
+  </data>
+  <data name="Device_UnknownName" xml:space="preserve">
+    <value>Unknown Device</value>
+  </data>
+  <data name="Device_Status_Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="Device_Status_Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="Device_Space_FreeFormat" xml:space="preserve">
+    <value>Free {0} / {1} GB</value>
+  </data>
+  <data name="Device_Menu_BatteryUsageFormat" xml:space="preserve">
+    <value>Battery: {0}</value>
+  </data>
+  <data name="Device_Menu_MaxBatteryCapacityUnknown" xml:space="preserve">
+    <value>Max Battery Capacity: —</value>
+  </data>
+  <data name="Device_Menu_ManufacturerFormat" xml:space="preserve">
+    <value>Manufacturer: {0}</value>
+  </data>
+  <data name="Device_Menu_BatterySerialFormat" xml:space="preserve">
+    <value>Battery Serial: {0}</value>
+  </data>
+  <data name="Device_Menu_EcidHexFormat" xml:space="preserve">
+    <value>ECID(hex): {0}</value>
+  </data>
+  <data name="Device_Menu_EcidDecFormat" xml:space="preserve">
+    <value>ECID(dec): {0}</value>
+  </data>
+  <data name="Device_Menu_SerialFormat" xml:space="preserve">
+    <value>Serial: {0}</value>
+  </data>
+  <data name="Device_Menu_UdidFormat" xml:space="preserve">
+    <value>UDID: {0}</value>
+  </data>
+  <data name="Device_Menu_ModelNumberFormat" xml:space="preserve">
+    <value>Part Number: {0}</value>
+  </data>
+  <data name="Device_Menu_HardwareModelFormat" xml:space="preserve">
+    <value>Board ID: {0}</value>
+  </data>
+  <data name="Device_ToolTip_EcidFormat" xml:space="preserve">
+    <value>ECID: {0}</value>
+  </data>
+  <data name="Device_ToolTip_CpuFormat" xml:space="preserve">
+    <value>CPU: {0}</value>
+  </data>
+  <data name="Device_Battery_ChargingFormat" xml:space="preserve">
+    <value>{0}% (Charging)</value>
+  </data>
+  <data name="Device_Battery_FullyChargedFormat" xml:space="preserve">
+    <value>{0}% (Full)</value>
+  </data>
+  <data name="Device_Battery_UnreliablePercentFormat" xml:space="preserve">
+    <value>{0}% (Unreliable)</value>
+  </data>
+  <data name="Device_Battery_HealthUnknown" xml:space="preserve">
+    <value>Health unknown</value>
+  </data>
+  <data name="Device_Battery_CyclesSuffixFormat" xml:space="preserve">
+    <value> · {0} cycles</value>
+  </data>
+  <data name="Device_Battery_UnreliableWarningSuffix" xml:space="preserve">
+    <value> (Data may be unreliable)</value>
+  </data>
+  <data name="Device_Battery_HealthTooltipFormat" xml:space="preserve">
+    <value>Health {0}% ({1} / {2} mAh){3}{4}</value>
+  </data>
+  <data name="Main_Scan_InProgress" xml:space="preserve">
+    <value>Scanning library…</value>
+  </data>
+  <data name="Main_Scan_PhaseEnumerate" xml:space="preserve">
+    <value>enumerating</value>
+  </data>
+  <data name="Main_Scan_PhaseParse" xml:space="preserve">
+    <value>parsing</value>
+  </data>
+  <data name="Main_Scan_ProgressPhaseFormat" xml:space="preserve">
+    <value>Scanning library… ({0} {1} / {2})</value>
+  </data>
+  <data name="Main_Scan_ProgressPhaseDoneFormat" xml:space="preserve">
+    <value>Scanning library… ({0} done: {1})</value>
+  </data>
+  <data name="Main_DeviceApps_CountNotRead" xml:space="preserve">
+    <value>Device Apps: Not read</value>
+  </data>
+  <data name="Main_DeviceApps_CountNoDevice" xml:space="preserve">
+    <value>Device Apps: No device</value>
+  </data>
+  <data name="Main_DeviceApps_CountReading" xml:space="preserve">
+    <value>Device Apps: Reading…</value>
+  </data>
+  <data name="Main_DeviceApps_CountFormat" xml:space="preserve">
+    <value>Device Apps: {0}</value>
+  </data>
+  <data name="Main_DeviceApps_VersionUnknown" xml:space="preserve">
+    <value>Version unknown</value>
+  </data>
+  <data name="Main_DeviceApps_BatchUninstallFormat" xml:space="preserve">
+    <value>Uninstall ({0})</value>
+  </data>
+  <data name="Main_MultiSelect_Off" xml:space="preserve">
+    <value>Multi: Off</value>
+  </data>
+  <data name="Main_MultiSelect_OnFormat" xml:space="preserve">
+    <value>Multi: {0}</value>
+  </data>
+  <data name="Main_CompatFilter_Off" xml:space="preserve">
+    <value>Compat Filter: Off</value>
+  </data>
+  <data name="Main_CompatFilter_Installable" xml:space="preserve">
+    <value>Compatible with Device</value>
+  </data>
+  <data name="Main_CompatFilter_Adapted" xml:space="preserve">
+    <value>Adapted for Device</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterCountFormat" xml:space="preserve">
+    <value>Advanced Filter ({0})</value>
+  </data>
+  <data name="Main_Log_SwitchToDetail" xml:space="preserve">
+    <value>Switch to Detail</value>
+  </data>
+  <data name="Main_Log_SwitchToSimple" xml:space="preserve">
+    <value>Switch to Simple</value>
+  </data>
+  <data name="Main_Group_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Main_Group_ErrorEmptyName" xml:space="preserve">
+    <value>Group name cannot be empty.</value>
+  </data>
+  <data name="Main_Group_ErrorReservedNameFormat" xml:space="preserve">
+    <value>"{0}" is a reserved name.</value>
+  </data>
+  <data name="Main_Group_ErrorAlreadyExists" xml:space="preserve">
+    <value>Group name already exists.</value>
+  </data>
+  <data name="Main_Group_ErrorNotFound" xml:space="preserve">
+    <value>Group does not exist.</value>
+  </data>
+  <data name="Main_Menu_HideMissingFiles" xml:space="preserve">
+    <value>Hide Missing Files</value>
+  </data>
+  <data name="Main_Menu_ShowMissingFiles" xml:space="preserve">
+    <value>Show Missing Files</value>
+  </data>
+  <data name="Main_Library_CountFormat" xml:space="preserve">
+    <value>{0} pkgs</value>
+  </data>
+  <data name="Main_Library_CountWithGroupsFormat" xml:space="preserve">
+    <value>{0} pkgs / {1} groups</value>
+  </data>
+  <data name="Main_Library_CountMissingSuffixFormat" xml:space="preserve">
+    <value>, {0} missing</value>
+  </data>
+  <data name="Settings_Scan_DbNotReady" xml:space="preserve">
+    <value>Database not ready</value>
+  </data>
+  <data name="App_Paths_CreateTempDirFailedFormat" xml:space="preserve">
+    <value>Could not create temp directory: {0}</value>
+  </data>
+  <data name="App_Paths_WriteTempDirFailedFormat" xml:space="preserve">
+    <value>Could not write to temp directory: {0}</value>
+  </data>
+  <data name="App_Paths_ProgramDirUnwritableHeader" xml:space="preserve">
+    <value>Data and logs could not be saved because the program directory is not writable.</value>
+  </data>
+  <data name="App_Paths_DirectoryFormat" xml:space="preserve">
+    <value>Directory: {0}</value>
+  </data>
+  <data name="App_Paths_ProgramDirOnlyNote" xml:space="preserve">
+    <value>Only reads and writes inside the program directory.</value>
+  </data>
+  <data name="App_Paths_CreateLogsDirFailedFormat" xml:space="preserve">
+    <value>Could not create logs directory: {0}</value>
+  </data>
+  <data name="App_Paths_WriteLogsDirFailedFormat" xml:space="preserve">
+    <value>Logs directory is not writable: {0}</value>
+  </data>
+  <data name="App_Paths_ReasonFormat" xml:space="preserve">
+    <value>Reason: {0}</value>
+  </data>
+  <data name="App_Paths_CopyRetryHint" xml:space="preserve">
+    <value>Please copy the program to a writable location and try again.</value>
+  </data>
+  <data name="Device_Product_China" xml:space="preserve">
+    <value>(China)</value>
+  </data>
+  <data name="Device_Product_Gen1" xml:space="preserve">
+    <value>(1st generation)</value>
+  </data>
+  <data name="Device_Product_Gen2" xml:space="preserve">
+    <value>(2nd generation)</value>
+  </data>
+  <data name="Device_Product_Gen3" xml:space="preserve">
+    <value>(3rd generation)</value>
+  </data>
+  <data name="Device_Product_Gen4" xml:space="preserve">
+    <value>(4th generation)</value>
+  </data>
+  <data name="Device_Product_Gen5" xml:space="preserve">
+    <value>(5th generation)</value>
+  </data>
+  <data name="Device_Product_Gen6" xml:space="preserve">
+    <value>(6th generation)</value>
+  </data>
+  <data name="Device_Product_Gen7" xml:space="preserve">
+    <value>(7th generation)</value>
+  </data>
+  <data name="Settings_Tab_Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="Settings_Security_AllowOutsideWrite" xml:space="preserve">
+    <value>Allow writing outside program directory</value>
+  </data>
+  <data name="Settings_Security_ReadOnlyNote" xml:space="preserve">
+    <value>When disabled, writes are only permitted inside the program directory; reading files and opening paths are unrestricted.</value>
+  </data>
+  <data name="Settings_Security_RiskNote" xml:space="preserve">
+    <value>Risk notice: If enabled, program defects (bugs) may accidentally modify or delete data outside the program directory. You assume this risk.</value>
+  </data>
+  <data name="Settings_Security_ConfirmTitle" xml:space="preserve">
+    <value>Allow Writing Outside Program Directory</value>
+  </data>
+  <data name="Settings_Security_ConfirmBody" xml:space="preserve">
+    <value>When enabled, this program may store the library, download folder, or session files outside the program directory.
+
+Risk statement: If a program defect (bug) occurs, it could unexpectedly modify or delete data outside the program directory. Enabling this option means you acknowledge and accept that risk.</value>
+  </data>
+  <data name="Settings_Security_ConfirmCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Settings_Security_ConfirmEnable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="Main_Closing_TitleFormat" xml:space="preserve">
+    <value>{0} - Closing - {1}</value>
+  </data>
+  <data name="Main_Closing_Step_SavingLayout" xml:space="preserve">
+    <value>Saving layout</value>
+  </data>
+  <data name="Main_Closing_Step_ClosingImportPipe" xml:space="preserve">
+    <value>Closing import pipe</value>
+  </data>
+  <data name="Main_Closing_Step_WaitingScan" xml:space="preserve">
+    <value>Waiting for scan to finish</value>
+  </data>
+  <data name="Main_Closing_Step_StoppingQueues" xml:space="preserve">
+    <value>Stopping device queues</value>
+  </data>
+  <data name="Main_Closing_Step_WaitingIcons" xml:space="preserve">
+    <value>Waiting for icon tasks</value>
+  </data>
+  <data name="Main_Closing_Step_SavingSettings" xml:space="preserve">
+    <value>Saving settings &amp; groups</value>
+  </data>
+  <data name="Main_Closing_Step_KillingProcesses" xml:space="preserve">
+    <value>Cleaning up processes</value>
+  </data>
+  <data name="Main_Queue_EmptyHint" xml:space="preserve">
+    <value>Double-click a file row to add it to this queue, or double-click it or the queued item again to cancel</value>
+  </data>
+  <data name="Main_Status_HistoryButtonFormat" xml:space="preserve">
+    <value>History ({0})</value>
+  </data>
+  <data name="Main_Status_HistoryTitle" xml:space="preserve">
+    <value>Important Notices (Newest First)</value>
+  </data>
+  <data name="Main_Status_NoHistory" xml:space="preserve">
+    <value>No important notices yet.</value>
+  </data>
+  <data name="Main_Status_DriveTimedOutFormat" xml:space="preserve">
+    <value>Drive or network path timed out: {0}</value>
+  </data>
+  <data name="Main_Status_DeviceModelMismatchFormat" xml:space="preserve">
+    <value>Model identification mismatch ({0}); using HardwareModel</value>
+  </data>
+  <data name="Main_Status_UnhandledErrorFormat" xml:space="preserve">
+    <value>Unhandled error: {0}</value>
+  </data>
+  <data name="Main_Status_SaveLogModeFailedFormat" xml:space="preserve">
+    <value>Failed to save log mode: {0}</value>
+  </data>
+  <data name="Main_Status_SaveGroupsFailedFormat" xml:space="preserve">
+    <value>Failed to save groups: {0}</value>
+  </data>
+  <data name="Main_Status_SaveSettingsFailedFormat" xml:space="preserve">
+    <value>Failed to save settings: {0}</value>
+  </data>
+  <data name="Main_Status_ExportLogFailedFormat" xml:space="preserve">
+    <value>Failed to export log: {0}</value>
+  </data>
+  <data name="Main_Status_OpenFileLogFailedFormat" xml:space="preserve">
+    <value>Failed to open file log (disabled): {0}</value>
+  </data>
+  <data name="Main_Status_DbUnavailableFormat" xml:space="preserve">
+    <value>{0} — library scan and persistence unavailable (data dir: {1})</value>
+  </data>
+  <data name="Main_Status_DeleteMissingDbNotReady" xml:space="preserve">
+    <value>Cannot delete missing records: database not ready</value>
+  </data>
+  <data name="Main_Status_NoMissingRecords" xml:space="preserve">
+    <value>No missing-file records found</value>
+  </data>
+  <data name="Main_Status_DeletedMissingFormat" xml:space="preserve">
+    <value>Removed {0} missing-file record(s)</value>
+  </data>
+  <data name="Main_Status_DeleteMissingFailedFormat" xml:space="preserve">
+    <value>Failed to delete missing records: {0}</value>
+  </data>
+  <data name="Main_Status_LoadLibraryFailedFormat" xml:space="preserve">
+    <value>Failed to load local library: {0}</value>
+  </data>
+  <data name="Main_Status_ScanSkippedDbNotReadyFormat" xml:space="preserve">
+    <value>Scan skipped: {0}</value>
+  </data>
+  <data name="Main_Status_DbNotReadyFallback" xml:space="preserve">
+    <value>Database not ready</value>
+  </data>
+  <data name="Main_Status_ScanWriteProbeFailedFormat" xml:space="preserve">
+    <value>Database write check failed, scan skipped: {0}</value>
+  </data>
+  <data name="Main_Status_NoScanRoots" xml:space="preserve">
+    <value>No scan roots configured; please add a scan folder</value>
+  </data>
+  <data name="Main_Status_ScanRootInaccessibleFormat" xml:space="preserve">
+    <value>Scan root inaccessible, skipped: {0}</value>
+  </data>
+  <data name="Main_Status_ScanRootErrorFormat" xml:space="preserve">
+    <value>Scan root error ({0}): {1}</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteNoRootsFormat" xml:space="preserve">
+    <value>Scan incomplete: no accessible scan roots ({0})</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteDbWritesFormat" xml:space="preserve">
+    <value>Scan incomplete: {0} batch(es) failed to write to library ({1})</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteRootsFormat" xml:space="preserve">
+    <value>Scan incomplete: {0} root(s) failed ({1})</value>
+  </data>
+  <data name="Main_Status_ScanFailedFormat" xml:space="preserve">
+    <value>Scan failed: {0}</value>
+  </data>
+  <data name="Main_Status_IpcImportSkippedFormat" xml:space="preserve">
+    <value>IPC import skipped ({0}): {1}</value>
+  </data>
+  <data name="Main_Status_RefreshDevicesFailedFormat" xml:space="preserve">
+    <value>Failed to refresh devices: {0}</value>
+  </data>
+  <data name="Main_Status_ReadDeviceInfoFailedFormat" xml:space="preserve">
+    <value>Failed to read device info ({0}): {1}</value>
+  </data>
+  <data name="Main_Status_ReadInstalledFailedFormat" xml:space="preserve">
+    <value>Failed to read installed apps [{0}]: {1}</value>
+  </data>
+  <data name="Main_Status_CancelledPendingFormat" xml:space="preserve">
+    <value>[{0}] Cancelled: {1}</value>
+  </data>
+  <data name="Main_Status_CancelledUploadFormat" xml:space="preserve">
+    <value>[{0}] Cancelled (transfer aborted): {1}</value>
+  </data>
+  <data name="Main_Status_CancelAfterInstallFormat" xml:space="preserve">
+    <value>[{0}] Will uninstall after install completes: {1}</value>
+  </data>
+  <data name="Main_Status_UninstallConflictFormat" xml:space="preserve">
+    <value>Uninstall rejected [{0}]: install task active ({1})</value>
+  </data>
+  <data name="Main_Status_UninstallQueuedFormat" xml:space="preserve">
+    <value>[{0}] Queued uninstall: {1}</value>
+  </data>
+  <data name="Main_Status_UninstallBatchFormat" xml:space="preserve">
+    <value>[{0}] Batch uninstall queued {1} app(s)</value>
+  </data>
+  <data name="Main_Status_MissingBundleIdFormat" xml:space="preserve">
+    <value>Install rejected: {0} has no BundleID; rescan and retry</value>
+  </data>
+  <data name="Main_Status_SourceFileMissingFormat" xml:space="preserve">
+    <value>Cannot enqueue: source file missing ({0})</value>
+  </data>
+  <data name="Main_Status_MinOsRejectedFormat" xml:space="preserve">
+    <value>Rejected {0}: {1}</value>
+  </data>
+  <data name="Main_Status_ForceInstallQueuedFormat" xml:space="preserve">
+    <value>[{0}] Force install: {1}</value>
+  </data>
+  <data name="Main_Status_SpaceInsufficientFormat" xml:space="preserve">
+    <value>Insufficient free space for {0}: needs {1}, available {2} (captured {3}, incl. 10 MB margin)</value>
+  </data>
+  <data name="Main_Status_InstallConflictFormat" xml:space="preserve">
+    <value>{0} not queued: uninstall task active ({1})</value>
+  </data>
+  <data name="Main_Status_RequeuedFormat" xml:space="preserve">
+    <value>[{0}] Re-queued at tail: {1}</value>
+  </data>
+  <data name="Main_Status_QueuedFormat" xml:space="preserve">
+    <value>[{0}] Queued install: {1}</value>
+  </data>
+  <data name="Main_Status_NoInstallableSelected" xml:space="preserve">
+    <value>No installable packages selected</value>
+  </data>
+  <data name="Main_Status_NoMissingFreeSelected" xml:space="preserve">
+    <value>No files enqueued (all selected source files are missing)</value>
+  </data>
+  <data name="Main_Status_BatchQueuedSingleFormat" xml:space="preserve">
+    <value>[{0}] Queued {1} package(s)</value>
+  </data>
+  <data name="Main_Status_NoOnlineDevices" xml:space="preserve">
+    <value>No online devices connected</value>
+  </data>
+  <data name="Main_Status_BatchQueuedMultiFormat" xml:space="preserve">
+    <value>Queued {0} package(s) × {1} device(s) ({2} task(s))</value>
+  </data>
+  <data name="Main_Status_NoDevicesSelected" xml:space="preserve">
+    <value>No target devices selected</value>
+  </data>
+  <data name="Main_Status_AutoResumeRestoredFormat" xml:space="preserve">
+    <value>[{0}] Connection stable, resumed {1} job(s)</value>
+  </data>
+  <data name="Main_Status_UninstallAlreadyQueuedFormat" xml:space="preserve">
+    <value>[{0}] Uninstall already queued: {1}</value>
+  </data>
+  <data name="Main_Status_UninstallBatchWithRejectedFormat" xml:space="preserve">
+    <value>[{0}] Batch uninstall: queued {1}, rejected {2}</value>
+  </data>
+  <data name="Main_Status_InstallAlreadyQueuedFormat" xml:space="preserve">
+    <value>{0} already in queue ({1}), ignored</value>
+  </data>
+  <data name="Main_Status_UnknownValue" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteDbAbortedSuffixFormat" xml:space="preserve">
+    <value> ({0} batch(es) aborted early due to repeated failures)</value>
+  </data>
+  <data name="Main_Queue_NoDeviceHint" xml:space="preserve">
+    <value>No device connected — connect a jailbroken device via USB and click Refresh (iTunes required)</value>
+  </data>
+  <data name="Main_Queue_NoDeviceHeader" xml:space="preserve">
+    <value>Install Queue (No Device)</value>
+  </data>
+  <data name="Main_Queue_SuspendFallback" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+</root>

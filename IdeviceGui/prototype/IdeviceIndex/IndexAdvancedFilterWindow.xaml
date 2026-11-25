@@ -1,0 +1,22 @@
+<Window x:Class="IdeviceIndex.IndexAdvancedFilterWindow" x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:IdeviceIndex.Resources"
+        Title="{x:Static res:Strings.Filter_Title}"
+        Width="780" Height="620" MinWidth="620" MinHeight="460"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+            <TextBlock Text="{x:Static res:Strings.Filter_Hint}" VerticalAlignment="Center" Foreground="#FF666666" TextWrapping="Wrap" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="{x:Static res:Strings.Filter_ClearAll}" Padding="10,3" Click="OnClearAllClick" />
+            <Button Content="{x:Static res:Strings.Filter_AddGroup}" Padding="10,3" Margin="8,0,0,0" Click="OnAddGroupClick" />
+            <Button x:Name="ApplyButton" Content="{x:Static res:Strings.Filter_Apply}" Width="76" Padding="0,3" Margin="16,0,0,0" IsDefault="True" Click="OnApplyClick" />
+            <Button x:Name="CancelButton" Content="{x:Static res:Strings.Filter_Cancel}" Width="76" Padding="0,3" Margin="8,0,0,0" IsCancel="True" Click="OnCancelClick" />
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="GroupsPanel" />
+        </ScrollViewer>
+    </DockPanel>
+</Window>

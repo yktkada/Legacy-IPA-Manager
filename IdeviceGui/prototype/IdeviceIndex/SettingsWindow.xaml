@@ -1,0 +1,420 @@
+<Window x:Class="IdeviceIndex.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="clr-namespace:IdeviceIndex.Resources"
+        Title="{x:Static res:Strings.Settings_Title}"
+        Width="640" Height="640"
+        MinWidth="560" MinHeight="520"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False">
+    <Window.Resources>
+        <Style x:Key="SectionTitle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0,10,0,4" />
+        </Style>
+        <Style x:Key="RowLabel" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,0,8,0" />
+        </Style>
+        <Style x:Key="GroupResetButton" TargetType="Button">
+            <Setter Property="Padding" Value="8,2" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="0,0,0,6" />
+        </Style>
+    </Window.Resources>
+
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button x:Name="OkButton" Content="{x:Static res:Strings.Settings_Button_Ok}"
+                    Width="76" Padding="0,3" IsDefault="True" Click="OnOkClick" />
+            <Button x:Name="ApplyButton" Content="{x:Static res:Strings.Settings_Button_Apply}"
+                    Width="76" Padding="0,3" Margin="8,0,0,0" Click="OnApplyClick" />
+            <Button x:Name="CancelButton" Content="{x:Static res:Strings.Settings_Button_Cancel}"
+                    Width="76" Padding="0,3" Margin="8,0,0,0" IsCancel="True" Click="OnCancelClick" />
+        </StackPanel>
+
+        <TabControl x:Name="Tabs">
+            <!-- General & UI -->
+            <TabItem Header="{x:Static res:Strings.Settings_Tab_General}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
+                    <StackPanel>
+                        <Button Content="{x:Static res:Strings.Settings_Button_ResetGroup}"
+                                Style="{StaticResource GroupResetButton}" Tag="General" Click="OnResetGroupClick" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="170" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_General_Language}" Style="{StaticResource RowLabel}" />
+                            <ComboBox x:Name="LanguageCombo" Grid.Column="1">
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_General_LangSystem}" Tag="system" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_General_LangZhCn}" Tag="zh-CN" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_General_LangEn}" Tag="en" />
+                            </ComboBox>
+                        </Grid>
+                        <TextBlock Text="{x:Static res:Strings.Settings_General_LanguageHint}"
+                                   Foreground="#666" FontSize="11" TextWrapping="Wrap" Margin="170,4,0,6" />
+
+                        <Grid Margin="0,6,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="170" />
+                                <ColumnDefinition Width="120" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_General_DisplayLimit}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="DisplayLimitBox" Grid.Column="1" VerticalContentAlignment="Center" />
+                            <TextBlock Grid.Column="2" Text="{x:Static res:Strings.Settings_General_DisplayLimitHint}"
+                                       Foreground="#666" FontSize="11" VerticalAlignment="Center" Margin="8,0,0,0" TextWrapping="Wrap" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="170" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_General_OpenLinkProgram}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="OpenLinkProgramBox" Grid.Column="1" VerticalContentAlignment="Center" />
+                            <Button Grid.Column="2" Content="{x:Static res:Strings.DownloadDir_Browse}"
+                                    Padding="10,2" Margin="6,0,0,0" Click="OnBrowseOpenLinkProgramClick" />
+                            <Button Grid.Column="3" Content="{x:Static res:Strings.Settings_General_ClearProgram}"
+                                    Padding="10,2" Margin="6,0,0,0" Click="OnClearOpenLinkProgramClick" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="170" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_General_IndexDb}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="CurrentDbPathBox" Grid.Column="1" VerticalContentAlignment="Center"
+                                     IsReadOnly="True" Background="#FFF5F5F5" Foreground="#FF555555" />
+                            <Button x:Name="SettingsImportIndexButton" Grid.Column="2"
+                                    Content="{x:Static res:Strings.Toolbar_ImportIndex}"
+                                    Padding="10,2" Margin="6,0,0,0" Click="OnImportIndexClick" />
+                        </Grid>
+
+                        <TextBlock Text="{x:Static res:Strings.Settings_General_RightSections}" Style="{StaticResource SectionTitle}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ListBox x:Name="RightSectionsList" Height="90">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Content="{Binding Label}" IsChecked="{Binding Visible, Mode=TwoWay}" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                            <StackPanel Grid.Column="1" Margin="8,0,0,0" VerticalAlignment="Top">
+                                <Button Content="{x:Static res:Strings.Settings_Button_MoveUp}" Width="76" Padding="0,3" Click="OnSectionMoveUpClick" />
+                                <Button Content="{x:Static res:Strings.Settings_Button_MoveDown}" Width="76" Padding="0,3" Margin="0,6,0,0" Click="OnSectionMoveDownClick" />
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock Text="{x:Static res:Strings.Settings_General_QueueColumns}" Style="{StaticResource SectionTitle}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ListBox x:Name="QueueColumnsList" Height="220">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Content="{Binding Label}" IsChecked="{Binding Visible, Mode=TwoWay}" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                            <StackPanel Grid.Column="1" Margin="8,0,0,0" VerticalAlignment="Top">
+                                <Button Content="{x:Static res:Strings.Settings_Button_MoveUp}" Width="76" Padding="0,3" Click="OnQueueColumnMoveUpClick" />
+                                <Button Content="{x:Static res:Strings.Settings_Button_MoveDown}" Width="76" Padding="0,3" Margin="0,6,0,0" Click="OnQueueColumnMoveDownClick" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- Download -->
+            <TabItem Header="{x:Static res:Strings.Settings_Tab_Download}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
+                    <StackPanel>
+                        <Button Content="{x:Static res:Strings.Settings_Button_ResetGroup}"
+                                Style="{StaticResource GroupResetButton}" Tag="Download" Click="OnResetGroupClick" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_Dir}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="DownloadDirBox" Grid.Column="1" VerticalContentAlignment="Center" />
+                            <Button Grid.Column="2" Content="{x:Static res:Strings.DownloadDir_Browse}"
+                                    Padding="10,2" Margin="6,0,0,0" Click="OnBrowseDownloadDirClick" />
+                        </Grid>
+                        <CheckBox x:Name="RememberLastDirCheck" Content="{x:Static res:Strings.Settings_Download_RememberLastDir}"
+                                  Margin="210,6,0,8" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_Connections}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="ConnectionsBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_Splits}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="SplitsBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_MinSplitSize}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="MinSplitSizeBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_Concurrency}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="ConcurrencyBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_SpeedLimit}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="SpeedLimitBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_PerTaskSpeedLimit}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="PerTaskSpeedLimitBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_RetryTimes}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="RetryTimesBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_RetryWait}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="RetryWaitBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Download_Timeout}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="TimeoutBox" Grid.Column="1" />
+                        </Grid>
+
+                        <CheckBox x:Name="ContinueCheck" Content="{x:Static res:Strings.Settings_Download_Continue}"
+                                  Margin="210,10,0,0" />
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- Network, Session & Import -->
+            <TabItem Header="{x:Static res:Strings.Settings_Tab_NetworkSession}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
+                    <StackPanel>
+                        <Button Content="{x:Static res:Strings.Settings_Button_ResetGroup}"
+                                Style="{StaticResource GroupResetButton}" Tag="NetworkSession" Click="OnResetGroupClick" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Network_ProxyMode}" Style="{StaticResource RowLabel}" />
+                            <ComboBox x:Name="ProxyModeCombo" Grid.Column="1" SelectionChanged="OnProxyModeChanged">
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Network_ProxySystem}" Tag="system" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Network_ProxyManual}" Tag="manual" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Network_ProxyNone}" Tag="none" />
+                            </ComboBox>
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Network_ProxyUrl}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="ProxyUrlBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Network_ProxyBypass}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="ProxyBypassBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Network_UserAgent}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="UserAgentBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,12,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Session_DirMode}" Style="{StaticResource RowLabel}" />
+                            <ComboBox x:Name="SessionDirModeCombo" Grid.Column="1" SelectionChanged="OnSessionDirModeChanged">
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Session_ModeProgram}" Tag="program" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Session_ModeTarget}" Tag="target" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Session_ModeCustom}" Tag="custom" />
+                            </ComboBox>
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Session_DirCustom}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="SessionDirCustomBox" Grid.Column="1" />
+                            <Button x:Name="BrowseSessionDirButton" Grid.Column="2" Content="{x:Static res:Strings.DownloadDir_Browse}"
+                                    Padding="10,2" Margin="6,0,0,0" Click="OnBrowseSessionDirClick" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Session_ControlFileMode}" Style="{StaticResource RowLabel}" />
+                            <ComboBox x:Name="ControlFileModeCombo" Grid.Column="1">
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Session_ControlSameAsPart}" Tag="same-as-part" />
+                                <ComboBoxItem Content="{x:Static res:Strings.Settings_Session_ControlSession}" Tag="session" />
+                            </ComboBox>
+                        </Grid>
+
+                        <CheckBox x:Name="KeepPartFilesCheck" Content="{x:Static res:Strings.Settings_Storage_KeepPartFiles}"
+                                  Margin="210,10,0,4" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Storage_PartTtlHours}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="PartTtlHoursBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Storage_SpaceMarginMb}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="SpaceMarginMbBox" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid Margin="0,8,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="120" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Static res:Strings.Settings_Storage_MaxFileSizeMb}" Style="{StaticResource RowLabel}" />
+                            <TextBox x:Name="MaxFileSizeMbBox" Grid.Column="1" />
+                        </Grid>
+
+                        <CheckBox x:Name="AutoImportCheck" Content="{x:Static res:Strings.Settings_Import_AutoImport}"
+                                  Margin="210,10,0,4" />
+                        <CheckBox x:Name="AutoRefreshFallbackCheck" Content="{x:Static res:Strings.Settings_Import_AutoRefreshFallback}"
+                                  Margin="210,2,0,4" />
+                        <CheckBox x:Name="OpenFolderWhenDoneCheck" Content="{x:Static res:Strings.Settings_Import_OpenFolderWhenDone}"
+                                  Margin="210,2,0,0" />
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- Security -->
+            <TabItem Header="{x:Static res:Strings.Settings_Tab_Security}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
+                    <StackPanel>
+                        <Button Content="{x:Static res:Strings.Settings_Button_ResetGroup}"
+                                Style="{StaticResource GroupResetButton}" Tag="Security" Click="OnResetGroupClick" />
+
+                        <CheckBox x:Name="AllowOutsideWriteCheck"
+                                  Content="{x:Static res:Strings.Settings_Security_AllowOutsideWrite}"
+                                  FontWeight="SemiBold"
+                                  Margin="0,8,0,10"
+                                  Click="OnAllowOutsideWriteClick" />
+
+                        <TextBlock Text="{x:Static res:Strings.Settings_Security_Hint}"
+                                   Foreground="#444" TextWrapping="Wrap" Margin="0,0,0,8" />
+                        <Border Background="#FFFFF4E5" BorderBrush="#FFE5B870" BorderThickness="1" Padding="10">
+                            <TextBlock Text="{x:Static res:Strings.Settings_Security_RiskNotice}"
+                                       Foreground="#FF663C00" TextWrapping="Wrap" />
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- License -->
+            <TabItem Header="{x:Static res:Strings.Settings_Tab_License}">
+                <DockPanel Margin="8">
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,8,0,0">
+                        <Button x:Name="OpenAppLicenseButton" Content="{x:Static res:Strings.Settings_License_OpenMain}"
+                                Padding="10,3" Click="OnOpenMainLicenseClick" />
+                        <Button x:Name="OpenAria2LicenseButton" Content="{x:Static res:Strings.Settings_License_OpenAria2}"
+                                Padding="10,3" Margin="8,0,0,0" Click="OnOpenAria2LicenseClick" />
+                        <TextBlock x:Name="LicenseStatusText" VerticalAlignment="Center" Foreground="#666" Margin="10,0,0,0" TextWrapping="Wrap" />
+                    </StackPanel>
+                    <TextBox x:Name="LicenseTextBox"
+                             IsReadOnly="True"
+                             TextWrapping="Wrap"
+                             VerticalScrollBarVisibility="Auto"
+                             HorizontalScrollBarVisibility="Auto"
+                             AcceptsReturn="True"
+                             FontFamily="Consolas"
+                             FontSize="12"
+                             Padding="6"
+                             Text="{x:Static res:Strings.License_Body}" />
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

@@ -1,0 +1,22 @@
+{
+  "bundleId": "LineArt",
+  "version": "2.2",
+  "name": "Line Art",
+  "minOs": "3.1.2",
+  "appDirectory": "Lines.app",
+  "plistFormat": "bplist",
+  "executableName": "Lines",
+  "arch": "armv7,armv6",
+  "archSource": "脚本内独立的 PowerShell 实现（Read-U32/Get-ArchFromMachO）；M3 用生产解析器复核，本轮不断言",
+  "machoMagic": "CAFEBABE",
+  "hasCgbi": true,
+  "fileSize": 1100372,
+  "sourceIpa": "Line Art.ipa",
+  "sourceIpaSha256": "9453fa1dd735dcd72081b16eef099717b32f1eaa8cb43c254d904bec10c222d2",
+  "generatedBy": "FixtureGeneration/extract_fixtures.ps1（R3：+sha256/来源指纹/machoMagic）",
+  "filesSha256": {
+    "Info.plist": "d3c6bdaa7a51d5c9e701a2bde43c0c4f77891d73da159d8cffaca667049e98c0",
+    "executable-head.bin": "f2ff613776e95f6a2105cb6e0c74193e487289079c616488436de34f5355c5dc",
+    "icon-slice.bin": "f60f2489956ac06323edb1b1fcbe44ab0dd58a9f6d13818e7ed146636fec0c8b"
+  }
+}

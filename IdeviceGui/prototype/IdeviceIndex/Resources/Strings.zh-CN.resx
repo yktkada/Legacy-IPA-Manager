@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="App_Title" xml:space="preserve">
+    <value>IPA 索引</value>
+  </data>
+  <data name="App_SingleInstance_Title" xml:space="preserve">
+    <value>IPA 索引已在运行</value>
+  </data>
+  <data name="App_SingleInstance_AlreadyRunning" xml:space="preserve">
+    <value>当前会话已有 IPA 索引在运行，请切换到已打开的窗口。</value>
+  </data>
+  <data name="App_DbOpenFailedFormat" xml:space="preserve">
+    <value>打开索引库失败：
+{0}</value>
+  </data>
+  <data name="Window_Title" xml:space="preserve">
+    <value>IPA 索引 - Legacy IPA Manager</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Toolbar_Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Toolbar_SearchToolTip" xml:space="preserve">
+    <value>可通过右侧 ▾ 选择搜索字段与匹配方式</value>
+  </data>
+  <data name="Toolbar_Device" xml:space="preserve">
+    <value>设备</value>
+  </data>
+  <data name="Filter_Device_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="Toolbar_MinIos" xml:space="preserve">
+    <value>最低 iOS</value>
+  </data>
+  <data name="Toolbar_CountMergedFormat" xml:space="preserve">
+    <value>{0:N0} 条（{1:N0} 组）</value>
+  </data>
+  <data name="Toolbar_CountUnmergedFormat" xml:space="preserve">
+    <value>{0:N0} 条</value>
+  </data>
+  <data name="Toolbar_MergeSameBundle" xml:space="preserve">
+    <value>同 BundleId 合并</value>
+  </data>
+  <data name="Toolbar_MergeSameBundleToolTip" xml:space="preserve">
+    <value>按同 BundleId 合并显示（点击组行按需展开）</value>
+  </data>
+  <data name="Search_OptionsToolTip" xml:space="preserve">
+    <value>选择搜索字段与匹配方式</value>
+  </data>
+  <data name="Search_MatchModeHeader" xml:space="preserve">
+    <value>匹配方式</value>
+  </data>
+  <data name="Search_ModeContains" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="Search_ModePrefix" xml:space="preserve">
+    <value>前缀</value>
+  </data>
+  <data name="Search_ModeExact" xml:space="preserve">
+    <value>精确</value>
+  </data>
+  <data name="Filter_ToggleName" xml:space="preserve">
+    <value>启用高级筛选</value>
+  </data>
+  <data name="Filter_ToggleToolTip" xml:space="preserve">
+    <value>启用或关闭高级筛选条件</value>
+  </data>
+  <data name="Filter_Button" xml:space="preserve">
+    <value>高级筛选</value>
+  </data>
+  <data name="Filter_ButtonCountFormat" xml:space="preserve">
+    <value>高级筛选 ({0})</value>
+  </data>
+  <data name="Filter_ButtonToolTip" xml:space="preserve">
+    <value>配置多组参数化 SQLite 高级筛选条件</value>
+  </data>
+  <data name="Filter_Title" xml:space="preserve">
+    <value>高级筛选</value>
+  </data>
+  <data name="Filter_Hint" xml:space="preserve">
+    <value>同组条件按 且 / 或 组合，组间按 且 组合。</value>
+  </data>
+  <data name="Filter_ClearAll" xml:space="preserve">
+    <value>全部清空</value>
+  </data>
+  <data name="Filter_AddGroup" xml:space="preserve">
+    <value>新增组</value>
+  </data>
+  <data name="Filter_Apply" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Filter_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Filter_Group_HeaderFormat" xml:space="preserve">
+    <value>条件组 {0}</value>
+  </data>
+  <data name="Filter_Group_JoinLabel" xml:space="preserve">
+    <value>组内：</value>
+  </data>
+  <data name="Filter_Join_And" xml:space="preserve">
+    <value>且 (AND)</value>
+  </data>
+  <data name="Filter_Join_Or" xml:space="preserve">
+    <value>或 (OR)</value>
+  </data>
+  <data name="Filter_AddCondition" xml:space="preserve">
+    <value>+ 条件</value>
+  </data>
+  <data name="Filter_RemoveGroup" xml:space="preserve">
+    <value>删除组</value>
+  </data>
+  <data name="Filter_Mode_Range" xml:space="preserve">
+    <value>范围</value>
+  </data>
+  <data name="Filter_Col_SizeMb" xml:space="preserve">
+    <value>大小 (MB)</value>
+  </data>
+  <data name="Filter_Col_Developer" xml:space="preserve">
+    <value>开发者</value>
+  </data>
+  <data name="Filter_Col_Source" xml:space="preserve">
+    <value>下载源</value>
+  </data>
+  <data name="Filter_Col_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="MinOs_OperatorToolTip" xml:space="preserve">
+    <value>最低 iOS 比较符号</value>
+  </data>
+  <data name="MinOs_InputToolTip" xml:space="preserve">
+    <value>手填最低 iOS 版本（如 6.1.3）或从下拉菜单选择</value>
+  </data>
+  <data name="MinOs_InvalidTooltip" xml:space="preserve">
+    <value>版本号格式无效（请使用 major.minor[.patch]，每段 0-99）</value>
+  </data>
+  <data name="MinOs_DropdownToolTip" xml:space="preserve">
+    <value>选择内置 iOS 版本 (2.0–10.3.4)</value>
+  </data>
+  <data name="MinOs_Any" xml:space="preserve">
+    <value>不限</value>
+  </data>
+  <data name="Column_Icon" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="Column_Title" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Column_Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="Column_MinOs" xml:space="preserve">
+    <value>最低 iOS</value>
+  </data>
+  <data name="Column_DeviceFamily" xml:space="preserve">
+    <value>设备族</value>
+  </data>
+  <data name="Column_Size" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="Column_Category" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="Detail_DescriptionHeader" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Detail_SourcesHeader" xml:space="preserve">
+    <value>下载源</value>
+  </data>
+  <data name="Detail_ReadOnlyHint" xml:space="preserve">
+    <value>双击索引行加入下载队列；双击队列行可取消。</value>
+  </data>
+  <data name="Detail_MetaFormat" xml:space="preserve">
+    <value>{0} · 版本 {1} · 最低 iOS {2} · {3} · {4} · {5} 个源</value>
+  </data>
+  <data name="Detail_LoadFailedFormat" xml:space="preserve">
+    <value>读取详情失败：{0}</value>
+  </data>
+  <data name="Detail_NoDescription" xml:space="preserve">
+    <value>无描述（来源未提供；不做生成）。</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="Status_MetaFormat" xml:space="preserve">
+    <value>schema {0} · 搜索 LIKE</value>
+  </data>
+  <data name="Status_MetaFailed" xml:space="preserve">
+    <value>元数据读取失败</value>
+  </data>
+  <data name="Status_MetaFailedFormat" xml:space="preserve">
+    <value>元数据读取失败：{0}</value>
+  </data>
+  <data name="Status_Querying" xml:space="preserve">
+    <value>查询中…</value>
+  </data>
+  <data name="Status_NoMatches" xml:space="preserve">
+    <value>没有匹配结果</value>
+  </data>
+  <data name="Status_QueryFailedFormat" xml:space="preserve">
+    <value>查询失败：{0}</value>
+  </data>
+  <data name="Status_IconLoadFailedFormat" xml:space="preserve">
+    <value>图标加载失败：{0}</value>
+  </data>
+  <data name="License_Body" xml:space="preserve">
+    <value>Legacy IPA Manager for Windows — IdeviceIndex
+许可协议：GNU GPL v2 或更高版本（LICENSE / COPYING）。
+
+本工具用于浏览本地只读 IPA 索引，应用描述按上游来源逐字展示，不做 AI 生成。
+
+随包第三方组件：
+· aria2 1.37.0 (win-64bit build1) — GNU GPL v2（详情见程序目录下 aria2-LICENSE.txt、aria2-LICENSE-OpenSSL.txt、aria2-SOURCE.txt）。
+· Microsoft.Data.Sqlite / SQLite (e_sqlite3.dll) — MIT / Public Domain。
+
+本工具为非官方第三方工具，与 Apple Inc. 无关。</value>
+  </data>
+  <data name="Toolbar_MultiSelect_Off" xml:space="preserve">
+    <value>多选</value>
+  </data>
+  <data name="Toolbar_MultiSelect_OnFormat" xml:space="preserve">
+    <value>多选 ({0})</value>
+  </data>
+  <data name="Toolbar_MultiSelect_ToolTip" xml:space="preserve">
+    <value>切换多选模式（左键拖动范围选择，右键加入下载）</value>
+  </data>
+  <data name="Toolbar_DownloadSelectedFormat" xml:space="preserve">
+    <value>下载选中 ({0})</value>
+  </data>
+  <data name="Toolbar_DownloadSelectedToolTip" xml:space="preserve">
+    <value>将选中条目加入下载队列</value>
+  </data>
+  <data name="Toolbar_ClearSelection" xml:space="preserve">
+    <value>清空选择</value>
+  </data>
+  <data name="Toolbar_ClearSelectionToolTip" xml:space="preserve">
+    <value>清除当前多选</value>
+  </data>
+  <data name="Toolbar_HideRight" xml:space="preserve">
+    <value>隐藏右侧栏</value>
+  </data>
+  <data name="Toolbar_ShowRight" xml:space="preserve">
+    <value>显示右侧栏</value>
+  </data>
+  <data name="Toolbar_RightToggleToolTip" xml:space="preserve">
+    <value>显示 / 隐藏右侧队列与详情栏（Ctrl+L）</value>
+  </data>
+  <data name="ContextMenu_Enqueue" xml:space="preserve">
+    <value>加入下载队列</value>
+  </data>
+  <data name="ContextMenu_EnqueueSelectedFormat" xml:space="preserve">
+    <value>下载选中 ({0} 项)</value>
+  </data>
+  <data name="ContextMenu_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="ContextMenu_CopyName" xml:space="preserve">
+    <value>复制名称</value>
+  </data>
+  <data name="ContextMenu_CopyBundleId" xml:space="preserve">
+    <value>复制 BundleId</value>
+  </data>
+  <data name="ContextMenu_CopyVersion" xml:space="preserve">
+    <value>复制版本</value>
+  </data>
+  <data name="ContextMenu_CopyMinOs" xml:space="preserve">
+    <value>复制最低 iOS</value>
+  </data>
+  <data name="ContextMenu_RowHeight" xml:space="preserve">
+    <value>行高</value>
+  </data>
+  <data name="RowHeight_Small" xml:space="preserve">
+    <value>小 (24)</value>
+  </data>
+  <data name="RowHeight_Medium" xml:space="preserve">
+    <value>中 (32)</value>
+  </data>
+  <data name="RowHeight_Large" xml:space="preserve">
+    <value>大 (42)</value>
+  </data>
+  <data name="ContextMenu_ClearSelection" xml:space="preserve">
+    <value>清空选择</value>
+  </data>
+  <data name="ContextMenu_ExpandGroup" xml:space="preserve">
+    <value>展开组</value>
+  </data>
+  <data name="ContextMenu_CollapseGroup" xml:space="preserve">
+    <value>收起组</value>
+  </data>
+  <data name="RightSection_Queue" xml:space="preserve">
+    <value>下载队列</value>
+  </data>
+  <data name="RightSection_Details" xml:space="preserve">
+    <value>应用详情</value>
+  </data>
+  <data name="Queue_Suspend" xml:space="preserve">
+    <value>挂起</value>
+  </data>
+  <data name="Queue_Resume" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="Queue_SuspendResumeToolTip" xml:space="preserve">
+    <value>挂起或继续待下载队列</value>
+  </data>
+  <data name="Queue_Cancel" xml:space="preserve">
+    <value>取消选中</value>
+  </data>
+  <data name="Queue_CancelToolTip" xml:space="preserve">
+    <value>取消选中任务（也可双击队列行取消）</value>
+  </data>
+  <data name="Queue_Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="Queue_ClearToolTip" xml:space="preserve">
+    <value>清除已完成、失败和已取消条目</value>
+  </data>
+  <data name="Queue_SummaryFormat" xml:space="preserve">
+    <value>{0} 等待 · {1} 进行中 · {2} 完成 · {3} 失败</value>
+  </data>
+  <data name="Queue_Status_Pending" xml:space="preserve">
+    <value>等待中</value>
+  </data>
+  <data name="Queue_Status_Downloading" xml:space="preserve">
+    <value>下载中</value>
+  </data>
+  <data name="Queue_Status_Verifying" xml:space="preserve">
+    <value>校验中</value>
+  </data>
+  <data name="Queue_Status_Importing" xml:space="preserve">
+    <value>入库中</value>
+  </data>
+  <data name="Queue_Status_Paused" xml:space="preserve">
+    <value>已暂停</value>
+  </data>
+  <data name="Queue_Status_Succeeded" xml:space="preserve">
+    <value>已完成</value>
+  </data>
+  <data name="Queue_Status_Failed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="Queue_Status_Cancelled" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="Queue_Note_Waiting" xml:space="preserve">
+    <value>已入队（等待下载引擎）</value>
+  </data>
+  <data name="Queue_Note_Suspended" xml:space="preserve">
+    <value>队列已挂起</value>
+  </data>
+  <data name="Queue_Col_Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Queue_Col_Note" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Queue_Col_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Queue_Col_Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="Queue_Col_Size" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="Queue_Col_MinOs" xml:space="preserve">
+    <value>最低 iOS</value>
+  </data>
+  <data name="Queue_Col_DeviceFamily" xml:space="preserve">
+    <value>设备族</value>
+  </data>
+  <data name="Queue_Col_Source" xml:space="preserve">
+    <value>下载源</value>
+  </data>
+  <data name="Queue_Col_TargetPath" xml:space="preserve">
+    <value>保存路径</value>
+  </data>
+  <data name="Status_EnqueuedFormat" xml:space="preserve">
+    <value>已加入下载队列：{0}</value>
+  </data>
+  <data name="Status_AlreadyQueuedFormat" xml:space="preserve">
+    <value>已在下载队列中：{0}</value>
+  </data>
+  <data name="Status_BatchEnqueuedFormat" xml:space="preserve">
+    <value>已批量入队 {0} 项（{1} 项已在队列中）</value>
+  </data>
+  <data name="Status_QueueCancelledFormat" xml:space="preserve">
+    <value>已取消：{0}</value>
+  </data>
+  <data name="Status_QueueSuspended" xml:space="preserve">
+    <value>下载队列已挂起</value>
+  </data>
+  <data name="Status_QueueResumed" xml:space="preserve">
+    <value>下载队列已恢复</value>
+  </data>
+  <data name="Status_QueueClearedFormat" xml:space="preserve">
+    <value>已清除 {0} 条已结束任务</value>
+  </data>
+  <data name="Status_CopiedFormat" xml:space="preserve">
+    <value>已复制：{0}</value>
+  </data>
+  <data name="Aria2_Error_FilesMissingFormat" xml:space="preserve">
+    <value>aria2 完整性校验失败：缺少必需文件（{0}），已停用下载。</value>
+  </data>
+  <data name="Aria2_Error_ManifestInvalidFormat" xml:space="preserve">
+    <value>aria2 完整性校验失败：清单无效（{0}），已停用下载。</value>
+  </data>
+  <data name="Aria2_Error_ProcessFailedFormat" xml:space="preserve">
+    <value>aria2 完整性校验失败：无法运行 aria2c.exe（{0}），已停用下载。</value>
+  </data>
+  <data name="Aria2_Error_VersionMismatchFormat" xml:space="preserve">
+    <value>aria2 版本不匹配（期望 {0}，实际 {1}），已停用下载。</value>
+  </data>
+  <data name="Aria2_Error_HashMismatchFormat" xml:space="preserve">
+    <value>aria2 SHA-256 校验不匹配（期望 {0}，实际 {1}），已停用下载。</value>
+  </data>
+  <data name="Aria2_Disabled_BannerFormat" xml:space="preserve">
+    <value>下载已停用：{0}</value>
+  </data>
+  <data name="Policy_Error_OutsideProgramDirFormat" xml:space="preserve">
+    <value>安全策略禁止在程序目录外写入：{0}</value>
+  </data>
+  <data name="Policy_Error_ForbiddenSystemDirFormat" xml:space="preserve">
+    <value>禁止写入系统临时目录或受保护的用户配置目录：{0}</value>
+  </data>
+  <data name="Policy_Error_ReparsePointFormat" xml:space="preserve">
+    <value>拒绝重解析点/符号链接路径：{0}</value>
+  </data>
+  <data name="Policy_Error_DirNotWritableFormat" xml:space="preserve">
+    <value>目标目录不可写（{0}）：{1}</value>
+  </data>
+  <data name="Policy_Error_MaxFileSizeFormat" xml:space="preserve">
+    <value>文件大小（{0} MB）超过上限（{1} MB）。</value>
+  </data>
+  <data name="Policy_Error_InsufficientSpaceFormat" xml:space="preserve">
+    <value>磁盘空间不足：缺少 {0}。</value>
+  </data>
+  <data name="Policy_Error_EmptyFile" xml:space="preserve">
+    <value>下载文件为空。</value>
+  </data>
+  <data name="Policy_Error_SizeMismatchFormat" xml:space="preserve">
+    <value>文件大小不匹配（期望 {0} 字节，实际 {1} 字节）。</value>
+  </data>
+  <data name="Policy_Error_InvalidZipHeader" xml:space="preserve">
+    <value>文件损坏：无效的 ZIP/IPA 文件头。</value>
+  </data>
+  <data name="Policy_Error_Sha256Mismatch" xml:space="preserve">
+    <value>文件损坏：SHA-256 校验失败。</value>
+  </data>
+  <data name="Policy_Error_NotSingleFileFormat" xml:space="preserve">
+    <value>拒绝删除目录或非常规文件：{0}</value>
+  </data>
+  <data name="Download_Note_NoSources" xml:space="preserve">
+    <value>无可用下载源</value>
+  </data>
+  <data name="Download_Note_MirrorAttemptFormat" xml:space="preserve">
+    <value>镜像 {0}/{1}</value>
+  </data>
+  <data name="Download_Note_RetryingFormat" xml:space="preserve">
+    <value>正在重试 ({0}/{1})...</value>
+  </data>
+  <data name="Download_Note_StallRetrying" xml:space="preserve">
+    <value>长时间无数据进展，正在重试...</value>
+  </data>
+  <data name="Download_Note_Verifying" xml:space="preserve">
+    <value>正在校验下载文件...</value>
+  </data>
+  <data name="Download_Error_DeadLink" xml:space="preserve">
+    <value>链接失效（HTTP 404/410）</value>
+  </data>
+  <data name="Download_Error_Unavailable" xml:space="preserve">
+    <value>链接不可用（HTTP 403）</value>
+  </data>
+  <data name="Download_Error_DiskFullFormat" xml:space="preserve">
+    <value>磁盘空间不足：{0}</value>
+  </data>
+  <data name="Download_Error_FailedFormat" xml:space="preserve">
+    <value>下载失败：{0}</value>
+  </data>
+  <data name="Download_Error_DaemonFailedFormat" xml:space="preserve">
+    <value>aria2 RPC 启动失败：{0}</value>
+  </data>
+  <data name="Download_Note_SavedToFormat" xml:space="preserve">
+    <value>已保存：{0}</value>
+  </data>
+  <data name="Window_ConfirmExitActiveDownloadsFormat" xml:space="preserve">
+    <value>当前仍有 {0} 个下载任务进行中，确定要退出并停止下载吗？</value>
+  </data>
+  <data name="Window_ConfirmExitCaption" xml:space="preserve">
+    <value>确认退出</value>
+  </data>
+  <data name="Status_Aria2ReadyFormat" xml:space="preserve">
+    <value>aria2 {0} 就绪</value>
+  </data>
+  <data name="Status_CleanedStalePartsFormat" xml:space="preserve">
+    <value>已清理 {0} 个过期临时文件</value>
+  </data>
+  <data name="Ipc_Note_ProtocolMismatch" xml:space="preserve">
+    <value>已保存；主程序通信协议版本不匹配（请更新）。</value>
+  </data>
+  <data name="Ipc_Note_StandaloneLibraryFallback" xml:space="preserve">
+    <value>已保存到默认资料库；主程序下次扫描时将自动入库。</value>
+  </data>
+  <data name="Ipc_Note_NotInScanRoot" xml:space="preserve">
+    <value>已保存；所在目录不是主程序已启用的扫描根（不会自动入库）。</value>
+  </data>
+  <data name="Ipc_Note_AutoImportedFormat" xml:space="preserve">
+    <value>已自动入库：{0}</value>
+  </data>
+  <data name="Ipc_Note_RefreshedFallback" xml:space="preserve">
+    <value>已保存；已触发主程序刷新资料库。</value>
+  </data>
+  <data name="Ipc_Note_NextScanFallback" xml:space="preserve">
+    <value>已保存；主程序将在下次扫描时入库。</value>
+  </data>
+  <data name="Toolbar_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Toolbar_SettingsToolTip" xml:space="preserve">
+    <value>配置下载参数、代理、布局与写盘安全策略</value>
+  </data>
+  <data name="DownloadDir_Label" xml:space="preserve">
+    <value>下载到</value>
+  </data>
+  <data name="DownloadDir_Browse" xml:space="preserve">
+    <value>浏览…</value>
+  </data>
+  <data name="DownloadDir_Warning_NotInScanRoot" xml:space="preserve">
+    <value>当前目标目录保存在扫描根外，下载后不会自动入库。</value>
+  </data>
+  <data name="DownloadDir_Warning_OutsideBlocked" xml:space="preserve">
+    <value>当前目录位于程序目录外，写盘已被安全策略阻止；请先在「设置 → 安全」中开启“允许程序在程序目录外写入”。</value>
+  </data>
+  <data name="Sources_CopyLink" xml:space="preserve">
+    <value>复制链接</value>
+  </data>
+  <data name="Sources_OpenLink" xml:space="preserve">
+    <value>打开链接</value>
+  </data>
+  <data name="Sources_OpenPage" xml:space="preserve">
+    <value>打开详情页</value>
+  </data>
+  <data name="Status_SourceLinkOpenedFormat" xml:space="preserve">
+    <value>已打开链接：{0}</value>
+  </data>
+  <data name="Status_SourceLinkInvalid" xml:space="preserve">
+    <value>只允许打开 http/https 链接。</value>
+  </data>
+  <data name="Status_LanguageChangedHint" xml:space="preserve">
+    <value>语言设置已保存；重启 IPA 索引后所有静态文案将完整切换。</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>IPA 索引设置</value>
+  </data>
+  <data name="Settings_Tab_General" xml:space="preserve">
+    <value>通用与界面</value>
+  </data>
+  <data name="Settings_Tab_Download" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="Settings_Tab_NetworkSession" xml:space="preserve">
+    <value>网络与入库</value>
+  </data>
+  <data name="Settings_Tab_Security" xml:space="preserve">
+    <value>安全</value>
+  </data>
+  <data name="Settings_Button_Ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Settings_Button_Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Settings_Button_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Settings_Button_ResetGroup" xml:space="preserve">
+    <value>恢复默认</value>
+  </data>
+  <data name="Settings_General_Language" xml:space="preserve">
+    <value>界面语言</value>
+  </data>
+  <data name="Settings_General_LangSystem" xml:space="preserve">
+    <value>跟随系统（默认）</value>
+  </data>
+  <data name="Settings_General_LangZhCn" xml:space="preserve">
+    <value>简体中文 (zh-CN)</value>
+  </data>
+  <data name="Settings_General_LangEn" xml:space="preserve">
+    <value>English (en)</value>
+  </data>
+  <data name="Settings_General_LanguageHint" xml:space="preserve">
+    <value>切换界面语言后，重启 IPA 索引即可完整生效。</value>
+  </data>
+  <data name="Settings_General_RightSections" xml:space="preserve">
+    <value>右侧栏区域（勾选显隐与上下顺序）</value>
+  </data>
+  <data name="Settings_General_QueueColumns" xml:space="preserve">
+    <value>下载队列显示字段（勾选显隐与上下顺序）</value>
+  </data>
+  <data name="Settings_Button_MoveUp" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Settings_Button_MoveDown" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Settings_Download_Dir" xml:space="preserve">
+    <value>默认下载目录</value>
+  </data>
+  <data name="Settings_Download_RememberLastDir" xml:space="preserve">
+    <value>记住上次选择的下载目录</value>
+  </data>
+  <data name="Settings_Download_Connections" xml:space="preserve">
+    <value>单服务器连接数 (1-16)</value>
+  </data>
+  <data name="Settings_Download_Splits" xml:space="preserve">
+    <value>分段数 (1-16)</value>
+  </data>
+  <data name="Settings_Download_MinSplitSize" xml:space="preserve">
+    <value>最小分块大小 (1M-64M)</value>
+  </data>
+  <data name="Settings_Download_Concurrency" xml:space="preserve">
+    <value>同时下载任务数 (1-8)</value>
+  </data>
+  <data name="Settings_Download_SpeedLimit" xml:space="preserve">
+    <value>总限速 (0 或 64K-100M)</value>
+  </data>
+  <data name="Settings_Download_PerTaskSpeedLimit" xml:space="preserve">
+    <value>单任务限速 (0 或 64K-100M)</value>
+  </data>
+  <data name="Settings_Download_RetryTimes" xml:space="preserve">
+    <value>失败重试次数 (0-10)</value>
+  </data>
+  <data name="Settings_Download_RetryWait" xml:space="preserve">
+    <value>重试等待秒数 (1-120)</value>
+  </data>
+  <data name="Settings_Download_Timeout" xml:space="preserve">
+    <value>超时秒数 (10-600)</value>
+  </data>
+  <data name="Settings_Download_Continue" xml:space="preserve">
+    <value>启用断点续传 (--continue)</value>
+  </data>
+  <data name="Settings_Network_ProxyMode" xml:space="preserve">
+    <value>代理模式</value>
+  </data>
+  <data name="Settings_Network_ProxySystem" xml:space="preserve">
+    <value>跟随系统代理</value>
+  </data>
+  <data name="Settings_Network_ProxyManual" xml:space="preserve">
+    <value>手动设置代理</value>
+  </data>
+  <data name="Settings_Network_ProxyNone" xml:space="preserve">
+    <value>直连（不使用代理）</value>
+  </data>
+  <data name="Settings_Network_ProxyUrl" xml:space="preserve">
+    <value>代理地址</value>
+  </data>
+  <data name="Settings_Network_ProxyBypass" xml:space="preserve">
+    <value>直连白名单</value>
+  </data>
+  <data name="Settings_Network_UserAgent" xml:space="preserve">
+    <value>User-Agent</value>
+  </data>
+  <data name="Settings_Session_DirMode" xml:space="preserve">
+    <value>会话文件目录</value>
+  </data>
+  <data name="Settings_Session_ModeProgram" xml:space="preserve">
+    <value>程序 data 目录 (program)</value>
+  </data>
+  <data name="Settings_Session_ModeTarget" xml:space="preserve">
+    <value>目标目录 .aria2 (target)</value>
+  </data>
+  <data name="Settings_Session_ModeCustom" xml:space="preserve">
+    <value>自定义目录 (custom)</value>
+  </data>
+  <data name="Settings_Session_DirCustom" xml:space="preserve">
+    <value>自定义会话目录</value>
+  </data>
+  <data name="Settings_Session_ControlFileMode" xml:space="preserve">
+    <value>.aria2 控制文件模式</value>
+  </data>
+  <data name="Settings_Session_ControlSameAsPart" xml:space="preserve">
+    <value>与 .part 同目录 (same-as-part)</value>
+  </data>
+  <data name="Settings_Session_ControlSession" xml:space="preserve">
+    <value>集中放会话目录 (session)</value>
+  </data>
+  <data name="Settings_Storage_KeepPartFiles" xml:space="preserve">
+    <value>取消或失败时保留 .part 文件以便续传</value>
+  </data>
+  <data name="Settings_Storage_PartTtlHours" xml:space="preserve">
+    <value>.part 过期清理小时数 (1-720)</value>
+  </data>
+  <data name="Settings_Storage_SpaceMarginMb" xml:space="preserve">
+    <value>额外剩余空间余量 MB (0-1024)</value>
+  </data>
+  <data name="Settings_Storage_MaxFileSizeMb" xml:space="preserve">
+    <value>单文件大小上限 MB (0 = 不限)</value>
+  </data>
+  <data name="Settings_Import_AutoImport" xml:space="preserve">
+    <value>落盘到扫描根内时自动入库主程序</value>
+  </data>
+  <data name="Settings_Import_AutoRefreshFallback" xml:space="preserve">
+    <value>单文件导入失败时回退触发资料库刷新</value>
+  </data>
+  <data name="Settings_Import_OpenFolderWhenDone" xml:space="preserve">
+    <value>下载完成后打开所在目录</value>
+  </data>
+  <data name="Settings_Security_AllowOutsideWrite" xml:space="preserve">
+    <value>允许程序在程序目录外写入</value>
+  </data>
+  <data name="Settings_Security_Hint" xml:space="preserve">
+    <value>关闭时只能在程序目录内写入；读取与打开路径不受限制。</value>
+  </data>
+  <data name="Settings_Security_RiskNotice" xml:space="preserve">
+    <value>开启后程序缺陷可能损坏程序目录外的数据，风险由使用者承担。</value>
+  </data>
+  <data name="Settings_Security_ConfirmTitle" xml:space="preserve">
+    <value>允许程序在程序目录外写入</value>
+  </data>
+  <data name="Settings_Security_ConfirmBody" xml:space="preserve">
+    <value>开启后，本程序可以把下载目录、会话文件放到程序目录以外的位置。</value>
+  </data>
+  <data name="Settings_Security_ConfirmRisk" xml:space="preserve">
+    <value>风险声明：若程序存在缺陷（bug），可能对程序目录之外的数据造成意外修改或删除。开启本选项表示你已知晓并自行承担该风险。</value>
+  </data>
+  <data name="Settings_Security_ConfirmCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Settings_Security_ConfirmEnable" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="Sources_ChooseProgram" xml:space="preserve">
+    <value>选择程序…</value>
+  </data>
+  <data name="Sources_ChooseProgramMenu" xml:space="preserve">
+    <value>选择程序打开…</value>
+  </data>
+  <data name="Links_ChooseProgramDialogTitle" xml:space="preserve">
+    <value>选择用于打开链接的程序</value>
+  </data>
+  <data name="Links_ExecutableFilter" xml:space="preserve">
+    <value>可执行文件 (*.exe)|*.exe</value>
+  </data>
+  <data name="Links_Error_ProgramMissingFormat" xml:space="preserve">
+    <value>自定义链接打开程序不存在或无效：{0}</value>
+  </data>
+  <data name="Links_SaveDefaultTitle" xml:space="preserve">
+    <value>保存默认链接打开程序</value>
+  </data>
+  <data name="Links_SaveDefaultPromptFormat" xml:space="preserve">
+    <value>是否将以下程序保存为默认链接打开程序？
+
+{0}</value>
+  </data>
+  <data name="Download_Hint_ProxyAria2Direct" xml:space="preserve">
+    <value>请检查代理/TUN 规则是否对 aria2c.exe 配了直连，可添加 PROCESS-NAME,aria2c.exe,PROXY</value>
+  </data>
+  <data name="Settings_General_DisplayLimit" xml:space="preserve">
+    <value>列表显示上限 (0 = 不限)</value>
+  </data>
+  <data name="Settings_General_DisplayLimitHint" xml:space="preserve">
+    <value>默认 0 表示不限（全量虚拟列表）；填正数可限制最大显示条数（负数或无效值回落 0）。</value>
+  </data>
+  <data name="Settings_General_OpenLinkProgram" xml:space="preserve">
+    <value>自定义链接打开程序</value>
+  </data>
+  <data name="Settings_General_ClearProgram" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Settings_Tab_License" xml:space="preserve">
+    <value>许可</value>
+  </data>
+  <data name="Settings_License_OpenMain" xml:space="preserve">
+    <value>打开主许可 (LICENSE)</value>
+  </data>
+  <data name="Settings_License_OpenAria2" xml:space="preserve">
+    <value>打开 aria2-LICENSE.txt</value>
+  </data>
+  <data name="Settings_License_FileMissingFormat" xml:space="preserve">
+    <value>程序目录下找不到许可文件：{0}</value>
+  </data>
+  <data name="Settings_License_OpenedFormat" xml:space="preserve">
+    <value>已打开许可文件：{0}</value>
+  </data>
+  <data name="Detail_GroupMetaFormat" xml:space="preserve">
+    <value>{0} · {1} 个版本 ({2}) · 最低 iOS {3} · {4} · {5} · 代表来源 {6}</value>
+  </data>
+  <data name="Toolbar_ImportIndex" xml:space="preserve">
+    <value>导入索引…</value>
+  </data>
+  <data name="Toolbar_ImportIndexToolTip" xml:space="preserve">
+    <value>导入本地 index.db、manifest.json、JSONL 或增量补丁</value>
+  </data>
+  <data name="Banner_MissingDbText" xml:space="preserve">
+    <value>当前未加载索引数据库。请点击「导入索引…」导入本地 index.db、manifest.json、entries.jsonl.gz 或 JSON 补丁。</value>
+  </data>
+  <data name="Status_NoIndexLoaded" xml:space="preserve">
+    <value>（未加载索引）</value>
+  </data>
+  <data name="Status_NoIndexHint" xml:space="preserve">
+    <value>未加载索引数据库 — 请点击「导入索引…」加载索引</value>
+  </data>
+  <data name="Status_IndexImportedFormat" xml:space="preserve">
+    <value>已加载索引：{0}</value>
+  </data>
+  <data name="Settings_General_IndexDb" xml:space="preserve">
+    <value>索引数据库</value>
+  </data>
+  <data name="Import_Title" xml:space="preserve">
+    <value>导入索引</value>
+  </data>
+  <data name="Import_FileLabel" xml:space="preserve">
+    <value>索引文件</value>
+  </data>
+  <data name="Import_FileFilter" xml:space="preserve">
+    <value>索引文件 (*.db;manifest.json;*.jsonl.gz;*.jsonl;*.json)|*.db;manifest.json;*.jsonl.gz;*.jsonl;*.json|所有文件 (*.*)|*.*</value>
+  </data>
+  <data name="Import_DialogTitle" xml:space="preserve">
+    <value>选择索引文件或增量补丁</value>
+  </data>
+  <data name="Import_DbModeGroup" xml:space="preserve">
+    <value>SQLite 数据库导入方式</value>
+  </data>
+  <data name="Import_DbCopyRadio" xml:space="preserve">
+    <value>复制到程序目录（index\index.db）</value>
+  </data>
+  <data name="Import_DbLinkRadio" xml:space="preserve">
+    <value>仅链接外部路径（只读直连，永不修改源文件）</value>
+  </data>
+  <data name="Import_JsonModeGroup" xml:space="preserve">
+    <value>JSON / JSONL 导入方式</value>
+  </data>
+  <data name="Import_JsonIncrementalRadio" xml:space="preserve">
+    <value>增量更新（单事务内执行 upsert / delete，失败自动回滚）</value>
+  </data>
+  <data name="Import_JsonFullReplaceRadio" xml:space="preserve">
+    <value>全量重建（新建完整 9 索引的 index.db 后原子替换）</value>
+  </data>
+  <data name="Import_MergeSourcesCheck" xml:space="preserve">
+    <value>保留并按 URL 去重合并旧下载源</value>
+  </data>
+  <data name="Import_VerifyBaseRevisionCheck" xml:space="preserve">
+    <value>存在 base_revision 时校验版本链</value>
+  </data>
+  <data name="Import_StartButton" xml:space="preserve">
+    <value>开始导入</value>
+  </data>
+  <data name="Import_CancelButton" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Import_CloseButton" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Import_ReadyHint" xml:space="preserve">
+    <value>请选择本地 index.db、manifest.json、.jsonl.gz、.jsonl 或 .json 文件。</value>
+  </data>
+  <data name="Import_ProgressFormat" xml:space="preserve">
+    <value>正在导入条目：{0:N0} / {1:N0}…</value>
+  </data>
+  <data name="Import_ProgressCountFormat" xml:space="preserve">
+    <value>正在导入条目：{0:N0}…</value>
+  </data>
+  <data name="Import_SuccessDbFormat" xml:space="preserve">
+    <value>索引库已就绪（共 {0:N0} 条）。</value>
+  </data>
+  <data name="Import_SuccessJsonFormat" xml:space="preserve">
+    <value>导入完成：当前共 {0:N0} 条（新增/更新 {1:N0} 条，删除 {2:N0} 条）。</value>
+  </data>
+  <data name="Import_Cancelled" xml:space="preserve">
+    <value>已取消导入；原有索引库保持不变。</value>
+  </data>
+  <data name="Import_Error_DbMissing" xml:space="preserve">
+    <value>所选索引数据库文件不存在。</value>
+  </data>
+  <data name="Import_Error_DbMissingTableFormat" xml:space="preserve">
+    <value>数据库缺少必需的数据表：{0}</value>
+  </data>
+  <data name="Import_Error_SchemaMismatchFormat" xml:space="preserve">
+    <value>不支持的索引结构版本：{0}</value>
+  </data>
+  <data name="Import_Error_DbInvalid" xml:space="preserve">
+    <value>无效的索引数据库文件。</value>
+  </data>
+  <data name="Import_Error_FileNotFound" xml:space="preserve">
+    <value>找不到所选索引文件。</value>
+  </data>
+  <data name="Import_Error_RevisionMismatchFormat" xml:space="preserve">
+    <value>增量补丁 base_revision 不匹配（需要 {0}，当前为 {1}），需要全量重建。</value>
+  </data>
+  <data name="Import_Error_UnsupportedFormat" xml:space="preserve">
+    <value>不支持的索引文件格式。</value>
+  </data>
+  <data name="Import_Error_ManifestInvalid" xml:space="preserve">
+    <value>manifest.json 格式无效。</value>
+  </data>
+  <data name="Import_Error_UnsafePath" xml:space="preserve">
+    <value>manifest.json 包含不安全或越界的相对路径。</value>
+  </data>
+  <data name="Import_Error_BytesMismatchFormat" xml:space="preserve">
+    <value>文件大小与 manifest 记录不一致（期望 {0} 字节，实际 {1} 字节）。</value>
+  </data>
+  <data name="Import_Error_Sha256MismatchFormat" xml:space="preserve">
+    <value>文件 SHA-256 校验失败（期望 {0}，实际 {1}）。</value>
+  </data>
+  <data name="Import_Error_InvalidRow" xml:space="preserve">
+    <value>索引文件中包含无效的 JSON 条目行。</value>
+  </data>
+  <data name="Import_Error_UnknownOpFormat" xml:space="preserve">
+    <value>不支持的增量操作类型：{0}</value>
+  </data>
+  <data name="Import_Error_MissingBundleId" xml:space="preserve">
+    <value>条目缺少必需的 bundle_id 字段。</value>
+  </data>
+  <data name="Import_Stage_Finalizing" xml:space="preserve">
+    <value>正在建立索引并完成切换…</value>
+  </data>
+  <data name="App_TempDirWarningFormat" xml:space="preserve">
+    <value>无法写入程序目录临时文件夹（{0}），将回退系统临时目录：{1}</value>
+  </data>
+  <data name="Toolbar_Index" xml:space="preserve">
+    <value>索引</value>
+  </data>
+  <data name="Import_RemoteGroup" xml:space="preserve">
+    <value>远程更新补丁链接（http/https）</value>
+  </data>
+  <data name="Import_UpdateUrlLabel" xml:space="preserve">
+    <value>更新链接</value>
+  </data>
+  <data name="Import_DownloadApplyButton" xml:space="preserve">
+    <value>下载并应用</value>
+  </data>
+  <data name="Import_Error_UpdateUrlInvalid" xml:space="preserve">
+    <value>更新链接必须是有效的 http:// 或 https:// 地址。</value>
+  </data>
+  <data name="Import_Stage_Downloading" xml:space="preserve">
+    <value>正在下载远程索引更新包…</value>
+  </data>
+  <data name="Window_Closing_TitleFormat" xml:space="preserve">
+    <value>{0} - 正在关闭 - {1}</value>
+  </data>
+  <data name="Window_Closing_Step_SavingLayout" xml:space="preserve">
+    <value>正在保存布局与设置</value>
+  </data>
+  <data name="Window_Closing_Step_StoppingDownloads" xml:space="preserve">
+    <value>正在停止下载引擎</value>
+  </data>
+  <data name="Window_Closing_Step_DisposingEngine" xml:space="preserve">
+    <value>正在释放下载引擎</value>
+  </data>
+  <data name="Queue_EmptyHint" xml:space="preserve">
+    <value>双击文件行以加入到该队列，再次双击相应文件行或队列任务以取消</value>
+  </data>
+</root>

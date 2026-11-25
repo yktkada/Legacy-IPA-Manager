@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Settings_Layout_Language" xml:space="preserve">
+    <value>界面语言</value>
+  </data>
+  <data name="Settings_Layout_Language_System" xml:space="preserve">
+    <value>跟随系统</value>
+  </data>
+  <data name="Settings_Layout_Language_ZhCn" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="Settings_Layout_Language_En" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_Layout_Language_Tooltip" xml:space="preserve">
+    <value>重启生效。未知或非中文系统语言默认使用英文。</value>
+  </data>
+  <data name="Settings_Layout_Language_RestartHint" xml:space="preserve">
+    <value>切换界面语言后需重启程序生效。</value>
+  </data>
+  <data name="Main_Toolbar_AddRoot" xml:space="preserve">
+    <value>添加扫描根…</value>
+  </data>
+  <data name="Main_Toolbar_AddRootToolTip" xml:space="preserve">
+    <value>将整个目录加入扫描根</value>
+  </data>
+  <data name="Main_Toolbar_OpenIndex" xml:space="preserve">
+    <value>IPA 索引…</value>
+  </data>
+  <data name="Main_Toolbar_OpenIndexToolTip" xml:space="preserve">
+    <value>打开索引浏览/下载工具 IdeviceIndex</value>
+  </data>
+  <data name="Main_Toolbar_InstallTo" xml:space="preserve">
+    <value>安装到…</value>
+  </data>
+  <data name="Main_Toolbar_HideLog" xml:space="preserve">
+    <value>隐藏日志</value>
+  </data>
+  <data name="Main_Toolbar_ShowLog" xml:space="preserve">
+    <value>显示日志</value>
+  </data>
+  <data name="Main_Toolbar_LogToggleToolTip" xml:space="preserve">
+    <value>显示 / 隐藏右侧日志栏（Ctrl+L）</value>
+  </data>
+  <data name="Main_Toolbar_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Main_Toolbar_SettingsToolTip" xml:space="preserve">
+    <value>设置：资料库 / 扫描 / 图标 / 日志 / 布局 / 设备</value>
+  </data>
+  <data name="Main_Device_MoreInfoToolTip" xml:space="preserve">
+    <value>更多设备信息</value>
+  </data>
+  <data name="Main_Device_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Main_Device_RefreshToolTip" xml:space="preserve">
+    <value>重新枚举设备并刷新信息</value>
+  </data>
+  <data name="Main_Device_OfflineToolTip" xml:space="preserve">
+    <value>设备离线（插回后自动恢复）</value>
+  </data>
+  <data name="Main_Device_CurrentJobStatusToolTip" xml:space="preserve">
+    <value>当前任务状态</value>
+  </data>
+  <data name="Main_Device_NoOnlineDevices" xml:space="preserve">
+    <value>没有在线设备</value>
+  </data>
+  <data name="Main_Library_ModeTitle" xml:space="preserve">
+    <value>资料库</value>
+  </data>
+  <data name="Main_Library_RowHeightSmall" xml:space="preserve">
+    <value>行高 小（24）</value>
+  </data>
+  <data name="Main_Library_RowHeightMedium" xml:space="preserve">
+    <value>行高 中（32）</value>
+  </data>
+  <data name="Main_Library_RowHeightLarge" xml:space="preserve">
+    <value>行高 大（40）</value>
+  </data>
+  <data name="Main_DeviceApps_ModeTitle" xml:space="preserve">
+    <value>设备应用</value>
+  </data>
+  <data name="Main_DeviceApps_ModeToolTip" xml:space="preserve">
+    <value>已安装到当前设备的 App</value>
+  </data>
+  <data name="Main_Library_MultiSelectToolTip" xml:space="preserve">
+    <value>多选模式：单击文件行选中/取消，右键可安装到设备</value>
+  </data>
+  <data name="Main_Library_SwitchGroupToolTip" xml:space="preserve">
+    <value>切换分组</value>
+  </data>
+  <data name="Main_Library_ManageGroups" xml:space="preserve">
+    <value>管理分组</value>
+  </data>
+  <data name="Main_Library_ManageGroupsToolTip" xml:space="preserve">
+    <value>管理用户分组：重命名 / 删除</value>
+  </data>
+  <data name="Main_Library_IncrementalScan" xml:space="preserve">
+    <value>增量扫描</value>
+  </data>
+  <data name="Main_Library_IncrementalScanToolTip" xml:space="preserve">
+    <value>只检查新增或变化的文件（按文件大小与修改时间）</value>
+  </data>
+  <data name="Main_Library_FullRescan" xml:space="preserve">
+    <value>全量重扫</value>
+  </data>
+  <data name="Main_Library_FullRescanToolTip" xml:space="preserve">
+    <value>重新解析文件的 体积 / 图标 / 架构等；可能耗时较长</value>
+  </data>
+  <data name="Main_Library_CompatFilterToolTip" xml:space="preserve">
+    <value>兼容性筛选: 关  / 可安装到该设备 / 已适配该设备（已适配=支持当前设备的屏幕分辨率 + 满足最低 iOS 要求）</value>
+  </data>
+  <data name="Main_Library_SearchToolTip" xml:space="preserve">
+    <value>按所选字段过滤；使用 ▾ 选择搜索范围与匹配方式</value>
+  </data>
+  <data name="Main_Library_SearchOptionsToolTip" xml:space="preserve">
+    <value>搜索范围与匹配方式</value>
+  </data>
+  <data name="Main_Library_SearchFieldFileName" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="Main_Search_MatchMode" xml:space="preserve">
+    <value>匹配方式</value>
+  </data>
+  <data name="Main_Search_ModeContains" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="Main_Search_ModePrefix" xml:space="preserve">
+    <value>前缀</value>
+  </data>
+  <data name="Main_Search_ModeExact" xml:space="preserve">
+    <value>精确</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterToggleName" xml:space="preserve">
+    <value>高级筛选总开关</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterToggleToolTip" xml:space="preserve">
+    <value>总开关：关闭后仍保留高级筛选条件</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterToolTip" xml:space="preserve">
+    <value>编辑高级筛选条件</value>
+  </data>
+  <data name="Main_Library_MergeSameBundle" xml:space="preserve">
+    <value>合并同 BundleID 包</value>
+  </data>
+  <data name="Main_Library_MergeSameBundleToolTip" xml:space="preserve">
+    <value>将同 BundleID 的多个版本合并</value>
+  </data>
+  <data name="Main_DeviceApps_MultiSelectToolTip" xml:space="preserve">
+    <value>设备应用多选：单击行选中/取消，然后批量卸载</value>
+  </data>
+  <data name="Main_DeviceApps_BatchUninstallToolTip" xml:space="preserve">
+    <value>卸载所有选中的设备应用</value>
+  </data>
+  <data name="Main_Common_SelectAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="Main_Common_ClearSelection" xml:space="preserve">
+    <value>取消选择</value>
+  </data>
+  <data name="Main_Column_Icon" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="Main_Column_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Main_Column_Origin" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="Main_Column_AppSize" xml:space="preserve">
+    <value>解压后体积</value>
+  </data>
+  <data name="Main_Column_Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="Main_Column_MinOs" xml:space="preserve">
+    <value>最低 iOS</value>
+  </data>
+  <data name="Main_Column_DeviceFamily" xml:space="preserve">
+    <value>设备族</value>
+  </data>
+  <data name="Main_Column_Arch" xml:space="preserve">
+    <value>架构</value>
+  </data>
+  <data name="Main_Column_FileSize" xml:space="preserve">
+    <value>原始大小</value>
+  </data>
+  <data name="Main_Column_State" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Main_Column_FilePath" xml:space="preserve">
+    <value>文件路径</value>
+  </data>
+  <data name="Main_Menu_ForceInstall" xml:space="preserve">
+    <value>强制安装到当前设备</value>
+  </data>
+  <data name="Main_Menu_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Main_Menu_CopyBundleId" xml:space="preserve">
+    <value>复制 BundleID</value>
+  </data>
+  <data name="Main_Menu_CopyName" xml:space="preserve">
+    <value>复制名称</value>
+  </data>
+  <data name="Main_Menu_CopyVersion" xml:space="preserve">
+    <value>复制版本</value>
+  </data>
+  <data name="Main_Menu_CopyMinOs" xml:space="preserve">
+    <value>复制最低 iOS</value>
+  </data>
+  <data name="Main_Menu_CopyFileName" xml:space="preserve">
+    <value>复制文件名</value>
+  </data>
+  <data name="Main_Menu_CopyFilePath" xml:space="preserve">
+    <value>复制文件路径</value>
+  </data>
+  <data name="Main_Menu_OpenFilePath" xml:space="preserve">
+    <value>打开文件目录</value>
+  </data>
+  <data name="Main_Menu_OpenFilePathToolTip" xml:space="preserve">
+    <value>在资源管理器中选中该文件并打开目录</value>
+  </data>
+  <data name="Main_Menu_CopyRow" xml:space="preserve">
+    <value>复制整行（Tab 分隔）</value>
+  </data>
+  <data name="Main_Menu_AddToGroup" xml:space="preserve">
+    <value>加入分组</value>
+  </data>
+  <data name="Main_Menu_NewGroup" xml:space="preserve">
+    <value>新建分组…</value>
+  </data>
+  <data name="Main_Menu_ManageGroups" xml:space="preserve">
+    <value>管理分组…</value>
+  </data>
+  <data name="Main_Menu_RemoveFromGroup" xml:space="preserve">
+    <value>移出当前分组</value>
+  </data>
+  <data name="Main_Menu_DeleteMissingRecords" xml:space="preserve">
+    <value>删除不存在文件的记录</value>
+  </data>
+  <data name="Main_Menu_NoGroups" xml:space="preserve">
+    <value>（无分组）</value>
+  </data>
+  <data name="Main_Menu_AllDevices" xml:space="preserve">
+    <value>全部设备</value>
+  </data>
+  <data name="Main_Menu_Install" xml:space="preserve">
+    <value>安装</value>
+  </data>
+  <data name="Main_Menu_More" xml:space="preserve">
+    <value>更多…</value>
+  </data>
+  <data name="Main_Menu_SelectAllItems" xml:space="preserve">
+    <value>全部选中</value>
+  </data>
+  <data name="Main_Menu_ClearAllItems" xml:space="preserve">
+    <value>全部取消选中</value>
+  </data>
+  <data name="Main_Queue_SuspendResumeToolTip" xml:space="preserve">
+    <value>挂起：当前任务继续跑完，等待任务转挂起；继续：恢复暂停 / 已挂起 / 离线队列</value>
+  </data>
+  <data name="Main_Queue_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Main_Queue_CancelToolTip" xml:space="preserve">
+    <value>按选中任务状态：进行中结束进程或稍后自动卸载；排队/挂起的任务直接取消</value>
+  </data>
+  <data name="Main_Queue_Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="Main_Queue_ClearToolTip" xml:space="preserve">
+    <value>清空当前设备队列中已结束的任务并清除状态标记</value>
+  </data>
+  <data name="Main_Queue_SpaceAfterToolTip" xml:space="preserve">
+    <value>所有未结束安装任务完成后的预计已用/总容量；剩余空间小于 500 MB 时标红</value>
+  </data>
+  <data name="Main_Log_Title" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="Main_Log_ModeToolTip" xml:space="preserve">
+    <value>只显示开始/结束/错误与警告</value>
+  </data>
+  <data name="Main_Log_Export" xml:space="preserve">
+    <value>导出…</value>
+  </data>
+  <data name="Main_Log_ExportToolTip" xml:space="preserve">
+    <value>把内存里的全量日志（最多 2000 行）导出为 txt</value>
+  </data>
+  <data name="Main_Log_Clear" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Main_Log_ClearToolTip" xml:space="preserve">
+    <value>清空日志面板（内存最多 2000 行）；不影响 logs\app.log 文件日志</value>
+  </data>
+  <data name="Main_Copy_Field_Row" xml:space="preserve">
+    <value>整行</value>
+  </data>
+  <data name="Main_Status_CopyFailedFormat" xml:space="preserve">
+    <value>未能复制{0}：{1}: {2}</value>
+  </data>
+  <data name="Main_Status_NoFilePath" xml:space="preserve">
+    <value>没有可打开的文件路径</value>
+  </data>
+  <data name="Main_Status_FileNotFoundFormat" xml:space="preserve">
+    <value>文件不存在：{0}</value>
+  </data>
+  <data name="Main_Status_OpenFilePathFailedFormat" xml:space="preserve">
+    <value>未能打开文件路径：{0}</value>
+  </data>
+  <data name="Main_Status_OpenFilePathExceptionFormat" xml:space="preserve">
+    <value>未能打开文件路径：{0}: {1}</value>
+  </data>
+  <data name="Main_Dialog_ExportLogTitle" xml:space="preserve">
+    <value>导出日志</value>
+  </data>
+  <data name="Main_Dialog_ExportLogFilter" xml:space="preserve">
+    <value>文本文件 (*.txt)|*.txt|所有文件 (*.*)|*.*</value>
+  </data>
+  <data name="Main_Index_DialogTitle" xml:space="preserve">
+    <value>IPA 索引</value>
+  </data>
+  <data name="Main_Index_MissingExe" xml:space="preserve">
+    <value>IdeviceIndex.exe 缺失，安装不完整。请重新安装或把 IdeviceIndex.exe 放回程序目录。</value>
+  </data>
+  <data name="Main_Index_LaunchFailedFormat" xml:space="preserve">
+    <value>未能启动 IPA 索引工具：{0}</value>
+  </data>
+  <data name="Main_Dialog_AddScanRootTitle" xml:space="preserve">
+    <value>选择要加入扫描根的目录</value>
+  </data>
+  <data name="Main_Status_AddScanRootFailedFormat" xml:space="preserve">
+    <value>未能添加扫描根：{0}: {1}</value>
+  </data>
+  <data name="Main_Dialog_NewGroupTitle" xml:space="preserve">
+    <value>新建分组</value>
+  </data>
+  <data name="Main_DeviceApps_MenuUninstallThis" xml:space="preserve">
+    <value>卸载此应用</value>
+  </data>
+  <data name="Main_DeviceApps_MenuUninstallSelectedFormat" xml:space="preserve">
+    <value>卸载选中 ({0})</value>
+  </data>
+  <data name="Main_DeviceApps_MenuEnterMultiSelect" xml:space="preserve">
+    <value>进入多选模式</value>
+  </data>
+  <data name="Main_Settings_OpenFailedFormat" xml:space="preserve">
+    <value>未能打开设置窗口：{0}</value>
+  </data>
+  <data name="App_SingleInstance_AlreadyRunning" xml:space="preserve">
+    <value>Legacy IPA Manager 已运行。</value>
+  </data>
+  <data name="App_SingleInstance_Title" xml:space="preserve">
+    <value>Legacy IPA Manager 仅允许一个实例。</value>
+  </data>
+  <data name="App_Error_CannotWriteProgramDirTitle" xml:space="preserve">
+    <value>未能写入程序目录</value>
+  </data>
+  <data name="App_Error_CannotWriteTempDirTitle" xml:space="preserve">
+    <value>未能写入临时目录</value>
+  </data>
+  <data name="App_Error_CannotStartTitle" xml:space="preserve">
+    <value>未能启动</value>
+  </data>
+  <data name="App_Error_Exiting" xml:space="preserve">
+    <value>即将退出。</value>
+  </data>
+  <data name="App_Error_CreateMainWindowFormat" xml:space="preserve">
+    <value>未能创建主窗口：{0}</value>
+  </data>
+  <data name="Group_Common_Ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Group_Common_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Group_Name_WindowTitle" xml:space="preserve">
+    <value>分组名称</value>
+  </data>
+  <data name="Group_Name_Label" xml:space="preserve">
+    <value>分组名称：</value>
+  </data>
+  <data name="Group_Name_EmptyWarning" xml:space="preserve">
+    <value>分组名不能为空。</value>
+  </data>
+  <data name="Group_Name_EmptyWarningTitle" xml:space="preserve">
+    <value>分组</value>
+  </data>
+  <data name="Group_Manager_Title" xml:space="preserve">
+    <value>管理分组</value>
+  </data>
+  <data name="Group_Manager_Rename" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="Group_Manager_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Group_Manager_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Group_Manager_SelectFirst" xml:space="preserve">
+    <value>请先选择一个分组。</value>
+  </data>
+  <data name="Group_Manager_RenameTitle" xml:space="preserve">
+    <value>重命名分组</value>
+  </data>
+  <data name="Group_Manager_DeleteConfirmFormat" xml:space="preserve">
+    <value>删除分组「{0}」？</value>
+  </data>
+  <data name="Group_Manager_DeleteConfirmNote" xml:space="preserve">
+    <value>只删除分组关系，不删除资料库文件。</value>
+  </data>
+  <data name="InstallTo_Title" xml:space="preserve">
+    <value>安装到…</value>
+  </data>
+  <data name="InstallTo_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="InstallTo_SelectAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="InstallTo_Install" xml:space="preserve">
+    <value>安装</value>
+  </data>
+  <data name="InstallTo_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Filter_Title" xml:space="preserve">
+    <value>高级筛选</value>
+  </data>
+  <data name="Filter_Hint" xml:space="preserve">
+    <value>组内统一用「且 / 或」，组间固定为「且」；已勾选的列不能重复。</value>
+  </data>
+  <data name="Filter_ClearAll" xml:space="preserve">
+    <value>清除全部</value>
+  </data>
+  <data name="Filter_AddGroup" xml:space="preserve">
+    <value>添加组</value>
+  </data>
+  <data name="Filter_Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Filter_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Filter_Col_Compatibility" xml:space="preserve">
+    <value>兼容性</value>
+  </data>
+  <data name="Filter_Arch_Multiple" xml:space="preserve">
+    <value>多种</value>
+  </data>
+  <data name="Filter_Origin_AppStore" xml:space="preserve">
+    <value>原始 App Store</value>
+  </data>
+  <data name="Filter_Origin_Resigned" xml:space="preserve">
+    <value>已重签名</value>
+  </data>
+  <data name="Filter_Origin_Decrypted" xml:space="preserve">
+    <value>已解密</value>
+  </data>
+  <data name="Filter_State_Normal" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="Filter_State_Missing" xml:space="preserve">
+    <value>文件缺失</value>
+  </data>
+  <data name="Filter_State_ParseFailed" xml:space="preserve">
+    <value>解析未完成</value>
+  </data>
+  <data name="Filter_State_Pending" xml:space="preserve">
+    <value>待解析</value>
+  </data>
+  <data name="Filter_Group_HeaderFormat" xml:space="preserve">
+    <value>组 {0}</value>
+  </data>
+  <data name="Filter_Group_JoinLabel" xml:space="preserve">
+    <value>  组内：</value>
+  </data>
+  <data name="Filter_Join_And" xml:space="preserve">
+    <value>且</value>
+  </data>
+  <data name="Filter_Join_Or" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="Filter_AddCondition" xml:space="preserve">
+    <value>＋条件</value>
+  </data>
+  <data name="Filter_RemoveGroup" xml:space="preserve">
+    <value>删除组</value>
+  </data>
+  <data name="Filter_DuplicateColumnFormat" xml:space="preserve">
+    <value>列不能重复选中：{0}</value>
+  </data>
+  <data name="Filter_Mode_Range" xml:space="preserve">
+    <value>范围</value>
+  </data>
+  <data name="Filter_Family_PhoneSide" xml:space="preserve">
+    <value>iPhone 侧 </value>
+  </data>
+  <data name="Filter_Family_PadSide" xml:space="preserve">
+    <value> iPad 侧 </value>
+  </data>
+  <data name="Filter_Family_Unselected" xml:space="preserve">
+    <value>（未选择）</value>
+  </data>
+  <data name="Filter_Compat_Off" xml:space="preserve">
+    <value>不过滤</value>
+  </data>
+  <data name="Filter_Compat_Installable" xml:space="preserve">
+    <value>可安装到该设备</value>
+  </data>
+  <data name="Filter_Compat_Adapted" xml:space="preserve">
+    <value>已适配到该设备</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Settings_Button_Ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Settings_Button_Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Settings_Button_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Settings_Button_ResetGroup" xml:space="preserve">
+    <value>恢复默认</value>
+  </data>
+  <data name="Settings_Button_MoveUp" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Settings_Button_MoveDown" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Settings_Tab_Library" xml:space="preserve">
+    <value>资料库</value>
+  </data>
+  <data name="Settings_Tab_Scan" xml:space="preserve">
+    <value>扫描</value>
+  </data>
+  <data name="Settings_Tab_Icons" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="Settings_Tab_Log" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="Settings_Tab_Layout" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="Settings_Tab_Queue" xml:space="preserve">
+    <value>队列</value>
+  </data>
+  <data name="Settings_Tab_Device" xml:space="preserve">
+    <value>设备</value>
+  </data>
+  <data name="Settings_Tab_About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="Settings_Library_RowHeight" xml:space="preserve">
+    <value>网格行高（DIP）</value>
+  </data>
+  <data name="Settings_Library_RowHeightToolTip" xml:space="preserve">
+    <value>16–48 DIP；默认 32（非法输入失焦后回填合法值）</value>
+  </data>
+  <data name="Settings_Library_SearchRows" xml:space="preserve">
+    <value>搜索延迟阈值（行数）</value>
+  </data>
+  <data name="Settings_Library_SearchRowsToolTip" xml:space="preserve">
+    <value>显示行数大于该值才启用搜索防抖；0–200000，默认 1000</value>
+  </data>
+  <data name="Settings_Library_SearchRowsUnit" xml:space="preserve">
+    <value>行</value>
+  </data>
+  <data name="Settings_Library_SearchDelay" xml:space="preserve">
+    <value>搜索延迟（ms）</value>
+  </data>
+  <data name="Settings_Library_SearchDelayToolTip" xml:space="preserve">
+    <value>0–5000，默认 200；0 = 不等待</value>
+  </data>
+  <data name="Settings_Library_DefaultSort" xml:space="preserve">
+    <value>默认排序</value>
+  </data>
+  <data name="Settings_Library_SortDescending" xml:space="preserve">
+    <value>降序</value>
+  </data>
+  <data name="Settings_Library_MatchMode" xml:space="preserve">
+    <value>搜索匹配方式</value>
+  </data>
+  <data name="Settings_Library_SearchScope" xml:space="preserve">
+    <value>搜索范围（列）</value>
+  </data>
+  <data name="Settings_Library_Behavior" xml:space="preserve">
+    <value>行为</value>
+  </data>
+  <data name="Settings_Library_MergeSameBundle" xml:space="preserve">
+    <value>合并同 BundleId</value>
+  </data>
+  <data name="Settings_Library_ShowMissingFiles" xml:space="preserve">
+    <value>显示不存在的文件</value>
+  </data>
+  <data name="Settings_Library_DeviceFamilyRetina" xml:space="preserve">
+    <value>设备族用 Retina 文案（关 = 用 R）</value>
+  </data>
+  <data name="Settings_Library_ColumnsSection" xml:space="preserve">
+    <value>列显示</value>
+  </data>
+  <data name="Settings_Library_ColumnInstalled" xml:space="preserve">
+    <value>已安装标记</value>
+  </data>
+  <data name="Settings_Library_ManageGroups" xml:space="preserve">
+    <value>管理分组…</value>
+  </data>
+  <data name="Settings_Scan_RootsSection" xml:space="preserve">
+    <value>扫描根（RootN）</value>
+  </data>
+  <data name="Settings_Scan_AddFolder" xml:space="preserve">
+    <value>添加目录…</value>
+  </data>
+  <data name="Settings_Scan_AddFolderToolTip" xml:space="preserve">
+    <value>立即生效：添加即写库并立刻扫描，不受「取消」影响</value>
+  </data>
+  <data name="Settings_Scan_DeleteSelected" xml:space="preserve">
+    <value>删除选中</value>
+  </data>
+  <data name="Settings_Scan_DeleteSelectedToolTip" xml:space="preserve">
+    <value>立即生效：会同时删掉该根下的包行并立刻扫描，不受「取消」影响</value>
+  </data>
+  <data name="Settings_Scan_BatchSize" xml:space="preserve">
+    <value>分批落库行数</value>
+  </data>
+  <data name="Settings_Scan_BatchSizeToolTip" xml:space="preserve">
+    <value>1–1000；默认 30（非法输入失焦后回填合法值）</value>
+  </data>
+  <data name="Settings_Scan_SkipStartup" xml:space="preserve">
+    <value>启动时跳过增量扫描</value>
+  </data>
+  <data name="Settings_Scan_SkipStartupNote" xml:space="preserve">
+    <value>开启后启动时仅从本地数据库直接加载已有记录，不自动扫描磁盘（适合低性能设备或远程网络驱动器，需要时可手动点击扫描）。</value>
+  </data>
+  <data name="Settings_Scan_Note" xml:space="preserve">
+    <value>说明：添加/删除扫描根会立刻重扫；删除会把该根下的包行从库里删掉。这两个动作立即生效，不受「取消」影响。</value>
+  </data>
+  <data name="Settings_Scan_NoRoots" xml:space="preserve">
+    <value>当前没有扫描根（可点「添加目录…」）</value>
+  </data>
+  <data name="Settings_Scan_RootsCountFormat" xml:space="preserve">
+    <value>共 {0} 个根</value>
+  </data>
+  <data name="Settings_Scan_AddRootDialogTitle" xml:space="preserve">
+    <value>添加扫描根</value>
+  </data>
+  <data name="Settings_Scan_UnknownError" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
+  <data name="Settings_Scan_AddRootFailedFormat" xml:space="preserve">
+    <value>未能添加：{0}</value>
+  </data>
+  <data name="Settings_Scan_DeleteRootConfirmFormat" xml:space="preserve">
+    <value>删除扫描根 {0}？
+会同时从资料库移除该根下的 {1} 个包，并立刻增量扫描。</value>
+  </data>
+  <data name="Settings_Scan_DeleteRootFailedFormat" xml:space="preserve">
+    <value>未能删除：{0}</value>
+  </data>
+  <data name="Settings_Scan_RootItemFormat" xml:space="preserve">
+    <value>{0}   {1}   （{2} 个包）</value>
+  </data>
+  <data name="Settings_Icons_CacheLimit" xml:space="preserve">
+    <value>图标缓存上限（MB）</value>
+  </data>
+  <data name="Settings_Icons_CacheLimitToolTip" xml:space="preserve">
+    <value>默认 2048；64–20480（非法输入失焦后回填合法值）</value>
+  </data>
+  <data name="Settings_Icons_MatchScale" xml:space="preserve">
+    <value>按缩放取最小的够用尺寸</value>
+  </data>
+  <data name="Settings_Icons_DownscaleCache" xml:space="preserve">
+    <value>落盘时缩到缓存档位（关掉存原尺寸，磁盘会变大）</value>
+  </data>
+  <data name="Settings_Icons_BucketHint" xml:space="preserve">
+    <value>图标尺寸跟随网格行高；缓存档位取 16 的倍数（固定）。</value>
+  </data>
+  <data name="Settings_Log_ToFile" xml:space="preserve">
+    <value>写文件日志 logs\app.log（默认关；crash.log 始终写）</value>
+  </data>
+  <data name="Settings_Log_DetailMode" xml:space="preserve">
+    <value>日志面板：详细模式（默认简洁）</value>
+  </data>
+  <data name="Settings_Layout_HideLog" xml:space="preserve">
+    <value>隐藏日志栏</value>
+  </data>
+  <data name="Settings_Layout_OverlayWidth" xml:space="preserve">
+    <value>最大化日志浮层宽度</value>
+  </data>
+  <data name="Settings_Layout_OverlayWidthToolTip" xml:space="preserve">
+    <value>260–900；默认 420（非法输入失焦后回填合法值）</value>
+  </data>
+  <data name="Settings_Layout_ResetColumns" xml:space="preserve">
+    <value>恢复默认三栏比例</value>
+  </data>
+  <data name="Settings_Layout_ResetColumnsToolTip" xml:space="preserve">
+    <value>立即生效：不受「取消」影响</value>
+  </data>
+  <data name="Settings_Queue_FieldsSection" xml:space="preserve">
+    <value>队列行字段（顺序 / 显示）</value>
+  </data>
+  <data name="Settings_Queue_FieldsNote" xml:space="preserve">
+    <value>“状态 / 备注 / 名称 / 版本 / 安装后大小”默认显示；备注只在失败 / 已暂停 / 已挂起时显示；全部隐藏时回落到状态列。</value>
+  </data>
+  <data name="Settings_Queue_ColStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Settings_Queue_ColNote" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Settings_Queue_ColInstalledSize" xml:space="preserve">
+    <value>安装后大小</value>
+  </data>
+  <data name="Settings_Device_PollSeconds" xml:space="preserve">
+    <value>在线轮询间隔（秒）</value>
+  </data>
+  <data name="Settings_Device_PollSecondsToolTip" xml:space="preserve">
+    <value>1–10；默认 2（非法输入失焦后回填合法值）</value>
+  </data>
+  <data name="Settings_Device_StableSeconds" xml:space="preserve">
+    <value>联机稳定窗口（秒）</value>
+  </data>
+  <data name="Settings_Device_StableSecondsToolTip" xml:space="preserve">
+    <value>1–10；默认 3；期间再次断开则重新计时</value>
+  </data>
+  <data name="Settings_Device_AutoResume" xml:space="preserve">
+    <value>联机稳定后自动继续（默认开）</value>
+  </data>
+  <data name="Settings_Device_AutoRetryAttempts" xml:space="preserve">
+    <value>失败后自动尝试次数</value>
+  </data>
+  <data name="Settings_Device_AutoRetryAttemptsToolTip" xml:space="preserve">
+    <value>2–5；默认 2（含首次）；每次失败后自动再入队一条，达到次数后终判失败</value>
+  </data>
+  <data name="Settings_Device_FieldsSection" xml:space="preserve">
+    <value>设备信息字段（顺序 / 显示）</value>
+  </data>
+  <data name="Settings_Device_FieldName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Settings_Device_FieldProduct" xml:space="preserve">
+    <value>型号</value>
+  </data>
+  <data name="Settings_Device_FieldVersion" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="Settings_Device_FieldCapacity" xml:space="preserve">
+    <value>容量</value>
+  </data>
+  <data name="Settings_Device_FieldColor" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="Settings_Device_FieldBatteryHealth" xml:space="preserve">
+    <value>最大电池容量：—</value>
+  </data>
+  <data name="Settings_About_LicensesButton" xml:space="preserve">
+    <value>第三方许可…</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Library_Common_Multiple" xml:space="preserve">
+    <value>多种</value>
+  </data>
+  <data name="Library_Group_CountFormat" xml:space="preserve">
+    <value>{0} 个</value>
+  </data>
+  <data name="Library_Row_TransientSuffix" xml:space="preserve">
+    <value>  ·未入库</value>
+  </data>
+  <data name="Library_State_Unparsed" xml:space="preserve">
+    <value>未解析</value>
+  </data>
+  <data name="Library_State_NotInstallable" xml:space="preserve">
+    <value>不可安装</value>
+  </data>
+  <data name="Library_State_FailedWithReasonFormat" xml:space="preserve">
+    <value>解析未完成：{0}</value>
+  </data>
+  <data name="Library_State_NotInstallableWithReasonFormat" xml:space="preserve">
+    <value>不可安装：{0}</value>
+  </data>
+  <data name="Library_State_PendingTooltip" xml:space="preserve">
+    <value>尚未解析该包，尝试「全量重扫」。</value>
+  </data>
+  <data name="Library_State_CompatHardConflict" xml:space="preserve">
+    <value>存在硬冲突</value>
+  </data>
+  <data name="Library_State_CompatConflictTooltipFormat" xml:space="preserve">
+    <value>与当前设备不兼容：{0}</value>
+  </data>
+  <data name="Library_State_CompatOkTooltip" xml:space="preserve">
+    <value>此包与当前设备兼容。</value>
+  </data>
+  <data name="Library_State_CompatUnknownTooltip" xml:space="preserve">
+    <value>未能判定兼容性</value>
+  </data>
+  <data name="Queue_Status_Pending" xml:space="preserve">
+    <value>等待中</value>
+  </data>
+  <data name="Queue_Status_VerifyDevice" xml:space="preserve">
+    <value>校验设备</value>
+  </data>
+  <data name="Queue_Status_Precheck" xml:space="preserve">
+    <value>检验中</value>
+  </data>
+  <data name="Queue_Status_Cleaning" xml:space="preserve">
+    <value>清理中</value>
+  </data>
+  <data name="Queue_Status_SpaceCheck" xml:space="preserve">
+    <value>检查空间</value>
+  </data>
+  <data name="Queue_Status_Installing" xml:space="preserve">
+    <value>安装中</value>
+  </data>
+  <data name="Queue_Status_Uninstalling" xml:space="preserve">
+    <value>卸载中</value>
+  </data>
+  <data name="Queue_Status_Readback" xml:space="preserve">
+    <value>回读中</value>
+  </data>
+  <data name="Queue_Status_Paused" xml:space="preserve">
+    <value>已暂停</value>
+  </data>
+  <data name="Queue_Status_Failed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="Queue_Status_NeedsConfirm" xml:space="preserve">
+    <value>需确认</value>
+  </data>
+  <data name="Queue_Status_Suspended" xml:space="preserve">
+    <value>已挂起</value>
+  </data>
+  <data name="Queue_Status_Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Queue_Status_Cancelled" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="Queue_RunState_Idle" xml:space="preserve">
+    <value>空闲</value>
+  </data>
+  <data name="Queue_RunState_Running" xml:space="preserve">
+    <value>运行中</value>
+  </data>
+  <data name="Queue_RunState_Paused" xml:space="preserve">
+    <value>已暂停</value>
+  </data>
+  <data name="Queue_RunState_Suspended" xml:space="preserve">
+    <value>已挂起</value>
+  </data>
+  <data name="Queue_RunState_Offline" xml:space="preserve">
+    <value>已离线</value>
+  </data>
+  <data name="Queue_Action_Resume" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="Queue_Action_Suspend" xml:space="preserve">
+    <value>挂起</value>
+  </data>
+  <data name="Queue_InstalledApps_NotRead" xml:space="preserve">
+    <value>已安装：未回读</value>
+  </data>
+  <data name="Queue_InstalledApps_CountFormat" xml:space="preserve">
+    <value>已安装：{0} 个 App</value>
+  </data>
+  <data name="Queue_Header_CurrentJobPercentFormat" xml:space="preserve">
+    <value> · 当前任务 {0}%</value>
+  </data>
+  <data name="Queue_StateNote_DeviceOffline" xml:space="preserve">
+    <value>设备离线</value>
+  </data>
+  <data name="Queue_Progress_CountFormat" xml:space="preserve">
+    <value>已完成 {0} / {1}</value>
+  </data>
+  <data name="Device_UnknownName" xml:space="preserve">
+    <value>未知设备</value>
+  </data>
+  <data name="Device_Status_Online" xml:space="preserve">
+    <value>在线</value>
+  </data>
+  <data name="Device_Status_Offline" xml:space="preserve">
+    <value>已离线</value>
+  </data>
+  <data name="Device_Space_FreeFormat" xml:space="preserve">
+    <value>可用 {0} / {1} GB</value>
+  </data>
+  <data name="Device_Menu_BatteryUsageFormat" xml:space="preserve">
+    <value>电量：{0}</value>
+  </data>
+  <data name="Device_Menu_MaxBatteryCapacityUnknown" xml:space="preserve">
+    <value>最大电池容量：—</value>
+  </data>
+  <data name="Device_Menu_ManufacturerFormat" xml:space="preserve">
+    <value>生产商：{0}</value>
+  </data>
+  <data name="Device_Menu_BatterySerialFormat" xml:space="preserve">
+    <value>电池序列号：{0}</value>
+  </data>
+  <data name="Device_Menu_EcidHexFormat" xml:space="preserve">
+    <value>ECID(hex)：{0}</value>
+  </data>
+  <data name="Device_Menu_EcidDecFormat" xml:space="preserve">
+    <value>ECID(dec)：{0}</value>
+  </data>
+  <data name="Device_Menu_SerialFormat" xml:space="preserve">
+    <value>序列号：{0}</value>
+  </data>
+  <data name="Device_Menu_UdidFormat" xml:space="preserve">
+    <value>UDID：{0}</value>
+  </data>
+  <data name="Device_Menu_ModelNumberFormat" xml:space="preserve">
+    <value>部件号：{0}</value>
+  </data>
+  <data name="Device_Menu_HardwareModelFormat" xml:space="preserve">
+    <value>板型：{0}</value>
+  </data>
+  <data name="Device_ToolTip_EcidFormat" xml:space="preserve">
+    <value>ECID：{0}</value>
+  </data>
+  <data name="Device_ToolTip_CpuFormat" xml:space="preserve">
+    <value>CPU：{0}</value>
+  </data>
+  <data name="Device_Battery_ChargingFormat" xml:space="preserve">
+    <value>{0}%（充电中）</value>
+  </data>
+  <data name="Device_Battery_FullyChargedFormat" xml:space="preserve">
+    <value>{0}%（已充满）</value>
+  </data>
+  <data name="Device_Battery_UnreliablePercentFormat" xml:space="preserve">
+    <value>{0}%(不可信)</value>
+  </data>
+  <data name="Device_Battery_HealthUnknown" xml:space="preserve">
+    <value>健康度未知</value>
+  </data>
+  <data name="Device_Battery_CyclesSuffixFormat" xml:space="preserve">
+    <value> · 循环 {0} 次</value>
+  </data>
+  <data name="Device_Battery_UnreliableWarningSuffix" xml:space="preserve">
+    <value>（数据可能不可信）</value>
+  </data>
+  <data name="Device_Battery_HealthTooltipFormat" xml:space="preserve">
+    <value>健康度 {0}%（{1} / {2} mAh）{3}{4}</value>
+  </data>
+  <data name="Main_Scan_InProgress" xml:space="preserve">
+    <value>正在扫描资料库…</value>
+  </data>
+  <data name="Main_Scan_PhaseEnumerate" xml:space="preserve">
+    <value>枚举</value>
+  </data>
+  <data name="Main_Scan_PhaseParse" xml:space="preserve">
+    <value>解析</value>
+  </data>
+  <data name="Main_Scan_ProgressPhaseFormat" xml:space="preserve">
+    <value>正在扫描资料库…（{0} {1} / {2}）</value>
+  </data>
+  <data name="Main_Scan_ProgressPhaseDoneFormat" xml:space="preserve">
+    <value>正在扫描资料库…（{0}完成 {1} 项）</value>
+  </data>
+  <data name="Main_DeviceApps_CountNotRead" xml:space="preserve">
+    <value>设备应用：未读取</value>
+  </data>
+  <data name="Main_DeviceApps_CountNoDevice" xml:space="preserve">
+    <value>设备应用：无设备</value>
+  </data>
+  <data name="Main_DeviceApps_CountReading" xml:space="preserve">
+    <value>设备应用：正在读取…</value>
+  </data>
+  <data name="Main_DeviceApps_CountFormat" xml:space="preserve">
+    <value>设备应用：{0} 个</value>
+  </data>
+  <data name="Main_DeviceApps_VersionUnknown" xml:space="preserve">
+    <value>版本未知</value>
+  </data>
+  <data name="Main_DeviceApps_BatchUninstallFormat" xml:space="preserve">
+    <value>卸载选中 ({0})</value>
+  </data>
+  <data name="Main_MultiSelect_Off" xml:space="preserve">
+    <value>多选:关</value>
+  </data>
+  <data name="Main_MultiSelect_OnFormat" xml:space="preserve">
+    <value>多选: {0} 项</value>
+  </data>
+  <data name="Main_CompatFilter_Off" xml:space="preserve">
+    <value>兼容性筛选: 关</value>
+  </data>
+  <data name="Main_CompatFilter_Installable" xml:space="preserve">
+    <value>与该设备兼容</value>
+  </data>
+  <data name="Main_CompatFilter_Adapted" xml:space="preserve">
+    <value>已适配该设备</value>
+  </data>
+  <data name="Main_Library_AdvancedFilterCountFormat" xml:space="preserve">
+    <value>高级筛选（{0}）</value>
+  </data>
+  <data name="Main_Log_SwitchToDetail" xml:space="preserve">
+    <value>切换到详细视图</value>
+  </data>
+  <data name="Main_Log_SwitchToSimple" xml:space="preserve">
+    <value>切换到简洁视图</value>
+  </data>
+  <data name="Main_Group_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="Main_Group_ErrorEmptyName" xml:space="preserve">
+    <value>分组名不能为空</value>
+  </data>
+  <data name="Main_Group_ErrorReservedNameFormat" xml:space="preserve">
+    <value>「{0}」是保留名称</value>
+  </data>
+  <data name="Main_Group_ErrorAlreadyExists" xml:space="preserve">
+    <value>分组名已存在</value>
+  </data>
+  <data name="Main_Group_ErrorNotFound" xml:space="preserve">
+    <value>分组不存在</value>
+  </data>
+  <data name="Main_Menu_HideMissingFiles" xml:space="preserve">
+    <value>隐藏不存在的文件</value>
+  </data>
+  <data name="Main_Menu_ShowMissingFiles" xml:space="preserve">
+    <value>显示不存在的文件</value>
+  </data>
+  <data name="Main_Library_CountFormat" xml:space="preserve">
+    <value>{0} 个包</value>
+  </data>
+  <data name="Main_Library_CountWithGroupsFormat" xml:space="preserve">
+    <value>{0} 个包 / {1} 组</value>
+  </data>
+  <data name="Main_Library_CountMissingSuffixFormat" xml:space="preserve">
+    <value>，{0} 个文件缺失</value>
+  </data>
+  <data name="Settings_Scan_DbNotReady" xml:space="preserve">
+    <value>数据库未就绪</value>
+  </data>
+  <data name="App_Paths_CreateTempDirFailedFormat" xml:space="preserve">
+    <value>未能创建临时目录：{0}</value>
+  </data>
+  <data name="App_Paths_WriteTempDirFailedFormat" xml:space="preserve">
+    <value>未能写入临时目录：{0}</value>
+  </data>
+  <data name="App_Paths_ProgramDirUnwritableHeader" xml:space="preserve">
+    <value>由于不能写入程序目录，数据与日志未能保存。</value>
+  </data>
+  <data name="App_Paths_DirectoryFormat" xml:space="preserve">
+    <value>目录：{0}</value>
+  </data>
+  <data name="App_Paths_ProgramDirOnlyNote" xml:space="preserve">
+    <value>仅读写程序目录。</value>
+  </data>
+  <data name="App_Paths_CreateLogsDirFailedFormat" xml:space="preserve">
+    <value>未能创建日志目录：{0}</value>
+  </data>
+  <data name="App_Paths_WriteLogsDirFailedFormat" xml:space="preserve">
+    <value>日志目录不可写：{0}</value>
+  </data>
+  <data name="App_Paths_ReasonFormat" xml:space="preserve">
+    <value>原因：{0}</value>
+  </data>
+  <data name="App_Paths_CopyRetryHint" xml:space="preserve">
+    <value>请将程序复制到可写位置后重试。</value>
+  </data>
+  <data name="Device_Product_China" xml:space="preserve">
+    <value>（中国大陆）</value>
+  </data>
+  <data name="Device_Product_Gen1" xml:space="preserve">
+    <value>(第 1 代)</value>
+  </data>
+  <data name="Device_Product_Gen2" xml:space="preserve">
+    <value>(第 2 代)</value>
+  </data>
+  <data name="Device_Product_Gen3" xml:space="preserve">
+    <value>(第 3 代)</value>
+  </data>
+  <data name="Device_Product_Gen4" xml:space="preserve">
+    <value>(第 4 代)</value>
+  </data>
+  <data name="Device_Product_Gen5" xml:space="preserve">
+    <value>(第 5 代)</value>
+  </data>
+  <data name="Device_Product_Gen6" xml:space="preserve">
+    <value>(第 6 代)</value>
+  </data>
+  <data name="Device_Product_Gen7" xml:space="preserve">
+    <value>(第 7 代)</value>
+  </data>
+  <data name="Settings_Tab_Security" xml:space="preserve">
+    <value>安全</value>
+  </data>
+  <data name="Settings_Security_AllowOutsideWrite" xml:space="preserve">
+    <value>允许程序在程序目录外写入</value>
+  </data>
+  <data name="Settings_Security_ReadOnlyNote" xml:space="preserve">
+    <value>关闭时只能在程序目录内写入；读取与打开路径不受限制。</value>
+  </data>
+  <data name="Settings_Security_RiskNote" xml:space="preserve">
+    <value>风险说明：开启后程序缺陷可能损坏程序目录外的数据，风险由使用者承担。</value>
+  </data>
+  <data name="Settings_Security_ConfirmTitle" xml:space="preserve">
+    <value>允许程序在程序目录外写入</value>
+  </data>
+  <data name="Settings_Security_ConfirmBody" xml:space="preserve">
+    <value>开启后，本程序可以把资料库、下载目录、会话文件放到程序目录以外的位置。
+
+风险声明：若程序存在缺陷（bug），可能对程序目录之外的数据造成意外修改或删除。开启本选项表示你已知晓并自行承担该风险。</value>
+  </data>
+  <data name="Settings_Security_ConfirmCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Settings_Security_ConfirmEnable" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="Main_Closing_TitleFormat" xml:space="preserve">
+    <value>{0} - 正在关闭 - {1}</value>
+  </data>
+  <data name="Main_Closing_Step_SavingLayout" xml:space="preserve">
+    <value>正在保存布局</value>
+  </data>
+  <data name="Main_Closing_Step_ClosingImportPipe" xml:space="preserve">
+    <value>正在关闭导入管道</value>
+  </data>
+  <data name="Main_Closing_Step_WaitingScan" xml:space="preserve">
+    <value>正在等待扫描结束</value>
+  </data>
+  <data name="Main_Closing_Step_StoppingQueues" xml:space="preserve">
+    <value>正在停止设备队列</value>
+  </data>
+  <data name="Main_Closing_Step_WaitingIcons" xml:space="preserve">
+    <value>正在等待图标任务</value>
+  </data>
+  <data name="Main_Closing_Step_SavingSettings" xml:space="preserve">
+    <value>正在保存设置与分组</value>
+  </data>
+  <data name="Main_Closing_Step_KillingProcesses" xml:space="preserve">
+    <value>正在清理残留进程</value>
+  </data>
+  <data name="Main_Queue_EmptyHint" xml:space="preserve">
+    <value>双击文件行以加入到该队列，再次双击相应文件行或队列任务以取消</value>
+  </data>
+  <data name="Main_Status_HistoryButtonFormat" xml:space="preserve">
+    <value>历史 ({0})</value>
+  </data>
+  <data name="Main_Status_HistoryTitle" xml:space="preserve">
+    <value>重要提示历史（最新在最前）</value>
+  </data>
+  <data name="Main_Status_NoHistory" xml:space="preserve">
+    <value>暂无重要提示</value>
+  </data>
+  <data name="Main_Status_DriveTimedOutFormat" xml:space="preserve">
+    <value>路径所在驱动器或共享响应超时：{0}</value>
+  </data>
+  <data name="Main_Status_DeviceModelMismatchFormat" xml:space="preserve">
+    <value>机型识别证据冲突（{0}），已按 HardwareModel 处理</value>
+  </data>
+  <data name="Main_Status_UnhandledErrorFormat" xml:space="preserve">
+    <value>未处理异常：{0}</value>
+  </data>
+  <data name="Main_Status_SaveLogModeFailedFormat" xml:space="preserve">
+    <value>未能保存日志模式：{0}</value>
+  </data>
+  <data name="Main_Status_SaveGroupsFailedFormat" xml:space="preserve">
+    <value>未能保存分组：{0}</value>
+  </data>
+  <data name="Main_Status_SaveSettingsFailedFormat" xml:space="preserve">
+    <value>未能保存设置：{0}</value>
+  </data>
+  <data name="Main_Status_ExportLogFailedFormat" xml:space="preserve">
+    <value>未能导出日志：{0}</value>
+  </data>
+  <data name="Main_Status_OpenFileLogFailedFormat" xml:space="preserve">
+    <value>未能打开文件日志（已关闭）：{0}</value>
+  </data>
+  <data name="Main_Status_DbUnavailableFormat" xml:space="preserve">
+    <value>{0} —— 资料库扫描与持久化不可用（数据目录：{1}）</value>
+  </data>
+  <data name="Main_Status_DeleteMissingDbNotReady" xml:space="preserve">
+    <value>未能删除不存在文件的记录：数据库未就绪</value>
+  </data>
+  <data name="Main_Status_NoMissingRecords" xml:space="preserve">
+    <value>没有文件不存在的记录</value>
+  </data>
+  <data name="Main_Status_DeletedMissingFormat" xml:space="preserve">
+    <value>已删除记录：{0} 条不存在文件的记录</value>
+  </data>
+  <data name="Main_Status_DeleteMissingFailedFormat" xml:space="preserve">
+    <value>未能删除不存在文件的记录：{0}</value>
+  </data>
+  <data name="Main_Status_LoadLibraryFailedFormat" xml:space="preserve">
+    <value>未能加载本地资料库：{0}</value>
+  </data>
+  <data name="Main_Status_ScanSkippedDbNotReadyFormat" xml:space="preserve">
+    <value>跳过扫描：{0}</value>
+  </data>
+  <data name="Main_Status_DbNotReadyFallback" xml:space="preserve">
+    <value>数据库未就绪</value>
+  </data>
+  <data name="Main_Status_ScanWriteProbeFailedFormat" xml:space="preserve">
+    <value>未能写入数据库，跳过本次扫描：{0}</value>
+  </data>
+  <data name="Main_Status_NoScanRoots" xml:space="preserve">
+    <value>没有可用的扫描根，请添加扫描根</value>
+  </data>
+  <data name="Main_Status_ScanRootInaccessibleFormat" xml:space="preserve">
+    <value>扫描根不可访问，跳过：{0}</value>
+  </data>
+  <data name="Main_Status_ScanRootErrorFormat" xml:space="preserve">
+    <value>扫描根出错（{0}）：{1}</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteNoRootsFormat" xml:space="preserve">
+    <value>扫描未完成：没有可用的扫描根（{0}）</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteDbWritesFormat" xml:space="preserve">
+    <value>扫描未完成：{0} 批未能写入资料库（{1}）</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteRootsFormat" xml:space="preserve">
+    <value>扫描未完整：{0} 个扫描根失败（{1}）</value>
+  </data>
+  <data name="Main_Status_ScanFailedFormat" xml:space="preserve">
+    <value>未能扫描 IPA：{0}</value>
+  </data>
+  <data name="Main_Status_IpcImportSkippedFormat" xml:space="preserve">
+    <value>IPC 入库跳过（{0}）：{1}</value>
+  </data>
+  <data name="Main_Status_RefreshDevicesFailedFormat" xml:space="preserve">
+    <value>未能刷新设备：{0}</value>
+  </data>
+  <data name="Main_Status_ReadDeviceInfoFailedFormat" xml:space="preserve">
+    <value>未能读取设备信息（{0}）：{1}</value>
+  </data>
+  <data name="Main_Status_ReadInstalledFailedFormat" xml:space="preserve">
+    <value>[{0}] 未能回读安装列表：{1}</value>
+  </data>
+  <data name="Main_Status_CancelledPendingFormat" xml:space="preserve">
+    <value>[{0}] 已取消：{1}</value>
+  </data>
+  <data name="Main_Status_CancelledUploadFormat" xml:space="preserve">
+    <value>[{0}] 已取消（上传中断）：{1}</value>
+  </data>
+  <data name="Main_Status_CancelAfterInstallFormat" xml:space="preserve">
+    <value>[{0}] 装完自动卸载：{1}</value>
+  </data>
+  <data name="Main_Status_UninstallConflictFormat" xml:space="preserve">
+    <value>已拒绝卸载请求：[{0}]，该包还有安装任务（{1}）</value>
+  </data>
+  <data name="Main_Status_UninstallQueuedFormat" xml:space="preserve">
+    <value>[{0}] 已加入卸载队列：{1}</value>
+  </data>
+  <data name="Main_Status_UninstallBatchFormat" xml:space="preserve">
+    <value>[{0}] 批量卸载：已提交 {1} 个 App</value>
+  </data>
+  <data name="Main_Status_MissingBundleIdFormat" xml:space="preserve">
+    <value>拒绝安装：{0} 没有 BundleID，请重扫后重试</value>
+  </data>
+  <data name="Main_Status_SourceFileMissingFormat" xml:space="preserve">
+    <value>未能入队：源文件已不存在（{0}）</value>
+  </data>
+  <data name="Main_Status_MinOsRejectedFormat" xml:space="preserve">
+    <value>已拒绝：{0} {1}</value>
+  </data>
+  <data name="Main_Status_ForceInstallQueuedFormat" xml:space="preserve">
+    <value>[{0}] 强制安装：{1}</value>
+  </data>
+  <data name="Main_Status_SpaceInsufficientFormat" xml:space="preserve">
+    <value>空间不足，拒绝入队：{0} 需要 {1}，当前可用 {2}（读取于 {3}，含 10 MB 余量）</value>
+  </data>
+  <data name="Main_Status_InstallConflictFormat" xml:space="preserve">
+    <value>{0} 未入队：该包还有卸载任务（{1}）</value>
+  </data>
+  <data name="Main_Status_RequeuedFormat" xml:space="preserve">
+    <value>[{0}] 已重新排入队尾：{1}</value>
+  </data>
+  <data name="Main_Status_QueuedFormat" xml:space="preserve">
+    <value>[{0}] 已加入安装队列：{1}</value>
+  </data>
+  <data name="Main_Status_NoInstallableSelected" xml:space="preserve">
+    <value>没有可安装的选中文件</value>
+  </data>
+  <data name="Main_Status_NoMissingFreeSelected" xml:space="preserve">
+    <value>没有可入队的文件（源文件均不存在）</value>
+  </data>
+  <data name="Main_Status_BatchQueuedSingleFormat" xml:space="preserve">
+    <value>[{0}] 已入队 {1} 个文件</value>
+  </data>
+  <data name="Main_Status_NoOnlineDevices" xml:space="preserve">
+    <value>没有在线设备</value>
+  </data>
+  <data name="Main_Status_BatchQueuedMultiFormat" xml:space="preserve">
+    <value>已入队 {0} 个文件 × {1} 台设备（共 {2} 个任务）</value>
+  </data>
+  <data name="Main_Status_NoDevicesSelected" xml:space="preserve">
+    <value>没有选择设备</value>
+  </data>
+  <data name="Main_Status_AutoResumeRestoredFormat" xml:space="preserve">
+    <value>[{0}] 联机稳定，已恢复 {1} 个任务</value>
+  </data>
+  <data name="Main_Status_UninstallAlreadyQueuedFormat" xml:space="preserve">
+    <value>[{0}] 卸载已在队列中：{1}</value>
+  </data>
+  <data name="Main_Status_UninstallBatchWithRejectedFormat" xml:space="preserve">
+    <value>[{0}] 批量卸载：已提交 {1} 个 App，拒绝 {2} 个</value>
+  </data>
+  <data name="Main_Status_InstallAlreadyQueuedFormat" xml:space="preserve">
+    <value>{0} 已在队列中（当前：{1}），本次点击已忽略</value>
+  </data>
+  <data name="Main_Status_UnknownValue" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Main_Status_ScanIncompleteDbAbortedSuffixFormat" xml:space="preserve">
+    <value>（其中 {0} 批因连续失败提前放弃）</value>
+  </data>
+  <data name="Main_Queue_NoDeviceHint" xml:space="preserve">
+    <value>当前未连接设备 — 请通过 USB 连接已越狱设备并点击「刷新」（需已安装 iTunes）</value>
+  </data>
+  <data name="Main_Queue_NoDeviceHeader" xml:space="preserve">
+    <value>安装队列（未连接设备）</value>
+  </data>
+  <data name="Main_Queue_SuspendFallback" xml:space="preserve">
+    <value>挂起</value>
+  </data>
+</root>

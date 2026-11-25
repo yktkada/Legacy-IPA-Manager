@@ -1,0 +1,22 @@
+{
+  "bundleId": "com.dotgears.flap",
+  "version": "1.2",
+  "name": "Flappy Bird",
+  "minOs": "6.0",
+  "appDirectory": "Flap.app",
+  "plistFormat": "bplist",
+  "executableName": "flap",
+  "arch": "armv7,armv7s",
+  "archSource": "脚本内独立的 PowerShell 实现（Read-U32/Get-ArchFromMachO）；M3 用生产解析器复核，本轮不断言",
+  "machoMagic": "CAFEBABE",
+  "hasCgbi": false,
+  "fileSize": 1360020,
+  "sourceIpa": "Flappy Bird_1.2_AppOnly.ipa",
+  "sourceIpaSha256": "5c1f9a0e0d40c8a6238acaac1aefd2ec6c776b8589d3b4c5841c14e1f2756f68",
+  "generatedBy": "FixtureGeneration/extract_fixtures.ps1（R3：+sha256/来源指纹/machoMagic）",
+  "filesSha256": {
+    "Info.plist": "dcf3844f5811311c7334304b7af30baf4aa9d2462d50fa55f56f51c51d42a3a6",
+    "executable-head.bin": "17ef4a848a970ae907cdfb5372140299f81c4ce0e3249721852ec69e147eed02",
+    "icon-slice.bin": "581bd7cfbbaad9ccdc9548b1203613c1d691637e8f9b4d6813099039737cbe8a"
+  }
+}

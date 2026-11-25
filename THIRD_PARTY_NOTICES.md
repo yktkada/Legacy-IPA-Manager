@@ -5,9 +5,9 @@ corresponding Windows x64 runtime binaries under `toolkit/`.
 
 ## Binaries included in this repository
 
-The `toolkit/` directory contains the runtime executables and DLLs built from
-these sources. Each component keeps its upstream license text in
-`toolkit/LICENSES/`.
+The `toolkit/` directory contains the runtime executables and DLLs used by the
+application. Each component keeps its upstream license text in
+`toolkit/LICENSES/` (or beside `aria2c.exe` in `toolkit/`).
 
 ## Source included in this repository
 
@@ -20,17 +20,16 @@ these sources. Each component keeps its upstream license text in
 | libusbmuxd | LGPL-2.1 | `third_party/libusbmuxd/` |
 | ideviceinstaller | GPL-2.0 | `third_party/ideviceinstaller/` |
 
-The snapshots are exported from the local MSYS2 source trees. Upstream `.github/`
-directories were removed, and the local `ideviceinstaller/FORK.md` was removed
-because it contained developer-machine paths. See `third_party/README.md`.
+The snapshots are exported from upstream source trees. Upstream `.github/`
+directories and any machine-specific notes were removed. See
+`third_party/README.md`.
 
-## Runtime libraries in `toolkit/`
-
-The bundled toolkit also contains these runtime libraries:
+## Runtime tools and libraries in `toolkit/`
 
 | Component | License | License text |
 |---|---|---|
-| OpenSSL (`libssl`, `libcrypto`) | Apache-2.0 | `toolkit/LICENSES/openssl-LICENSE` |
+| aria2 (`aria2c.exe` 1.37.0) | GPL-2.0 | `toolkit/aria2-LICENSE.txt`, `toolkit/aria2-SOURCE.txt` |
+| OpenSSL (`libssl`, `libcrypto`) | Apache-2.0 / OpenSSL | `toolkit/LICENSES/openssl-LICENSE`, `toolkit/aria2-LICENSE-OpenSSL.txt` |
 | libzip | BSD-3-Clause | `toolkit/LICENSES/libzip-LICENSE` |
 | bzip2 | bzip2 license | `toolkit/LICENSES/bzip2-LICENSE` |
 | xz/liblzma | Public Domain / 0BSD / LGPL-2.1 / GPL | `toolkit/LICENSES/xz-*` |
@@ -47,6 +46,7 @@ its own license.
 |---|---|
 | .NET / WPF | MIT |
 | Microsoft.Data.Sqlite | MIT |
+| xUnit v3 (tests) | Apache-2.0 |
 
 See the package metadata for the exact license text of each NuGet package.
 

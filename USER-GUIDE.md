@@ -1,245 +1,204 @@
 # Legacy IPA Manager · User Guide
 
-> IPA library and installation queue for legacy iOS devices on Windows.
-> This document describes the interface, the working logic, and the decision rules. It contains no walkthrough.
+> IPA library manager, compatibility analyzer, and independent multi-device installation queue for legacy iOS devices on Windows.
+> Covers the current UI, keyboard shortcuts, decision rules, and the bundled `IdeviceIndex` component.
 
 ---
 
 ## 1. Overview
 
-### 1.1 What it is
+### 1.1 Identity & Components
 
 | Item | Value |
 |---|---|
 | Product name | `Legacy IPA Manager for Windows` |
-| Function | IPA library management, compatibility evaluation, multi-device installation queue |
-| Implementation | C# / WPF / MVVM; calls `ideviceinstaller.exe` and `AfcHelper.exe` |
-| UI language | Chinese and English builds |
+| Core function | Local IPA library management, offline compatibility analysis, multi-device installation/uninstall queues |
+| Implementation | C# / WPF / MVVM (.NET 10), wrapping `ideviceinstaller.exe`, `AfcHelper.exe`, and `IdeviceIconHelper.exe` |
+| UI language | Bilingual single-source resources (`System` / `Simplified Chinese` / `English`; runtime logs remain Chinese) |
+| Companion | `IdeviceIndex.exe` (essential bundled component for offline index browsing, `aria2c` downloading, and named-pipe auto-import) |
 
-An **IPA** is the installation package format of an iOS app. This program scans, parses, and installs such files.
+An **IPA** is the installation package format of an iOS app. This program scans, parses, and installs such files over USB.
 
-### 1.2 Supported scope
+### 1.2 Supported Scope
 
 | Item | Value |
 |---|---|
 | Devices | Verified: iPhone 4 (iOS 4.1), iPad 2 (6.1.3), iPhone 4S (7.1.1), iPhone 5 (8.1.2), iPod touch 5 (8.4.1) |
-| iOS versions | 4 / 6 / 7 / 8 and iPad verified; **iOS 9 / 10 unverified** |
-| Concurrency | Independent queue per device; four devices installing simultaneously verified |
-| Library size | 423 packages / 97.8 GB verified; refresh baselines measured at 10,000 and 50,000 rows |
+| iOS versions | **iOS 4 / 6 / 7 / 8 and iPad verified**; **iOS 9 / 10 unverified** |
+| Prerequisite | Target devices must be jailbroken with **AppSync Unified** |
+| Concurrency | Independent queue and serial pump per device; 4 devices installing simultaneously verified |
+| Library scale | 423 real packages / 97.8 GB verified; main app benchmarked at **50,000 rows**; `IdeviceIndex` verified at **200,000 rows** |
 
 ### 1.3 Requirements
 
 | Item | Value |
 |---|---|
 | OS | Windows 10 / 11, 64-bit |
-| iTunes | Required (provides Apple Mobile Device Service); no sign-in needed |
-| Cable | Device connected over USB |
-| Directory permission | Program directory must be writable; otherwise the program reports and exits at startup, without falling back to user directories |
+| Runtime | .NET 10 Desktop Runtime |
+| iTunes | Required (provides Apple Mobile Device Service); no Apple ID sign-in needed |
+| Cable | USB data connection |
+| Directory permissions | Program directory must be writable; if read-only, the program reports and exits at startup without falling back to `%APPDATA%` or `%TEMP%` |
 
 ---
 
 ## 2. Interface and Operations
 
-![Main window](guide/01-main.png)
-
 ### 2.1 Regions
 
 | Region | Content |
 |---|---|
-| Top bar | `Add...` `Install to...` `Hide log` `Settings` |
-| Device tab strip | One tab per online device; wraps by window width; the leftmost fixed block shows the current run-state colour |
-| Left · view switch | `Library` and `Device apps` as two equal-width buttons in fixed positions |
-| Left · library toolbar | Multi-select, groups, scan, compatibility, advanced filter, merge |
-| Left · grid | Library rows or device app rows; virtualized |
+| Top bar | `Add...`, `IPA Index...`, `Install to...`, `Hide log`, `Settings`, plus active device details and `More ▾` |
+| Device tab strip | Fixed leftmost block shows active device run-state colour; one tab per online device with segmented progress blocks; offline tabs greyed out and moved to the end |
+| Left · view switch | `Library` and `Device apps` as two equal-width fixed buttons |
+| Left · library toolbar | Multi-select, user group dropdown, `Manage groups`, `Incremental scan`, `Full rescan`, compatibility filter, advanced filter, merge by BundleId |
+| Left · quick jump bar | Above the grid: horizontal `0–9`, `A–Z`, `#` buttons (supports Chinese Pinyin initials), shared by `Library` and `Device apps` |
+| Left · grid | Virtualized Library rows or Device apps rows; supports `Shift + Mouse Wheel` horizontal scrolling with a 2–3 px slim scrollbar |
 | Right · queue | Queue and progress of the current device tab; defaults to Status / Note / Name / Version / Installed size |
-| Bottom right · log | Operation log; verbose/concise toggle; can be hidden |
+| Bottom right · log | Operation log; verbose/concise toggle, export, clear; collapsible via button or `Ctrl+L` |
 
-### 2.2 Top bar
+### 2.2 Top Bar
 
 | Control | Function |
 |---|---|
-| `Add...` | Submenu: `Add folder...` scans a whole directory recursively; `Add files...` adds only the selected IPA files |
-| `Install to...` | Installs the selected packages to devices. Menu contains all online devices, `More...` (device selection window), and a per-device `Install` submenu |
+| `Add...` | Submenu: `Add files...` imports selected `.ipa` files; `Add folder...` adds a recursive scan root and triggers a scan |
+| `IPA Index...` | Opens the bundled `IdeviceIndex.exe` browser/downloader |
+| `Install to...` | Queues selected packages to all online devices, a picked device, or via the multi-device selection dialog |
 | `Hide log` | Collapses or expands the log pane (`Ctrl+L`) |
-| `Settings` | Opens the settings window (8 tabs) |
+| `Settings` | Opens the settings window (8 setting tabs + About) |
+| Device info & `More ▾` | Shows `Name · Model · iOS(Build) · Free/Total GB · Color · Battery Health%` (+ ECID when wide enough); `More ▾` shows battery telemetry and copies ECID / Serial / UDID / ModelNumber / HardwareModel |
 
-### 2.3 Devices and queue
+### 2.3 Devices and Queue
 
 | Control | Function |
 |---|---|
-| `Refresh` | Re-probes devices immediately. Polling runs every 2 seconds by default; manual refresh is normally unnecessary |
-| `Suspend` / `Resume` | One button whose caption follows the device run state: `Suspend` when Idle or Running; `Resume` when Paused, Suspended, or Offline |
-| `Cancel` | Cancels the selected task. Cancelling during transfer counts as not installed; cancelling after the install stage begins uninstalls automatically when installation completes |
-| `Clear` | Removes finished tasks and clears the red/yellow/green status marks in the library |
+| `Refresh` | Forces a full re-probe of all connected devices; normal plug/unplug detection is driven by Windows USB events with low-frequency fallback, and automatic incremental refreshes **only probe newly added or recovered devices without disturbing active installs** |
+| `Suspend` / `Resume` | One button matching device run state: `Suspend` when Idle/Running; `Resume` when Paused/Suspended/Offline |
+| `Cancel` | Cancels the selected job. During transfer it kills the process tree cleanly; once installing begins, it waits for completion and uninstalls automatically |
+| `Clear` | Removes finished jobs and clears red/yellow/green marks in the library |
 
-Queue rows default to:
+Default queue row layout:
 
 ```text
 [status progress] | note | app name | version | installed size
 ```
 
-Notes appear only for Failed / Paused / Suspended. Device apps have independent multi-select and batch uninstall.
+- Notes only appear on Failed / Paused / Suspended jobs.
+- When switching between device tabs, the main window saves and restores the **Library grid's vertical scroll offset** per device `UDID` in memory (queue and log scroll positions are not tracked per tab).
+- `Device apps` supports independent multi-select and batch uninstall.
 
-### 2.4 Library toolbar
-
-![Library toolbar](guide/02-library-toolbar.png)
+### 2.4 Library Toolbar
 
 | Control | Function |
 |---|---|
-| `Multi-select: off` / `Multi-select: N selected` | Toggles multi-select mode and shows the number of selected rows |
-| Group dropdown | Switches between `All` and a user group. Empty groups are greyed out and cannot be selected |
-| `Manage groups` | Creates, renames, and deletes groups |
-| `Incremental scan` | Checks only new and changed files |
-| `Full rescan` | Re-parses every present file (used to fill in size, icon, and architecture fields, or after parsing rules change) |
-| Compatibility dropdown | `Compatibility filter: Off` / `Compatible with this device` / `Adapted to this device`; rules in 4.1 |
-| Advanced filter switch + `Advanced filter (N)` | Condition filter: AND/OR within a group, AND between groups; supports version range, size range, multiple architectures, status, and compatibility |
-| `Merge packages with the same BundleID` | Merges versions sharing a BundleId into a group row; group rows expand and collapse |
+| `Multi-select: off` / `Multi-select: N selected` | Toggles multi-select mode and shows selection count |
+| Group dropdown | Switches between `All` and user groups (empty groups greyed out) |
+| `Manage groups` | Creates, renames, and deletes user groups |
+| `Incremental scan` | Reconciles new, changed, and missing files |
+| `Full rescan` | Re-parses every present file cleanly |
+| Compatibility dropdown | `Off` / `Installable` / `Adapted` (rules in 4.1) |
+| Advanced filter switch + `Advanced filter (N)` | Group-internal AND/OR, cross-group AND; filters by version range, size range, architecture, origin, state, compatibility |
+| `Merge packages with the same BundleID` | Collapses matching BundleIds into group rows with version range and count |
 
-### 2.5 Grid
+### 2.5 Quick Jump Bar & Grid
 
 | Item | Content |
 |---|---|
-| Columns | Icon · Name · Uncompressed size · Version · Minimum iOS · Device family · BundleId · Architecture · Original size · Status (default order) |
-| Column operations | Drag a column header to reorder; drag the edge to resize; both are persisted |
-| Column visibility | Per-column switches under `Settings → Library` |
-| Row height | Small (24) / Medium (32) / Large (40) |
-| Group row | Appears when merging by BundleId; shows the version range and member count; collapsed by default |
-| Check column | Marks whether the package is installed on the device; rules in 4.2 |
+| Quick jump bar | Horizontal **`0–9` / `A–Z` / `#`** bar above the grid supporting English letters, digits, **Chinese Pinyin initials**, and `#` for symbols; adapts on narrow windows in 3 stages: hide unavailable grey buttons → tighten spacing → 2–3 px slim horizontal scrollbar (`Shift + Wheel`) |
+| Columns | Check (`✓`) · Icon · Name · Uncompressed size · Version · Minimum iOS · Device family · Origin · BundleId · Architecture · Original size · Status · File path |
+| Column operations | Drag headers to reorder; drag edges to resize; toggle visibility under `Settings → Library` (all persisted) |
+| Row height | Small (24 DIP) / Medium (32 DIP) / Large (40 DIP) |
+| Group row | Version range + `N` count; collapsed by default; crisp integer `1` DIP borders |
+| Check column | Shows installed status on the active device (rules in 4.2) |
+| Missing rows | Rows whose file is absent on disk turn grey (`IsMissing`); hide via `H` or clean records + rescan via `D` |
 
-### 2.6 Log pane
+### 2.6 Log Pane
 
 | Control | Function |
 |---|---|
-| `Switch to detailed view` / `Switch to compact view` | Toggles log verbosity |
-| `Export…` | Exports the current log |
-| `Clear` | Clears the log pane |
+| `Switch to detailed view` / `Switch to compact view` | Toggles log detail level |
+| `Export…` | Saves visible log lines to text |
+| `Clear` | Clears only the UI log pane without touching `logs\app.log` |
 
-### 2.7 Mouse gestures
+### 2.7 Mouse Gestures
 
 | Gesture | Effect |
 |---|---|
-| Click a column header | Sorts by that column; clicking again toggles ascending/descending |
-| Click a group row | Expands or collapses the group |
-| Double-click a file row (two presses in the same column within 400 ms) | Adds to or removes from that device queue |
-| Drag in multi-select mode | Toggles each row passed over, starting at the drag origin |
-| Right-click a file row | Copy fields, group operations, `Install to...`, show/hide missing files, delete records for missing files |
-| Right-click an unselected row | Selects the row first, then opens the menu |
+| Click a column header | Sorts ascending/descending |
+| Click a group row | Expands or collapses that group |
+| Double-click a file row (≤ 400 ms) | Arms blue and enqueues or removes from the current device queue |
+| Drag in multi-select mode | Toggles checked state across dragged rows |
+| `Shift + Mouse Wheel` | Horizontal scrolling in grids and the quick jump bar (2–3 px slim scrollbar) |
+| Right-click a data row | Selects that row and opens the context menu (empty grid area clears menu) |
 
-### 2.8 Context menu
+### 2.8 Context Menu & Keyboard Shortcuts
 
-| Item | Function |
-|---|---|
-| `Copy BundleID` / `Copy name` / `Copy version` / `Copy minimum iOS` / `Copy entire row (tab-separated)` | Copies the corresponding field |
-| `Add to group` / `New group` / `Manage groups` / `Remove from group` | Group operations; group rows do not show these |
-| `Install to...` | Same menu as the top bar |
-| `Select all` / `Clear all` | Multi-select mode only |
-| `Show missing files` / `Hide missing files` | Toggles whether rows whose file is missing are shown |
-| `Delete records for missing files` | Deletes all library records whose file is missing (no confirmation, does not delete files on disk) |
-| `Add scan folder...` | Appends a scan root |
-| `Force install to current device (skip minimum iOS and space check)` | Single IPA only; hidden in multi-select mode |
-| `Clear` | Clears finished queue items and clears status marks |
+Context menu items render their single-letter mnemonic inside the **left icon gutter**:
+- **With menu open**: press the single letter directly;
+- **Without opening the menu**: press **`Ctrl + Alt + <Letter>`** with focus in the grid (`Ctrl + L` globally toggles the log pane).
+
+**Main App — Library Single-Row / General:**
+
+| Key | Menu / Action | Notes |
+|---|---|---|
+| `I` | Force install to current device | Skips minimum iOS and free-space checks (single valid IPA only) |
+| `C` | Copy (submenu) | Submenu keys: `B` BundleId, `N` Name, `V` Version, `O` Min iOS, `F` File name, `P` File path, `R` Entire row (Tab-separated) |
+| `E` | Open file location | Selects the IPA file in Windows Explorer |
+| `G` | Add to group | Opens quick group selector |
+| `W` | New group... | Creates group and adds item |
+| `M` | Manage groups... | Renames/deletes groups |
+| `X` | Remove from current group | Enabled inside a user group |
+| `H` | Show / Hide missing files | Toggles grey missing-file rows |
+| `D` | Delete missing records | Removes dead DB records immediately (never deletes disk files) and automatically runs an incremental rescan |
+
+**Main App — Multi-Select & Device Apps:**
+
+| Scope | Key | Action |
+|---|---|---|
+| Library (Multi-select) | `A` / `K` | `A` enqueue to all online devices; `K` open `Install to...` dialog |
+| Library (Multi-select) | `S` / `Z` | `S` select all visible rows; `Z` clear selection |
+| Device Apps | `U` / `T` / `D` | `U` uninstall focused app; `T` toggle multi-select; `D` batch uninstall checked apps |
+| Device Apps (Multi-select) | `S` / `Z` | `S` select all; `Z` clear selection |
+
+### 2.9 Closing Progress Status
+
+When closing either `IdeviceGui` or `IdeviceIndex`, if shutdown tasks are still finishing (saving layout, closing import pipe, waiting for scan/DB load, stopping device queues or `aria2c`, waiting for icon decoding, saving settings/groups, or killing lingering child processes), the window title appends **` - Closing - <current step>`** (Chinese UI: **` - 正在关闭 - <当前步骤>`**).
 
 ---
 
 ## 3. Working Logic
 
-### 3.1 Three stages
+### 3.1 Three Stages
 
 | Stage | Input | Output | Persistence |
 |---|---|---|---|
-| Scan | `.ipa` under the scan roots | Parsed rows | SQLite: `data\library.db` |
-| Library | Parsed rows | Filtered, sorted, grouped view | View in memory only; groups written to `data\groups.json` |
-| Queue | Library rows + target device | Install / uninstall results | Memory only; lost on close |
+| Scan | `.ipa` under scan roots | Parsed rows | SQLite: `data\library.db` |
+| Library | Parsed rows | Filtered, sorted, grouped view | Memory only; groups in `data\groups.json` |
+| Queue | Library rows + device | Install / uninstall results | Memory only; cleared on exit |
 
-### 3.2 Two levels of state
+### 3.2 Two-Level State Machine
 
-**Device queue run state** (one per device):
+**Device queue run states**: `Idle`, `Running`, `Paused` (device-level stop), `Suspended` (queue-level stop), `Offline`.
 
-| Caption | Meaning |
-|---|---|
-| Idle | No task executing |
-| Running | The pump is executing tasks |
-| Paused | Stopped for a device-level reason |
-| Suspended | Stopped for a queue-level reason |
-| Offline | Device unreachable |
+**Task states**: `Waiting`, `Verifying device` (`idevice_id` + `ProductType`/`ProductVersion`), `Checking`, `Cleaning` (`/PublicStaging` via `AfcHelper`), `Checking space`, `Installing` / `Uninstalling`, `Reading back` (`list --xml`), `Completed`, `Failed`, `Paused`, `Suspended`, `Cancelled`.
 
-**Task state** (one per task):
+### 3.3 Install & Uninstall Sequences
 
-| Caption | Meaning |
-|---|---|
-| Waiting | Queued, not started |
-| Verifying device | Compares `idevice_id -l` against `ProductType` / `ProductVersion` |
-| Checking | Compatibility and file readability check; for uninstall only confirms the target exists |
-| Cleaning | Clears `/PublicStaging` on the device |
-| Checking space | Compares free space against required space |
-| Installing / Uninstalling | `ideviceinstaller` executing |
-| Reading back | Confirms the result via `list --xml` |
-| Completed | All three checks pass; not written to the database, kept for this session only |
-| Failed | Single task failed; the pump continues with the next task |
-| Paused | Interrupted for a device-level reason; can be resumed |
-| Suspended | Stopped at queue level; waiting to resume |
-| Cancelled | Cancelled by the user |
+- **Install**: `Waiting → Verifying device → Checking → Cleaning → Checking space → Installing → Reading back → Completed`
+  - Cleaning failure never blocks installs unless AFC is unreachable (`Paused`). Insufficient space after cleaning suspends the queue safely (`Suspended`).
+- **Uninstall**: `Waiting → Verifying device → Checking → Uninstalling → Reading back → Completed`
+  - Skips compatibility, staging cleanup, and space checks; relies on `list --xml` readback because iOS 6/7 return exit code `0` even when uninstalling an absent app.
 
-### 3.3 Install sequence
+### 3.4 Timeouts & Concurrency
 
-```
-Waiting → Verifying device → Checking → Cleaning → Checking space → Installing → Reading back → Completed
-```
-
-| Step | Result on failure |
-|---|---|
-| Verifying device | Offline / unreachable / identity mismatch → Paused |
-| Checking | → Failed |
-| Cleaning | Cleaning failure does not block (space hygiene is not an install prerequisite); only a fully unreachable AFC → Paused |
-| Checking space | Insufficient space → Suspended (all waiting tasks on that device turn grey) |
-| Installing | → Failed |
-| Reading back | Not confirmed → Failed (exit code 0 with the app absent is not counted as success) |
-
-The space check runs after cleaning: residual staging is removed first, then free space is evaluated.
-
-### 3.4 Uninstall sequence
-
-```
-Waiting → Verifying device → Checking → Uninstalling → Reading back → Completed
-```
-
-For uninstall, the `Checking` step only confirms the target exists on the device. It performs no compatibility or space check and does not clean `/PublicStaging`.
-Reason: on iOS 6 and 7, uninstalling an app that is not installed returns exit code 0; without reading back, "not installed" would be recorded as a successful uninstall.
-
-### 3.5 Timeout criteria
-
-| Call | Criterion | Result on timeout |
+| Call | Timeout | Outcome |
 |---|---|---|
-| `idevice_id -l` | 5 s | Device treated as offline |
-| `ideviceinfo` probe | 15 s | Device treated as unresponsive |
-| AFC helper (cleaning / space query) | 30 s total + 15 s without output | Process tree killed; device treated as unreachable; queue paused |
-| `ideviceinstaller install` | 180 s without new output (not total duration) | Process tree killed, then the device is re-probed |
-| `ideviceinstaller list --xml` | 30 s | Result unknown; recorded as failed |
+| `idevice_id -l` | 5 s | Device marked offline |
+| `ideviceinfo` probe | 15 s | Device marked unresponsive |
+| AFC helper | 30 s total / 15 s no output | Process tree killed; queue paused |
+| `ideviceinstaller install` | 180 s without output | Process tree killed, device re-probed |
+| `ideviceinstaller list --xml` | 30 s | Treated as failed |
 
-### 3.6 Scanning and reconciliation
-
-| Item | Content |
-|---|---|
-| Scan roots | Default `<program directory>\library`, created on first start; multiple recursive roots; added and removed under `Settings → Scan` |
-| File identity | Volume serial + FileId preferred; path used as fallback |
-| Incremental decision | If file identity, size, and modification time are unchanged, the existing parse result is reused |
-| Failed rows | Rows that failed to parse are retried on the next scan |
-| Write batches | The database is written once per 1000 parsed rows |
-| During scanning | The library area is disabled and shows `Scanning library… (parsing N / M)`; the top bar remains usable except for the scan buttons |
-| Startup order | Open database → apply layout → refresh devices → start 2-second polling → incremental scan |
-| No early library read | Library content is built once after the scan completes |
-| Full rescan | Re-parses all present files; `ParseState=Ok` does not imply that deep fields are complete |
-
-### 3.7 Queue concurrency model
-
-| Item | Content |
-|---|---|
-| Pump | One independent serial pump per device; tasks are serial within a device |
-| Single-pump constraint | At most one pump per UDID; enforced by the pump registry |
-| Locking | One lock per UDID; inside the lock only memory operations, no IO and no child processes |
-| Between devices | No shared locks, no waiting on each other; an exception on one device stops only that device |
-| Child processes | All run through the process runner; a child is considered hung when it produces no output; timeout and cancellation both kill the process tree |
-| Window close | All child processes are terminated; no leftovers |
+Each device has one dedicated serial pump and one memory-only lock (zero IO or child processes inside locks). Failures on one device never affect other devices.
 
 ---
 
@@ -247,255 +206,73 @@ Reason: on iOS 6 and 7, uninstalling an app that is not installed returns exit c
 
 ### 4.1 Compatibility
 
-| Dropdown item | Decision |
+- **Off**: no filter.
+- **Installable**: package device family permits the device class and `MinimumOSVersion` ≤ device OS.
+- **Adapted**: passes `Installable` and highest internal screen tier (`UILaunchImages` / storyboards / icons) ≥ device screen tier (`HardwareModel` primary, `ProductType` fallback). Packages with missing/`unknown` screen evidence default to earliest OG 3.5" iPhone tier.
+
+### 4.2 Installed Markers (`✓` Column)
+
+| Case | Display |
 |---|---|
-| `Compatibility filter: Off` | Not applied |
-| `Compatible with this device` | The device family permits the device class, and `MinimumOSVersion` ≤ the device system version |
-| `Adapted to this device` | Device family and `MinimumOSVersion` pass, and the package's highest tier for that device class ≥ the device tier |
+| Same BundleId & exact same version installed | **Green background + ✓** |
+| Same BundleId & different/unknown version installed | **Light blue (`#D6E9FF`), no ✓** |
+| Not installed | White background, no ✓ |
+| Group row | Any member exact match → **Green + ✓**; else any alternate version → **Light blue** |
 
-| Item | Rule |
-|---|---|
-| Device tier source | `HardwareModel` preferred (case-sensitive); falls back to `ProductType` when unregistered |
-| Mismatch between the two | `HardwareModel` wins; the status bar reports `Model identification mismatch (<ProductType>)` |
-| Device family missing or `unknown` | Treated as the earliest iPhone (OG 3.5" / 320×480): `Compatible with this device` allows iPhone/iPod but not iPad; `Adapted to this device` allows nothing |
-| Evidence source | Entirely from inside the IPA (`UILaunchImages`, storyboards, `Default*` resources, actual icon dimensions); no network access |
+### 4.3 Queue Ordering & Space Accounting
 
-### 4.2 Installed markers
+- **Order**: `1. Uninstalls first → 2. Same kind by PeakBytes (original + uncompressed) descending → 3. FIFO`.
+- **Space**: `Required = PeakBytes + 10 MB margin` (when uncompressed size is unknown, `compressed × 2`); checked live after `/PublicStaging` cleanup.
 
-| Situation | Check column |
-|---|---|
-| Same BundleId, same version installed | Green background + check |
-| Same BundleId, different version installed | White background + check |
-| Not installed | White background, no check |
-| Any member of a group row installed | The group row's check column turns green with a check; the whole row does not turn green |
+### 4.4 Success Verification & Automatic Behavior
 
-The check column is not overridden by the row operation colour, selection colour, or double-click arm colour.
-The installed set comes from `list --xml` readback; the database is not used and no extra scan is performed.
-
-### 4.3 Queue ordering
-
-Waiting tasks are ordered stably as follows:
-
-```
-1. Uninstall before install
-2. Within the same kind, descending PeakBytes
-   PeakBytes = compressed package size + uncompressed size
-3. Within the same footprint, original enqueue order
-```
-
-| Item | Rule |
-|---|---|
-| Running task | Never preempted |
-| Order consistency | The queue list and the device tab progress blocks use the same order |
-| After resume | Re-sorted |
-
-### 4.4 Space accounting
-
-```
-Available = TotalDataAvailable from ideviceinfo -q com.apple.disk_usage
-            falls back to FSFreeBytes from the AFC helper when unavailable
-Required  = peak footprint + 10 MB margin
-Peak      = compressed package size + expected uncompressed size
-            when uncompressed size is unknown: compressed package size × 2
-```
-
-| Timing | Behavior |
-|---|---|
-| Enqueue | No space check, no rejection, no state change |
-| After each readback | Simulates all not-yet-started install tasks in queue order; if any task cannot fit, a log line is written and the queue is not modified (no rejection, removal, reordering, or pausing) |
-| Log deduplication | Key is queue version + set of tasks that do not fit; identical results are not logged again |
-| When an install task actually starts | Space is checked again after staging is cleaned; if insufficient, the device queue is suspended without uploading and without marking failure |
-
-Uninstall tasks skip the space check. Running and finished tasks are not part of the simulation.
-
-### 4.5 Success criteria
-
-A task succeeds only when all three hold:
-
-1. Exit code `== 0`
-2. No line in `stderr` starting with `ERROR` (`WARNING` ignored)
-3. Readback confirms: app present after install, app absent after uninstall
-
-| Situation | Handling |
-|---|---|
-| Install reported an error but readback confirms installed | Recorded as completed |
-| Exit code 0 but readback does not confirm | Recorded as failed |
-| Uninstalling an app that is not installed (exit code 0 on iOS 6/7) | Caught by readback; recorded as failed |
-| Readback retries | Up to 3 attempts, 1 s apart; exceptions, not-found, and version mismatch are all retried |
-| Device offline | Does not consume a retry; the queue pauses immediately |
-| Readback confirms installed but the version differs | The retry-suppression flag is set on that attempt; the task fails terminally and is not automatically re-queued |
-| All 3 attempts exhausted | Exception → Failed (`Unable to verify result`); otherwise → Failed |
-
-Readback retries apply only to the final success determination and to the pre-resume confirmation. Overwrite detection before installation and post-failure confirmation remain single readbacks.
-
-### 4.6 Automatic behavior
-
-| Behavior | Rule |
-|---|---|
-| Automatic re-queue on failure | `Settings → Devices → Automatic attempt count`, default 2, range 2–5, including the first attempt. When a task fails and the count has not been reached, the original entry is deleted and a new task is enqueued with the same parameters, noted `Attempt N`. Once the count is reached the task stays failed |
-| Cases never re-queued | Readback confirmed installed but the version differs (prevents an overwrite install) |
-| Suspend on disconnect | When a device-level pause occurs (offline or unreachable): the current task becomes Paused and is marked interrupted; all other waiting tasks become Suspended and are marked `SuspendedByDisconnect` |
-| Auto-resume on reconnect | Requires `Auto-resume after stable connection` under `Settings → Devices`. The device must remain online for the whole stability window; a further disconnect within the window restarts the timer. Default window 3 s, range 1–10 s |
-| Resume scope | Only tasks suspended due to disconnect and interrupted Paused tasks are resumed; tasks suspended manually by the user are left unchanged |
-| Manual suspend | The current task is not interrupted and runs to a terminal state; all waiting tasks become Suspended; tasks enqueued while suspended enter directly as Suspended |
-
-### 4.7 Routing of decision outcomes
-
-| Stage | Situation | Outcome |
-|---|---|---|
-| Enqueue | No BundleId parsed | Rejected, not queued |
-| Enqueue | Source file missing | Rejected, not queued |
-| Enqueue | Lower than the package's minimum iOS | Rejected, not queued |
-| Before execution | Offline / unreachable / identity mismatch | Paused |
-| Before execution | Insufficient space | Suspended |
-| Before execution | Package unreadable / minimum iOS recheck fails | Failed |
-| During execution or readback | Otherwise | Failed |
-
-`Waiting` means the task has not come up in the queue; it never stays in that state because a check failed.
+- **Success**: exit code `== 0`, no `ERROR` line in `stderr`, and up to 3 `list --xml` readbacks confirm presence/absence.
+- **Auto-retry**: up to configurable attempts (default 2, range 2–5) unless a different version is already confirmed installed.
+- **Disconnect & Auto-resume**: USB drop marks active task `Paused` and waiting tasks `SuspendedByDisconnect`; reconnect stability window (default 3 s, range 1–10 s) automatically triggers readback recovery and resumes.
 
 ---
 
-## 5. Irreversible Operations and Data Loss
+## 5. Irreversible Operations
 
-| Item | Description |
+| Item | Behavior |
 |---|---|
-| Overwrite install | Installing over the same BundleId recreates the data container and clears the app's sandbox data. The program neither blocks nor confirms this |
-| Queue and device list | Memory only. Closing the window or crashing loses the queue; the device list is re-probed |
-| Delete records for missing files | Executes immediately without confirmation; deletes only library records, never files on disk |
-| Cancel during installation | Cancelling after the install stage begins waits for installation to finish, then uninstalls automatically |
-| Interrupted install | Before restarting after an interrupted transfer, a readback runs first; if already installed, the reinstall is skipped |
-| Space pre-check | Advisory only; never modifies the queue |
+| Overwrite install | Installing over an existing BundleId recreates its container and wipes sandbox data without confirmation |
+| Delete missing records | Runs immediately; deletes DB records only, **never disk files**, and triggers an incremental rescan |
+| Cancel during install | Waits for install completion, then automatically uninstalls |
+| Memory-only queues | Queues and active device lists are not saved across app restarts |
 
 ---
 
-## 6. Settings
+## 6. Settings (8 Tabs + About)
 
-![Settings window](guide/03-settings.png)
-
-### 6.1 Library
-
-| Item | Default / notes |
-|---|---|
-| Grid row height (DIP) | Small 24 / Medium 32 / Large 40 |
-| Search delay threshold (rows) | Debouncing is used once the row count exceeds the threshold |
-| Search delay (ms) | Debounce delay |
-| Default sort | Saved only here; clicking a column header affects the current view only |
-| Descending | Default sort direction |
-| Search match mode | Contains / Exact |
-| Search scope (columns) | Columns included in search; changing the current view does not write back to the default |
-| Merge same BundleId | On by default |
-| Show missing files | On by default |
-| Use Retina text for device family (off = use R) | On by default |
-| Column visibility | Per-column switches |
-
-### 6.2 Scan
-
-| Item | Notes |
-|---|---|
-| Scan roots (RootN) | Add with `Add folder…`, remove with `Delete selected` |
-| Rows per batch write | One database write per N parsed rows |
-
-### 6.3 Icons
-
-| Item | Notes |
-|---|---|
-| Icon cache limit (MB) | Default 2048; icons still referenced are not evicted |
-| Pick the smallest sufficient size for the current scale | Selects the smallest source image not smaller than the target |
-| Downscale to cache bucket on disk | When off, original dimensions are stored and disk usage grows |
-
-### 6.4 Log
-
-| Item | Notes |
-|---|---|
-| Write file log `logs\app.log` | Off by default; `logs\crash.log` is always written |
-| Log panel: verbose mode | Concise by default |
-
-### 6.5 Layout
-
-| Item | Notes |
-|---|---|
-| Hide log pane | Hidden state is remembered |
-| Maximize log overlay width | Overlay width |
-| Restore default three-pane proportions | Restores 45 / 27 / 28 |
-
-### 6.6 Queue
-
-| Item | Notes |
-|---|---|
-| Queue fields (order / visibility) | Status, Note, Name, Version, Installed size, BundleId, File path, Origin, Min iOS, Device family; use Move up/down |
-| Default visible | Status, Note, Name, Version, Installed size |
-| Note rule | Shown only for Failed / Paused / Suspended; an empty note takes no space |
-
-### 6.7 Devices
-
-| Item | Notes |
-|---|---|
-| Online poll interval (seconds) | Default 2 |
-| Connection stability window (seconds) | Default 3, range 1–10 |
-| Auto-resume after stable connection | On by default |
-| Automatic attempt count | Default 2, range 2–5, including the first attempt |
-| Device info fields (order / visibility) | `Move up` and `Move down` change the order |
-
-### 6.8 About
-
-Version number and product name. This tab is not affected by `Apply`, `Cancel`, or `Restore defaults`.
+1. **Library**: row height (24/32/40 DIP), search debounce threshold/delay, default sort column/direction, match mode (`Contains`/`Prefix`/`Exact`), default search columns, merge same BundleId, show missing files, Retina vs `R` label toggle, per-column visibility switches.
+2. **Scan**: scan root list (`RootN`), batch DB write size, **Skip incremental scan on startup** (`SkipStartupScan`).
+3. **Icons**: cache limit (default 2048 MB), scale matching, disk downscaling.
+4. **Log**: file log `logs\app.log` toggle (off by default; 5 MB × 3 rotation), detailed mode toggle.
+5. **Layout (and Language)**: hide log pane, overlay width, reset default 45/27/28 column split, **UI language** (`System` / `Simplified Chinese` / `English`, applies on restart).
+6. **Queue**: queue column order & visibility.
+7. **Devices**: poll interval (2 s), disconnect stability window (3 s), auto-resume toggle, automatic retry count (2–5), device info field order & visibility.
+8. **Security**: **Allow writing outside program directory** (off by default; requires confirming an explicit risk dialog with no pre-checked box).
+9. **About**: version & licensing (unaffected by Apply/Cancel/Reset).
 
 ---
 
-## 7. Data and Privacy
+## 7. Data Locations & Privacy
 
-### 7.1 File locations
-
-Everything lives under the program directory. Nothing is written to user directories, and `%APPDATA%` and `%TEMP%` are not used.
-
-| Path | Content |
-|---|---|
-| `data\library.db` | Library (SQLite, WAL mode); scan roots, settings, and parsed package data |
-| `data\groups.json` | User groups and member snapshots |
-| `data\icons\` | Icon cache (`<sha1>-<bucket>.png`), bounded by the cache limit and reference protection |
-| `data\deviceicons\` | Device app icons |
-| `data\tmp\` | SQLite temporary files |
-| `logs\app.log` | Runtime log, off by default; rotated at 5 MB × 3 |
-| `logs\crash.log` | Crash log, overwritten, only the last crash kept |
-
-### 7.2 Network
-
-The program does not access the network. All information comes from local files, the USB device, and the command-line tools shipped with the program.
-Compatibility evidence is derived from inside the IPA; no online lookups are made.
-
-### 7.3 Unwritable directory
-
-If the program directory is not writable, the program reports it at startup and exits; it does not fall back to another directory.
+All state lives inside `<program dir>\data` and `<program dir>\logs` (`library.db`, `groups.json`, `icons/`, `deviceicons/`, `tmp/`, `indexer.json`, `index/`, `app.log`, `crash.log`). Writing to `%TEMP%`, `AppData`, `Windows`, or reparse points outside the program directory is always blocked. The main app makes zero network connections.
 
 ---
 
-## 8. Known Limitations and Glossary
+## 8. Companion Tool: IdeviceIndex
 
-### 8.1 Limitations
+Open via `IPA Index...` or `IdeviceIndex.exe`:
+- **Import & Remote Updates**: supports local `index.db` (copy or read-only external link), `manifest.json` / `entries.jsonl(.gz)` / `.json` full rebuilds or incremental `upsert`/`delete` deltas, and `Index.UpdateUrl` remote updates.
+- **200,000+ Row Virtual List & Shortcuts**: defaults to full virtualized scrolling (optional 500-row paging in Settings), shared **`0–9 / A–Z / #` Pinyin jump bar**, `Shift + Wheel` horizontal scroll, and `93`-version iOS quick filter (`2.0`–`10.3.4`). Shortcuts (`<Letter>` in menu / `Ctrl+Alt+<Letter>` global): `G` expand/collapse, `Q` enqueue focused, `S` enqueue checked, `C` copy submenu (`N/B/V/O`), `H` row height (`S/M/L`), `Z` clear selection, `Ctrl+L` toggle right pane.
+- **Verified `aria2c` & IPC Auto-Import**: validates `<program dir>\aria2c.exe` (1.37.0) via 4-step SHA-256 verification and notifies `IdeviceGui` via the `IdeviceGui.Import.v1` named pipe when downloads finish inside a scan root.
 
-| Item | Notes |
-|---|---|
-| iOS 9 / 10 | Unverified |
-| System apps | Not shown in the device apps view; only user apps are listed |
-| Architecture | The program does not block installation of an architecture mismatch; the behavior of armv6-only packages on armv7s devices is unverified |
-| Device icons | Obtained from the SpringBoard icon interface; the number of icons available per session is limited, and failures are retried |
-| Overwrite install | Reported as not preserving data, but not blocked |
-| Forced install | Single IPA right-click `Force install to current device`: skips minimum iOS and space checks; unavailable in multi-select/group rows |
-| Needs confirmation | `NeedsConfirm` is a reserved state and is not currently produced |
-| Uninstall | Device apps support multi-select batch uninstall through the normal queue uninstall path, de-duplicated by BundleId |
+---
 
-### 8.2 Glossary
+## 9. License
 
-| Term | Meaning |
-|---|---|
-| IPA | iOS app installation package |
-| BundleId | Unique identifier of an app |
-| Device family | Device classes and screen tiers the package declares support for |
-| Uncompressed size | Total uncompressed size of the `.app` inside the IPA |
-| Original size | Size of the compressed IPA file |
-| PeakBytes | Peak footprint = original size + uncompressed size |
-| Readback | Reading the installed list from the device via `ideviceinstaller list --xml` |
-| Pump | The serial task executor of one device |
-| Suspend | Queue-level soft stop; tasks have not started |
-| Pause | Task execution was interrupted; a readback is required before resuming |
-| Scan root | A directory included in scanning |
+- Application code: **GPL-2.0-or-later** ([COPYING](COPYING), [LICENSE](LICENSE)).
+- Bundled `aria2c.exe` (1.37.0): **GPL-2.0** (`aria2-LICENSE.txt`, `aria2-SOURCE.txt`).

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- 与被测程序同 TFM（主程序是 net10.0-windows + WPF），否则引用不上 -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <AssemblyName>IdeviceGui.Tests</AssemblyName>
+    <RootNamespace>IdeviceGui.Tests</RootNamespace>
+
+    <!-- 用 Microsoft Testing Platform 自执行（xunit.v3），不走 vstest testhost。
+         原因（2026-10-29 实测）：本机沙箱禁止 OpenProcess 其他进程，vstest 的 testhost
+         启动时要监视父进程退出 → 直接崩 `Win32Exception(5) 拒绝访问`。
+         MTP 由测试程序自己当宿主，只需要自身句柄，沙箱下可用。
+         实测：dotnet test 走 MTP → 3 个测试通过、152 ms。 -->
+    <OutputType>Exe</OutputType>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 直接引用真实程序集（主程序已用 InternalsVisibleTo 开放给本测试工程），不复制源码 -->
+    <ProjectReference Include="..\..\IdeviceGui\prototype\IdeviceGui\IdeviceGui.csproj" />
+    <ProjectReference Include="..\..\IdeviceGui\prototype\IdeviceIndex\IdeviceIndex.csproj" />
+  </ItemGroup>
+</Project>
